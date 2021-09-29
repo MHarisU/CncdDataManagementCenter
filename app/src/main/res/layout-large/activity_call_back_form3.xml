@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UIs.CallBackForm3Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bluelight">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="CloseForm"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/bluelight"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_back_arrow_white" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/call_back_study_questionnaire"
+                android:textColor="@color/White"
+                android:textSize="22dp" />
+
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bluelight">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center_vertical"
+                                android:padding="8dp"
+                                android:text="@string/tobacco_usage_19"
+                                android:textColor="@color/White"
+                                android:textSize="18dp" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/gray" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.2"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/n1"
+                                android:textColor="@color/Black80"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/which_best_describes_subjects_history_of_tobacco_use"
+                                android:textColor="@color/Black80"
+                                android:textSize="16sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="2dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/bttn_drk_stroke"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:gravity="center"
+                                        android:inputType="text"
+                                        android:onClick="selectUsageTobacco"
+                                        android:padding="10dp"
+                                        android:text="@string/never_use"
+                                        android:textColor="@color/Black80"
+                                        android:textSize="14sp" />
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.2"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/n2"
+                                android:textColor="@color/Black80"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/does_did_the_patient_use_following_tobacco"
+                                android:textColor="@color/Black80"
+                                android:textSize="16sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/cigarettes" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/beedies" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/huqqa_chilum" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/sheesha" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/naswar" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/paan" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/gutka" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/supari" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/gul" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/naas" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.2"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/n3"
+                                android:textColor="@color/Black80"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/if_yes_to_cigarettes_and_beedies"
+                                android:textColor="@color/Black80"
+                                android:textSize="16sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/how_many_per_day"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/Brand"
+                                            android:inputType="text"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingStart="10dp"
+                                        android:paddingTop="10dp"
+                                        android:text="@string/type_of_cigarettes"
+                                        android:textColor="@color/Black80"
+                                        android:textSize="14sp" />
+
+                                    <RadioGroup
+
+                                        android:layout_marginTop="-10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_above="@+id/view_below"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/filter" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/non_filter" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/both" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:checked="true"
+                                            android:text="@string/not_answered" />
+                                    </RadioGroup>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/at_what_age_did_subject_start"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/at_what_age_did_subject_quit"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingStart="10dp"
+                                        android:paddingTop="10dp"                                        android:text="Has the subject smoked > 100 Cigarettes/Beedies in life?"
+                                        android:textColor="@color/Black80"
+                                        android:textSize="14sp" />
+
+                                    <RadioGroup
+                                        android:layout_marginTop="-10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_above="@+id/view_below"
+                                        android:orientation="horizontal">
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/yes" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/no" />
+
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:checked="true"
+                                            android:text="@string/not_answered" />
+                                    </RadioGroup>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/gray" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.2"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/n4"
+                                android:textColor="@color/Black80"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/if_yes_to_huqqa_chilum"
+                                android:textColor="@color/Black80"
+                                android:textSize="16sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity=""
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/at_what_age_did_subject_start"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/at_what_age_did_subject_quit"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="2dp">
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/bttn_drk_stroke"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:gravity="center"
+                                        android:hint="@string/how_many_years_patients_has_smoked"
+                                        android:inputType="number"
+                                        android:maxLength="3"
+                                        android:padding="10dp"
+                                        android:textSize="14sp" />
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/gray" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.2"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/n5"
+                                android:textColor="@color/Black80"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/if_yes_to_sheesha"
+                                android:textColor="@color/Black80"
+                                android:textSize="16sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity=""
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/at_what_age_did_subject_start"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/at_what_age_did_subject_quit"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingStart="10dp"
+                                        android:paddingTop="10dp"
+                                        android:text="@string/how_often_used"
+                                        android:textColor="@color/Black80"
+                                        android:textSize="14sp" />
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <TextView
+                                            android:onClick="selectHowOftenUsed"
+                                            android:id="@+id/sheeshUsedText"
+                                            android:textColor="@color/Black80"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/not_answered"
+                                            android:inputType="text"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </LinearLayout>
+
+
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2.2"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/n6"
+                                android:textColor="@color/Black80"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10dp"
+                                android:text="@string/if_yes_to_sheesha"
+                                android:textColor="@color/Black80"
+                                android:textSize="16sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity=""
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/at_what_age_did_subject_start"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/at_what_age_did_subject_quit"
+                                            android:inputType="number"
+                                            android:maxLength="3"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingStart="10dp"
+                                        android:paddingTop="10dp"
+                                        android:text="@string/how_often_used"
+                                        android:textColor="@color/Black80"
+                                        android:textSize="14sp" />
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_margin="10dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:cardElevation="2dp">
+
+                                        <TextView
+                                            android:textColor="@color/Black80"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bttn_drk_stroke"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:hint="@string/not_answered"
+                                            android:inputType="text"
+                                            android:padding="10dp"
+                                            android:textSize="14sp" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </LinearLayout>
+
+
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/gray" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

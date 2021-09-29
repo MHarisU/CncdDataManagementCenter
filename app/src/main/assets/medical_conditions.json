@@ -1,0 +1,39 @@
+[
+  {
+    name: "HTN"
+  },
+  {
+    name: "Diabetes Type-1"
+  },
+  {
+    name: "Diabetes Type-2"
+  },
+  {
+    name: "Angina"
+  },
+  {
+    name: "MI"
+  },
+  {
+    name: "Heart Failure"
+  },
+  {
+    name: "Stroke"
+  },
+  {
+    name: "CLD"
+  },
+  {
+    name: "Cancer"
+  },
+  {
+    name: "Obesity"
+  },
+  {
+    name: "Sudden Death"
+  },
+  {
+    name: "Pregnancy Related Complication"
+  }
+]
+

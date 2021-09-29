@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/secondImageView"
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/splash_graphic" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo" />
+
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/AppSubtitleTexts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="Welcome back"
+
+        android:textColor="@color/colorETHints"
+        android:textSize="@dimen/font_26" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingStart="20dp"
+        android:text="LOGIN"
+        android:textColor="@color/Black80"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingStart="20dp"
+        android:text="Enter your email"
+        android:textColor="@color/Black80"
+        android:textSize="18sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/frag_log1_emailET_TIL"
+        style="@style/material_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+
+
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="@dimen/tilTopnBttmMargins"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="@dimen/tilTopnBttmMargins"
+        android:clipToPadding="false"
+
+
+        android:gravity="center_vertical"
+
+        android:hint="Email"
+        app:boxBackgroundColor="@color/colorBg"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+
+
+        >
+
+        <EditText
+            android:id="@+id/frag_log1_emailET"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/material_fields_drawable_padding"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLength="23"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/sizeEditTextsInput"
+            android:textStyle="normal"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fragment_fragment1_gotofragment2"
+
+            style="@style/AppSubtitleTexts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="bottom"
+            android:layout_marginStart="20dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:background="@drawable/bttn_drk_stroke"
+
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:ellipsize="end"
+            android:maxLines="1"
+
+
+            android:padding="10dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+
+
+            android:textSize="@dimen/font_22"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:icon="@drawable/ic_bttn_arrow_drk"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconTint="@color/colorWhite" />
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/frag_log1_loginBttn"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Fragment 2" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

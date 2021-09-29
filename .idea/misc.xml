@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/bttn_drk_stroke.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/button_gray_stock_small.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_arrow_forward_gray.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_arrow_forward_white.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_back_arrow.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_back_arrow_white.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_bttn_arrow_drk.xml" value="0.36770833333333336" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_exit_white.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_notification.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_setting_blue.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_user_baseline_blue.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_user_blue.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form2.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form3.xml" value="0.33" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_pgrform.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_splash.xml" value="0.22" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/family_row.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/fragment_fragment1.xml" value="0.32958984375" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/fragment_fragment2.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/medication_row.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/search_medicine_dialog_layout.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/select_form_type_dialog_layout.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form2.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form3.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_login.xml" value="0.3515625" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_main2.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_splash.xml" value="0.3515625" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/family_row.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/fragment_fragment1.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/fragment_fragment2.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/medication_row.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/search_medicine_dialog_layout.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/select_form_type_dialog_layout.xml" value="0.11216216216216217" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

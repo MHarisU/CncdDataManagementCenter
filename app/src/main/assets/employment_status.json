@@ -1,0 +1,17 @@
+[
+  {
+    name: "One"
+  },
+  {
+    name: "Two"
+  },
+  {
+    name: "Unemployed"
+  },
+  {
+    name: "Retired"
+  },
+  {
+    name: "Not Answered"
+  }
+]

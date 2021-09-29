@@ -1,0 +1,23 @@
+[
+  {
+    name: "Once a year"
+  },
+  {
+    name: "Once a month"
+  },
+  {
+    name: "2-3 times a month"
+  },
+  {
+    name: "Once a week"
+  },
+  {
+    name: "2-3 times a week"
+  },
+  {
+    name: "4-6 times a week"
+  },
+  {
+    name: "Everyday"
+  }
+]

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UIs.SplashActivity">
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/topImageView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/splash_low" />
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/secondImageView"
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/splash_graphic" />
+
+    <com.airbnb.lottie.LottieAnimationView
+
+        android:visibility="invisible"
+        android:id="@+id/animation_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="heartbeat.json"
+        app:lottie_loop="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:fontFamily="@font/proxima_nova"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/copy_right"
+            android:textColor="@color/Black80" />
+
+
+    </LinearLayout>
+</LinearLayout>
