@@ -9,6 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.cncd.first.R;
+import com.cncd.first.Utils.GeneralUtils;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -18,6 +19,10 @@ public class LoginActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        if (GeneralUtils.getLanguage(LoginActivity.this).equals("ur"))
+        GeneralUtils.changeIntoUrdu(LoginActivity.this);
+
         setContentView(R.layout.activity_login);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 

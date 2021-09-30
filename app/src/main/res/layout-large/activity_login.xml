@@ -147,6 +147,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:paddingStart="25dp"
+                android:paddingEnd="25dp"
                 android:text="@string/welcome_back"
                 android:textColor="@color/colorETHints"
                 android:textSize="@dimen/font_26" />
@@ -156,6 +157,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingStart="25dp"
+                android:paddingEnd="25dp"
                 android:text="@string/signin_your_account"
                 android:textColor="@color/Black80"
                 android:textSize="20sp"
@@ -167,6 +169,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingStart="25dp"
+                android:paddingEnd="25dp"
                 android:text="@string/enter_your_email_password"
                 android:textColor="@color/Black80"
                 android:textSize="18sp" />

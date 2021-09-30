@@ -67,7 +67,7 @@
                             android:layout_height="25dp"
                             android:layout_marginStart="0dp"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="Hamad Khan"
+                            android:text="@string/hamad_khan"
                             android:textColor="@color/Black80"
                             android:textSize="22sp"
                             android:textStyle="bold" />
@@ -78,7 +78,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="0dp"
                             android:fontFamily="@font/poppins_regular"
-                            android:text="Research Officer"
+                            android:text="@string/research_officer"
                             android:textColor="@color/bluelight"
                             android:textSize="14sp" />
                     </LinearLayout>

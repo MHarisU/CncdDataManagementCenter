@@ -1,0 +1,14 @@
+[
+  {
+    name: "Filter"
+  },
+  {
+    name: "Non-Filter"
+  },
+  {
+    name: "Both"
+  },
+  {
+    name: "Not Answered"
+  }
+]

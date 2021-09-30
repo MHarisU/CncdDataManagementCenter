@@ -48,6 +48,8 @@ public class CallBackForm2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (GeneralUtils.getLanguage(CallBackForm2Activity.this).equals("ur"))
+            GeneralUtils.changeIntoUrdu(CallBackForm2Activity.this);
         setContentView(R.layout.activity_call_back_form2);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 

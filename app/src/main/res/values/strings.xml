@@ -20,11 +20,17 @@
     <string name="logout">LOGOUT</string>
     <string name="welcome_to_cncd_data_management_center">Welcome to CNCD Data Management Center</string>
     <string name="add_form">Add Form</string>
+    <string name="hamad_khan">Hamad Khan</string>
+    <string name="research_officer">Research Officer</string>
+
     <string name="edit_form">Edit Form</string>
     <string name="search_form">Search Form</string>
     <string name="delete_form">Delete Form</string>
     <string name="pgr">PGR</string>
+    <string name="english">ENGLISH</string>
+    <string name="urdu">URDU</string>
     <string name="select_type_of_form">Select Type of Form</string>
+    <string name="select_language">Select Language</string>
     <string name="call_back_study_questionnaire">CALL BACK STUDY QUESTIONNAIRE</string>
     <string name="promis">PROMIS</string>
     <string name="cad">CAD</string>
@@ -136,7 +142,7 @@
     <string name="gul">Gul</string>
     <string name="naas">Naas</string>
     <string name="if_yes_to_cigarettes_and_beedies">If Yes to Cigarettes and Beedies</string>
-    <string name="how_many_per_day">How many per day</string>
+    <string name="how_many_per_day">How many per day?</string>
     <string name="Brand">Brand</string>
     <string name="type_of_cigarettes">Type of Cigarettes</string>
     <string name="filter">Filter</string>
@@ -150,6 +156,33 @@
     <string name="how_many_years_patients_has_smoked">How many years patient has smoked?</string>
     <string name="if_yes_to_sheesha">If Yes to Sheesha</string>
     <string name="how_often_used">How often used?</string>
+    <string name="tambako_type">Tambako Type</string>
+    <string name="naswar_type">Naswar Type</string>
+
+    <string name="if_yes_to_paan">If Yes to Paan</string>
+    <string name="tambako">Tambako</string>
+    <string name="non_tambako">Non-tambako</string>
+
+    <string name="if_yes_to_gutka">If Yes to Gutka</string>
+
+    <string name="if_yes_to_supari">If Yes to Supari</string>
+
+    <string name="if_yes_to_naswar">If Yes to Naswar</string>
+    <string name="black">Black</string>
+    <string name="green">Green</string>
+    <string name="kashmiri">Kashmiri</string>
+    <string name="how_many_packets_per_day">How many packets per day?</string>
+
+    <string name="if_yes_to_gul">If Yes to Gul</string>
+
+    <string name="if_yes_to_naas">If Yes to Naas</string>
+
+    <string name="are_you_exposed_to_other_peoples_smoke">Are you exposed to other peoples smoke (Passive Smoke)</string>
+
+    <string name="never">Never</string>
+    <string name="work_place">Work Place</string>
+    <string name="home">Home</string>
+    <string name="with_friends">With Friends</string>
 
 
 

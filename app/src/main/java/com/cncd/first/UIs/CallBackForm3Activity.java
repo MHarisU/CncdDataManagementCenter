@@ -25,6 +25,8 @@ public class CallBackForm3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (GeneralUtils.getLanguage(CallBackForm3Activity.this).equals("ur"))
+            GeneralUtils.changeIntoUrdu(CallBackForm3Activity.this);
         setContentView(R.layout.activity_call_back_form3);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
@@ -90,5 +92,27 @@ public class CallBackForm3Activity extends AppCompatActivity {
     public void selectUsageTobacco(View view) {
         GeneralUtils.selectUsageTobacco(CallBackForm3Activity.this, view);
 
+    }
+
+    public void selectYesNoNot(View view) {
+        GeneralUtils.selectYesNoNotAnswered(CallBackForm3Activity.this, view);
+    }
+
+    public void selectFilterNonFilter(View view) {
+        GeneralUtils.selectFilteredNonFiltered(CallBackForm3Activity.this, view);
+
+    }
+
+    public void selectTambakoNonTambako(View view) {
+        GeneralUtils.selectTambakoNonTambako(CallBackForm3Activity.this, view);
+    }
+
+    public void selectTypeOfNaswar(View view) {
+        GeneralUtils.selectTypeOfNaswar(CallBackForm3Activity.this, view);
+
+    }
+
+    public void selectExposedToOtherSmoke(View view) {
+        GeneralUtils.selectExposedToOtherSmoke(CallBackForm3Activity.this, view);
     }
 }

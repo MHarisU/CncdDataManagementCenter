@@ -18,7 +18,7 @@
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form2.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form3.xml" value="0.33" />
-        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_pgrform.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_splash.xml" value="0.22" />
@@ -28,6 +28,7 @@
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/medication_row.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/search_medicine_dialog_layout.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/select_form_type_dialog_layout.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/select_language_dialog_layout.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form2.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form3.xml" value="0.30405405405405406" />
@@ -41,6 +42,7 @@
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/medication_row.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/search_medicine_dialog_layout.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/select_form_type_dialog_layout.xml" value="0.11216216216216217" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/select_language_dialog_layout.xml" value="0.30405405405405406" />
       </map>
     </option>
   </component>
