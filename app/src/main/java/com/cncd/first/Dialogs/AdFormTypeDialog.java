@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 import com.cncd.first.R;
 import com.cncd.first.UIs.CallBackFormActivity;
+import com.cncd.first.UIs.FamilySheetActivity;
 import com.cncd.first.UIs.PGRFormActivity;
 
 public class AdFormTypeDialog {
@@ -56,6 +57,21 @@ public class AdFormTypeDialog {
 
             }
         });
+
+
+
+        LinearLayout buttonFamilySheet = (LinearLayout) dialog.findViewById(R.id.buttonFamilySheet);
+        buttonFamilySheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, FamilySheetActivity.class));
+                dialog.dismiss();
+
+            }
+        });
+
+
+
 
 
         dialog.show();

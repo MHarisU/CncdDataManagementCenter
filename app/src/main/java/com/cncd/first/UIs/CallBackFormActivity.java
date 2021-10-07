@@ -59,7 +59,19 @@ public class CallBackFormActivity extends AppCompatActivity {
     }
 
     public void moveToSecondForm(View view) {
-        startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
+        //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
+
+        Intent intent = new Intent(this, CallBackForm2Activity.class);
+        startActivityForResult(intent, 1);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode == 1) {
+            this.finish();
+        }
     }
 
     public void CloseForm(View view) {

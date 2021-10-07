@@ -91,6 +91,7 @@
     <string name="recurrent_chest_infections">Recurrent Chest Infections</string>
     <string name="any_other_disease">Any other disease</string>
     <string name="continue_c">CONTINUE</string>
+    <string name="submit_c">SUBMIT</string>
     <string name="medication_history_16">16. MEDICATION HISTORY</string>
     <string name="add_f_c">ADD</string>
     <string name="add_new_medication">Add new medication</string>
@@ -126,8 +127,8 @@
     <string name="enter_occupation">Enter occupation</string>
 
 
-
     <string name="tobacco_usage_19">19. TOBACCO USAGE</string>
+    <string name="alcohol_consumption_20">20. ALCOHOL CONSUMPTION</string>
     <string name="which_best_describes_subjects_history_of_tobacco_use">Which best describes subjects history of tobacco use?</string>
     <string name="never_use">Never Use</string>
     <string name="does_did_the_patient_use_following_tobacco">Does/did the patient use any of the following tobacco products?</string>
@@ -185,6 +186,100 @@
     <string name="with_friends">With Friends</string>
 
 
+    <string name="has_the_subject_ever_had_drink_of_beer">Has the subject ever had a drink of beer, wine, or any other Alcoholic Beverage</string>
+    <string name="for_women_only">21. FOR WOMEN ONLY - QUESTIONS</string>
+    <string name="state_of_subject">State of subject</string>
+    <string name="pre_menopausal">Pre-menopausal</string>
+    <string name="peri_menopausal">Peri-menopausal</string>
+    <string name="post_menopausal">Post-menopausal</string>
+    <string name="has_the_subject_had_menstrual_period">Has the subject had a menstrual period in the last 12 months</string>
+    <string name="at_what_age_did_they_stop">At what age did they stop?</string>
+    <string name="why_did_they_stop">Why did they stop?</string>
+    <string name="menopause">Menopause</string>
+    <string name="hysterectomy">Hysterectomy</string>
+    <string name="radiation">Radiation</string>
+    <string name="other_s">Other</string>
+    <string name="have_you_ever_used_female_hormone_replacements">Have you ever used female hormone replacements?</string>
+    <string name="have_you_ever_had_any_abortion">Have you ever had any abortion or miscarriage?</string>
+    <string name="if_yes_so_how_many_times">If Yes, so how many times?</string>
+    <string name="have_you_ever_had_eclampsia">Have you ever had Eclampsia, Pre-eclampsia or high blood pressure complication during pregnancy?</string>
+    <string name="have_you_ever_develop_gestational_diabetes">Have you ever develop gestational diabetes during pregnancy?</string>
+    <string name="have_you_ever_delivered_premature_baby">Have you ever delivered premature birth to baby?</string>
+
+
+    <string name="age_in_years">Age in Years</string>
+    <string name="number">Number</string>
+
+    <string name="physical_examination">22. PHYSICAL EXAMINATION</string>
+    <string name="systolic_blood_pressure">Systolic Blood Pressure</string>
+    <string name="mmhg">mmHg</string>
+    <string name="diastolic_blood_pressure">Diastolic Blood Pressure</string>
+    <string name="pulse">Pulse</string>
+    <string name="per_minute">(Per Minute)</string>
+    <string name="temperature">Temperature</string>
+    <string name="f">(°F)</string>
+    <string name="waist_standing">Waist Standing</string>
+    <string name="cm">CM</string>
+    <string name="hip_standing">Hip Standing</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="kg">KG</string>
+
+
+    <string name="abi_examination">23. ABI - EXAMINATION</string>
+    <string name="important_before_measuring_abi_please_allow_the_patient_to_lay_down">Important: Before measuring ABI please allow the patient to lay down for atleast 15 minutes</string>
+    <string name="date_and_time_of_test">Date and Time of Test</string>
+    <string name="right_side">Right Side</string>
+    <string name="result">Result</string>
+    <string name="left_side">Left Side</string>
+    <string name="abi">ABI</string>
+    <string name="abi_result">ABI Result</string>
+    <string name="arm_pressure">Arm Pressure (mmHg)</string>
+    <string name="ankle_pressure">Ankle Pressure (mmHg)</string>
+    <string name="arm_pressure_result">Arm Pressure (mmHg) Result</string>
+    <string name="ankle_pressure_result">Ankle Pressure (mmHg) Result</string>
+
+    <string name="body_composition_analysis">24. BODY COMPOSITION ANALYSIS</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="clothes_weight">Clothes Weight</string>
+    <string name="body_type">Body Type</string>
+    <string name="standard">Standard</string>
+    <string name="athletic">Athletic</string>
+    <string name="bmi">BMI</string>
+    <string name="gm">GM</string>
+    <string name="fat_composition">Fat Composition</string>
+    <string name="percentage">%</string>
+    <string name="impedance">Impedance</string>
+    <string name="ohm">Ω</string>
+    <string name="fat_mass">Fat Mass</string>
+    <string name="bmr">BMR</string>
+    <string name="kj">KJ</string>
+    <string name="k_cal">K.Cal</string>
+    <string name="ffm">FFM</string>
+    <string name="tbw">TBW</string>
+    <string name="desirable_range">Desirable Range</string>
+    <string name="fat">Fat</string>
+    <string name="thank_you_c">THANK YOU</string>
+
+
+    <string name="family_data_form_c">FAMILY DATA FORM</string>
+    <string name="name_of_call_back_participant">Name of the Call Back Participant</string>
+    <string name="ref_point">Ref. Point</string>
+    <string name="family_study_id">Family Study ID</string>
+    <string name="_search_participant_with_family_study_id">Search participant with Family Study ID</string>
+    <string name="address">Address</string>
+    <string name="cnic_no">CNIC No.</string>
+    <string name="cell_no">Cell No.</string>
+    <string name="whatsapp_no">Whatsapp No.</string>
+    <string name="email_id">Email ID</string>
+    <string name="subject_id">Subject ID</string>
+    <string name="name">Name</string>
+    <string name="father_husband">Father / Husband</string>
+    <string name="relationship_with_cb_participant">Relationship with Call Back participant</string>
+    <string name="relationship_with_spouse">Relationship with spouse</string>
+    <string name="other_participating_subjects">OTHER PARTICIPATING SUBJECTS</string>
+    <string name="no_subjects_added">No Subjects Added</string>
 
 
     <!-- numbers -->
@@ -219,9 +314,6 @@
     <string name="n28">28.</string>
     <string name="n29">29.</string>
     <string name="n30">30.</string>
-
-
-
 
 
 </resources>

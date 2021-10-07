@@ -1,0 +1,17 @@
+[
+  {
+    name: "Menopausal"
+  },
+  {
+    name: "Hysterectomy"
+  },
+  {
+    name: "Radiation"
+  },
+  {
+    name: "Other"
+  },
+  {
+    name: "Not Answered"
+  }
+]

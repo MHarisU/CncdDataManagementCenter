@@ -10,22 +10,20 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.First">
         <activity
+            android:name=".UIs.FamilySheetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UIs.CallBackForm4Activity"
+            android:exported="true" />
+        <activity
             android:name=".UIs.CallBackForm3Activity"
-            android:exported="true" >
-
-
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".UIs.CallBackForm2Activity"
             android:exported="true" />
         <activity
             android:name=".UIs.CallBackFormActivity"
-            android:exported="true">
-
-
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".UIs.PGRFormActivity"
             android:exported="true" />
@@ -35,15 +33,11 @@
         <activity
             android:name=".UIs.SplashActivity"
             android:exported="true">
-
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".UIs.MainActivity"

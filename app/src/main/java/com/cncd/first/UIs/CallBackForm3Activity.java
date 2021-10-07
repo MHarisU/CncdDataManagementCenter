@@ -2,6 +2,7 @@ package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -114,5 +115,23 @@ public class CallBackForm3Activity extends AppCompatActivity {
 
     public void selectExposedToOtherSmoke(View view) {
         GeneralUtils.selectExposedToOtherSmoke(CallBackForm3Activity.this, view);
+    }
+
+    public void moveToFourthForm(View view) {
+        //startActivity(new Intent(CallBackForm3Activity.this, CallBackForm4Activity.class));
+        //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
+
+        Intent intent = new Intent(this, CallBackForm4Activity.class);
+        startActivityForResult(intent, 1);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode == 1) {
+            this.setResult(1);
+            this.finish();
+        }
     }
 }

@@ -440,5 +440,81 @@ public class GeneralUtils {
 
     }
 
+    public static void selectStateOfWomenSubject(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "state_of_women_subject.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+
+    public static void selectWhyDidPeriodsStop(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "why_did_periods_stop.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+    public static void selectBodyType(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "body_type.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
 
 }

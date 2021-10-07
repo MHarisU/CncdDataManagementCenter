@@ -318,9 +318,22 @@ public class CallBackForm2Activity extends AppCompatActivity {
     }
 
     public void moveToThirdForm(View view) {
-        startActivity(new Intent(CallBackForm2Activity.this, CallBackForm3Activity.class));
+        //startActivity(new Intent(CallBackForm2Activity.this, CallBackForm3Activity.class));
+        //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
+
+        Intent intent = new Intent(this, CallBackForm3Activity.class);
+        startActivityForResult(intent, 1);
+
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode == 1) {
+            this.setResult(1);
+            this.finish();
+        }
+    }
     public void selectMaritalStatus(View view) {
         GeneralUtils.selectMaritalStatus(CallBackForm2Activity.this, view);
 

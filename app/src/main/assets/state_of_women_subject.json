@@ -1,0 +1,14 @@
+[
+  {
+    name: "Pre-Menopausal"
+  },
+  {
+    name: "Peri-Menopausal"
+  },
+  {
+    name: "Post-Menopausal"
+  },
+  {
+    name: "Not Answered"
+  }
+]
