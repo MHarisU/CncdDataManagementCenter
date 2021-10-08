@@ -1,0 +1,14 @@
+[
+  {
+    name: "First Cousin"
+  },
+  {
+    name: "Second Cousin"
+  },
+  {
+    name: "Other"
+  },
+  {
+    name: "No Relationship"
+  }
+]

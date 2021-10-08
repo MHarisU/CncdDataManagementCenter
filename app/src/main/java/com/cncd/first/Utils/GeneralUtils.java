@@ -16,6 +16,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.cncd.first.UIs.CallBackForm3Activity;
+import com.cncd.first.UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity;
 
 import java.util.List;
 import java.util.Locale;
@@ -47,6 +48,24 @@ public class GeneralUtils {
         builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
+            }
+        });
+        builder.setIcon(android.R.drawable.ic_dialog_info);
+
+        AlertDialog alert1 = builder.create();
+        alert1.show();
+    }
+
+    public static void alertDialogBoxSimpleCloseActivity(Context context, String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setCancelable(false);
+        builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                if(context instanceof RecruitmentGeneralExclusionAndSpecificDiseaseActivity){
+                    ((RecruitmentGeneralExclusionAndSpecificDiseaseActivity)context).finish(); }
             }
         });
         builder.setIcon(android.R.drawable.ic_dialog_info);
@@ -257,6 +276,108 @@ public class GeneralUtils {
         menu.show(); //showing popup menu
 
     }
+
+
+    public static void selectRelation(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "relations.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+               /* if (item.getTitle().equals("Edit Account")) {
+                    Intent intent = new Intent(PatientProfileActivity.this, EditProfileActivity.class);
+                    intent.putExtra("first_name", name);
+                    intent.putExtra("last_name", last_name);
+                    intent.putExtra("date", date_of_birth);
+                    intent.putExtra("email", email);
+                    intent.putExtra("phone", phone_number);
+                    intent.putExtra("address", office_address);
+                    startActivity(intent);
+
+                }
+                if (item.getTitle().equals("Change Profile")) {
+                    Intent intent = new Intent(PatientProfileActivity.this, UploadProfileActivity.class);
+                    intent.putExtra("image", user_image);
+                    startActivity(intent);
+
+                }
+                if (item.getTitle().equals("Change Password")) {
+                    Intent intent = new Intent(PatientProfileActivity.this, ChangePasswordActivity.class);
+                    startActivity(intent);
+
+                }*/
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+
+    public static void selectRelationExtra(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "relations_extra.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+               /* if (item.getTitle().equals("Edit Account")) {
+                    Intent intent = new Intent(PatientProfileActivity.this, EditProfileActivity.class);
+                    intent.putExtra("first_name", name);
+                    intent.putExtra("last_name", last_name);
+                    intent.putExtra("date", date_of_birth);
+                    intent.putExtra("email", email);
+                    intent.putExtra("phone", phone_number);
+                    intent.putExtra("address", office_address);
+                    startActivity(intent);
+
+                }
+                if (item.getTitle().equals("Change Profile")) {
+                    Intent intent = new Intent(PatientProfileActivity.this, UploadProfileActivity.class);
+                    intent.putExtra("image", user_image);
+                    startActivity(intent);
+
+                }
+                if (item.getTitle().equals("Change Password")) {
+                    Intent intent = new Intent(PatientProfileActivity.this, ChangePasswordActivity.class);
+                    startActivity(intent);
+
+                }*/
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+
 
 
     public static void selectEmploymentStatus(Context context, View view) {
@@ -515,6 +636,35 @@ public class GeneralUtils {
         menu.show(); //showing popup menu
 
     }
+
+
+
+    public static void selectRelationWithSpouse(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "relation_with_spouse.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+
 
 
 }

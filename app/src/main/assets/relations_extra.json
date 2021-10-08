@@ -1,0 +1,35 @@
+[
+  {
+    name: "Father"
+  },
+  {
+    name: "Mother"
+  },
+  {
+    name: "Wife"
+  },
+  {
+    name: "Brother"
+  },
+  {
+    name: "Sister"
+  },
+  {
+    name: "Son"
+  },
+  {
+    name: "Daughter"
+  },
+  {
+    name: "Cousin"
+  },
+  {
+    name: "Uncle"
+  },
+  {
+    name: "Aunt"
+  },
+  {
+    name: "Other"
+  }
+]

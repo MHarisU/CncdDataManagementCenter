@@ -28,6 +28,8 @@
     <string name="search_form">فارم تلاش کریں</string>
     <string name="delete_form">فارم ختم کریں</string>
     <string name="pgr">پی جی آر</string>
+    <string name="hospital_recruitment">HOSPITAL RECRUITMENT</string>
+    <string name="callback_recruitment">CALL BACK RECRUITMENT</string>
     <string name="english">انگریزی</string>
     <string name="urdu">اردو</string>
     <string name="select_type_of_form">فارم منتخب کریں</string>
@@ -96,6 +98,7 @@
     <string name="medication_history_16">۱٦. ادویات کا ریکارڈ</string>
     <string name="add_f_c">شامل کریں</string>
     <string name="add_new_medication">نئی دوا شامل کریں</string>
+    <string name="add_new_participant">Add new Participant</string>
     <string name="enter_drug_name">دوا کا نام درج کریں</string>
     <string name="enter_generic_name">دوا کا عام نام درج کریں</string>
     <string name="duration">دورانیہ</string>
@@ -126,7 +129,6 @@
     <string name="number_of_years_education_completed_by_subject">مریض کے تعلیمی سالوں کی کل تعداد؟</string>
     <string name="occupation_of_the_subject">مریض کا پیشہ؟</string>
     <string name="enter_occupation">پیشہ درج کریں</string>
-
 
 
     <string name="tobacco_usage_19">۱۹. ٹوباکو کا استعمال</string>
@@ -161,7 +163,6 @@
     <string name="how_often_used">مریض اسے کتنی بار استعمال کرتا ہے؟</string>
     <string name="tambako_type">Tambako Type</string>
     <string name="naswar_type">Naswar Type</string>
-
 
 
     <string name="if_yes_to_paan">If Yes to Paan</string>
@@ -230,7 +231,6 @@
     <string name="kg">KG</string>
 
 
-
     <string name="abi_examination">23. ABI - EXAMINATION</string>
     <string name="important_before_measuring_abi_please_allow_the_patient_to_lay_down">Important: Before measuring ABI please allow the patient to lay down for atleast 15 minutes</string>
     <string name="date_and_time_of_test">Date and Time of Test</string>
@@ -243,8 +243,6 @@
     <string name="ankle_pressure">Ankle Pressure (mmHg)</string>
     <string name="arm_pressure_result">Arm Pressure (mmHg) Result</string>
     <string name="ankle_pressure_result">Ankle Pressure (mmHg) Result</string>
-
-
 
 
     <string name="body_composition_analysis">24. BODY COMPOSITION ANALYSIS</string>
@@ -269,7 +267,6 @@
     <string name="desirable_range">Desirable Range</string>
     <string name="fat">Fat</string>
     <string name="thank_you_c">THANK YOU</string>
-
 
 
     <string name="family_data_form_c">FAMILY DATA FORM</string>
@@ -323,9 +320,6 @@
     <string name="n28">۲۸.</string>
     <string name="n29">۲۹.</string>
     <string name="n30">۳۰.</string>
-
-
-
 
 
 </resources>

@@ -12,6 +12,7 @@ import com.cncd.first.R;
 import com.cncd.first.UIs.CallBackFormActivity;
 import com.cncd.first.UIs.FamilySheetActivity;
 import com.cncd.first.UIs.PGRFormActivity;
+import com.cncd.first.UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity;
 
 public class AdFormTypeDialog {
 
@@ -65,6 +66,19 @@ public class AdFormTypeDialog {
             @Override
             public void onClick(View view) {
                 context.startActivity(new Intent(context, FamilySheetActivity.class));
+                dialog.dismiss();
+
+            }
+        });
+
+
+
+
+        LinearLayout buttonRecruitment = (LinearLayout) dialog.findViewById(R.id.buttonHospitalRecruitment);
+        buttonRecruitment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, RecruitmentGeneralExclusionAndSpecificDiseaseActivity.class));
                 dialog.dismiss();
 
             }

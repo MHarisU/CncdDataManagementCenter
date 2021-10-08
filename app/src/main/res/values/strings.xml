@@ -27,6 +27,8 @@
     <string name="search_form">Search Form</string>
     <string name="delete_form">Delete Form</string>
     <string name="pgr">PGR</string>
+    <string name="hospital_recruitment">HOSPITAL RECRUITMENT</string>
+    <string name="callback_recruitment">CALL BACK RECRUITMENT</string>
     <string name="english">ENGLISH</string>
     <string name="urdu">URDU</string>
     <string name="select_type_of_form">Select Type of Form</string>
@@ -95,6 +97,7 @@
     <string name="medication_history_16">16. MEDICATION HISTORY</string>
     <string name="add_f_c">ADD</string>
     <string name="add_new_medication">Add new medication</string>
+    <string name="add_new_participant">Add new Participant</string>
     <string name="enter_drug_name">Enter Drug Name</string>
     <string name="enter_generic_name">Enter Generic Name</string>
     <string name="duration">Duration</string>

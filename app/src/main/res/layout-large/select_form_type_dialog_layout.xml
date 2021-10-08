@@ -175,6 +175,65 @@
 
 
         <LinearLayout
+            android:id="@+id/buttonHospitalRecruitment"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="0dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_log_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="0sp"
+                android:background="@color/Transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="@string/hospital_recruitment"
+                android:textColor="@color/Black80"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="0dp"
+                    android:padding="17dp"
+                    android:src="@drawable/ic_arrow_forward_gray" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray50"/>
+
+
+
+        <LinearLayout
             android:id="@+id/buttonPgr"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
