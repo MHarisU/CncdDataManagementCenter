@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -29,13 +33,14 @@ public class FamilySheetActivity extends AppCompatActivity {
     LinearLayout layoutAddNewSubjects;
     ImageView closeAddNewSubject, closeAddNewFamily;
 
-    EditText subjectIDEdit, subjectNameEdit, subjectFatherHusbandEdit, subjectAge;
+    EditText searchParticipantIdEditText, subjectIDEdit, subjectNameEdit, subjectFatherHusbandEdit, subjectAge;
     TextView relationshipWithCallBack, relationshipWithSpouse;
     RadioButton radio1_s, radio2_s;
 
 
     RecyclerView subjectsRecycler;
     ArrayList<ParticipantSubjectList> subjectsLists;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +82,63 @@ public class FamilySheetActivity extends AppCompatActivity {
         relationshipWithSpouse = findViewById(R.id.relationshipWithSpouse);
         radio1_s = findViewById(R.id.radio1_s);
         radio2_s = findViewById(R.id.radio2_s);
+
+        searchParticipantIdEditText = findViewById(R.id.searchParticipantIdEditText);
+        searchParticipantIdEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String txt = searchParticipantIdEditText.getText().toString();
+                if (txt.length() > 4) {
+                    ProgressDialog dialog = new ProgressDialog(FamilySheetActivity.this);
+                    dialog.setMessage("Please wait loading participant details");
+                    dialog.setIndeterminate(true);
+                    dialog.show();
+                    GeneralUtils.hideSoftKeyboard(FamilySheetActivity.this, searchParticipantIdEditText);
+
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            dialog.dismiss();
+                            LoadInfo();
+                        }
+                    },3000);
+
+
+                }
+
+            }
+        });
+
+
+    }
+
+    private void LoadInfo() {
+        TextView participantName = findViewById(R.id.participantName);
+        TextView participantAddress = findViewById(R.id.participantAddress);
+        TextView participantPhone = findViewById(R.id.participantPhone);
+        TextView participantWhatsapp = findViewById(R.id.participantWhatsapp);
+        TextView participantAge = findViewById(R.id.participantAge);
+        TextView participantCnic = findViewById(R.id.participantCnic);
+
+        participantName.setText("Ali Khan");
+        participantAddress.setText("House No. 24/1, Defence View, Near Iqra University, Main Service Road, Karachi");
+        participantPhone.setText("+923473647030");
+        participantWhatsapp.setText("+923473647030");
+        participantAge.setText("43 Years");
+        participantCnic.setText("45403-2947846-2");
+
     }
 
     public void CloseForm(View view) {
@@ -109,12 +171,9 @@ public class FamilySheetActivity extends AppCompatActivity {
         String subjectRelationWithCallback = relationshipWithCallBack.getText().toString();
         String subjectRelationWithSpouse = relationshipWithSpouse.getText().toString();
 
-        if(radio1_s.isChecked())
-        {
+        if (radio1_s.isChecked()) {
             gender = "Male";
-        }
-        else if(radio2_s.isChecked())
-        {
+        } else if (radio2_s.isChecked()) {
             gender = "Female";
         }
 
@@ -129,7 +188,7 @@ public class FamilySheetActivity extends AppCompatActivity {
                         && subjectRelationWithSpouse != null && !subjectRelationWithSpouse.equals("")
         ) {
 
-                subjectsLists.add(new ParticipantSubjectList(subjectID, subjectName, subjectFatherHusband, subjectAgeString, gender, subjectRelationWithCallback, subjectRelationWithSpouse));
+            subjectsLists.add(new ParticipantSubjectList(subjectID, subjectName, subjectFatherHusband, subjectAgeString, gender, subjectRelationWithCallback, subjectRelationWithSpouse));
 
 
             //medicationLists.notify();

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UIs.MICaseExclusionInclusionCriteriaActivity">
+    tools:context=".UIs.HfCaseExcIncCriteriaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Myocardial Infarction Case Exclusion &amp; Inclusion Criteria"
+                android:text="Heart Failure Case Exclusion &amp; Inclusion Criteria"
                 android:textColor="@color/White"
                 android:textSize="22dp" />
 
@@ -55,7 +55,7 @@
 
 
         <LinearLayout
-            android:id="@+id/layoutMIExclusion"
+            android:id="@+id/layoutHFExclusion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -84,7 +84,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:text="MI Case Exclusion Criteria"
+                        android:text="HF Case Exclusion Criteria"
                         android:textColor="@color/White"
                         android:textSize="18dp" />
 
@@ -140,7 +140,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
-                    android:onClick="mIExclusionYes"
+                    android:onClick="HfExclusionYes"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
 
@@ -201,7 +201,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
-                    android:onClick="mIExclusionNo"
+                    android:onClick="HfExclusionNo"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
 
@@ -260,7 +260,7 @@
 
         <LinearLayout
             android:visibility="visible"
-            android:id="@+id/layoutMIInclusion"
+            android:id="@+id/layoutHFInclusion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -309,7 +309,7 @@
                             android:layout_marginBottom="20dp"
                             android:fontFamily="@font/poppins_regular"
                             android:padding="10dp"
-                            android:text="1 -  This is my first ever acute myocardial infarction"
+                            android:text="1 -  I have clinical symptoms suggestive of acute/chronic heart failure."
                             android:textSize="18sp" />
 
                         <RadioGroup
@@ -350,10 +350,53 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:text="2 -  I have ECG changes suggestive of systolic heart failure"
+                            android:textSize="18sp" />
+
+                        <RadioGroup
+
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:layout_marginEnd="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no" />
+                        </RadioGroup>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
                             android:layout_marginBottom="0dp"
                             android:fontFamily="@font/poppins_regular"
                             android:padding="10dp"
-                            android:text="2 -  I have 1 mm ST elevation in any 2 or more contiguous limb leads"
+                            android:text="3 -  My ejection fraction on echocardiography is less than 40%"
                             android:textSize="18sp" />
 
                         <RadioGroup

@@ -184,35 +184,12 @@ public class CallBackForm2Activity extends AppCompatActivity {
 
         PopupMenu menu = LoadListToMenu.loadMenu(CallBackForm2Activity.this, list, view);
 
-
         //registering popup with OnMenuItemClickListener
         menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             public boolean onMenuItemClick(MenuItem item) {
 
                 medConditionEdit.setText(item.getTitle().toString());
 
-               /* if (item.getTitle().equals("Edit Account")) {
-                    Intent intent = new Intent(PatientProfileActivity.this, EditProfileActivity.class);
-                    intent.putExtra("first_name", name);
-                    intent.putExtra("last_name", last_name);
-                    intent.putExtra("date", date_of_birth);
-                    intent.putExtra("email", email);
-                    intent.putExtra("phone", phone_number);
-                    intent.putExtra("address", office_address);
-                    startActivity(intent);
-
-                }
-                if (item.getTitle().equals("Change Profile")) {
-                    Intent intent = new Intent(PatientProfileActivity.this, UploadProfileActivity.class);
-                    intent.putExtra("image", user_image);
-                    startActivity(intent);
-
-                }
-                if (item.getTitle().equals("Change Password")) {
-                    Intent intent = new Intent(PatientProfileActivity.this, ChangePasswordActivity.class);
-                    startActivity(intent);
-
-                }*/
 
                 return true;
             }

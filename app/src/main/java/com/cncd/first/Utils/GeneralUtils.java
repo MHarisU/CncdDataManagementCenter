@@ -16,6 +16,8 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.cncd.first.UIs.CallBackForm3Activity;
+import com.cncd.first.UIs.HfCaseExcIncCriteriaActivity;
+import com.cncd.first.UIs.MICaseExclusionInclusionCriteriaActivity;
 import com.cncd.first.UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity;
 
 import java.util.List;
@@ -66,6 +68,12 @@ public class GeneralUtils {
                 dialog.dismiss();
                 if(context instanceof RecruitmentGeneralExclusionAndSpecificDiseaseActivity){
                     ((RecruitmentGeneralExclusionAndSpecificDiseaseActivity)context).finish(); }
+
+                if(context instanceof MICaseExclusionInclusionCriteriaActivity){
+                    ((MICaseExclusionInclusionCriteriaActivity)context).finish(); }
+
+                if(context instanceof HfCaseExcIncCriteriaActivity){
+                    ((HfCaseExcIncCriteriaActivity)context).finish(); }
             }
         });
         builder.setIcon(android.R.drawable.ic_dialog_info);

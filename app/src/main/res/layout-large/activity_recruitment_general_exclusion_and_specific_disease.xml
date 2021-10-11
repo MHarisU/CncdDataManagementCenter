@@ -311,7 +311,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:text="Type of Disease"
+                        android:text="Type of Recruitment"
                         android:textColor="@color/White"
                         android:textSize="18dp" />
 
@@ -325,7 +325,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="20sp"
-                        android:text="Please select type of disease"
+                        android:text="Please select type of recruitment"
                         android:padding="10dp"/>
 
 
@@ -344,7 +344,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="diseaseTypeCase"
+                            android:onClick="selectMICase"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -376,16 +376,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_yes" />
 
 
                                 </RelativeLayout>
@@ -438,16 +428,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_exit_white" />
 
 
                                 </RelativeLayout>
@@ -501,7 +481,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:text="Type of Case"
+                        android:text="Type of Disease"
                         android:textColor="@color/White"
                         android:textSize="18dp" />
 
@@ -515,7 +495,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
                         android:textSize="20sp"
-                        android:text="Please select type of case"
+                        android:text="Please select type of disease"
                         android:padding="10dp"/>
 
 
@@ -535,7 +515,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="selectMICase"
+                            android:onClick="diseaseTypeCase"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -567,16 +547,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_yes" />
 
 
                                 </RelativeLayout>
@@ -631,16 +601,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_exit_white" />
 
 
                                 </RelativeLayout>
@@ -694,16 +654,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_exit_white" />
 
 
                                 </RelativeLayout>
@@ -766,16 +716,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_yes" />
 
 
                                 </RelativeLayout>
@@ -829,16 +769,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_exit_white" />
 
 
                                 </RelativeLayout>
@@ -892,16 +822,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_exit_white" />
 
 
                                 </RelativeLayout>
@@ -963,16 +883,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_yes" />
 
 
                                 </RelativeLayout>
@@ -1026,16 +936,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_exit_white" />
 
 
                                 </RelativeLayout>
@@ -1089,16 +989,6 @@
                                         android:textStyle="bold" />
 
 
-                                    <ImageView
-
-                                        android:visibility="gone"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentEnd="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginEnd="0dp"
-                                        android:padding="5dp"
-                                        android:src="@drawable/ic_exit_white" />
 
 
                                 </RelativeLayout>

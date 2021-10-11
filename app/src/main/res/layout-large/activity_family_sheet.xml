@@ -71,6 +71,7 @@
 
 
                 <EditText
+                    android:id="@+id/searchParticipantIdEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20sp"
@@ -186,6 +187,7 @@
                         app:cardElevation="0dp">
 
                         <TextView
+                            android:id="@+id/participantName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
@@ -208,6 +210,7 @@
                     app:cardElevation="0dp">
 
                     <TextView
+                        android:id="@+id/participantAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bttn_drk_stroke"
@@ -232,6 +235,7 @@
                         app:cardElevation="0dp">
 
                         <TextView
+                            android:id="@+id/participantPhone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
@@ -251,6 +255,7 @@
                         app:cardElevation="0dp">
 
                         <TextView
+                            android:id="@+id/participantWhatsapp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
@@ -278,6 +283,7 @@
                         app:cardElevation="0dp">
 
                         <TextView
+                            android:id="@+id/participantAge"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
@@ -341,6 +347,7 @@
                         app:cardElevation="0dp">
 
                         <TextView
+                            android:id="@+id/participantCnic"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"

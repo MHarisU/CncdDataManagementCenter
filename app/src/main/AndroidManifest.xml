@@ -10,13 +10,14 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.First">
         <activity
+            android:name=".UIs.HfCaseExcIncCriteriaActivity"
+            android:exported="true" />
+        <activity
             android:name=".UIs.MICaseExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
             android:name=".UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".UIs.FamilySheetActivity"
             android:exported="true" />
@@ -41,13 +42,11 @@
         <activity
             android:name=".UIs.SplashActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".UIs.MainActivity"
