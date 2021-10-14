@@ -344,7 +344,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="selectMICase"
+                            android:onClick="selectCase"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -396,7 +396,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="diseaseTypeCase"
+                            android:onClick="diseaseTypeMI"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -515,7 +515,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="diseaseTypeCase"
+                            android:onClick="diseaseTypeMI"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -568,7 +568,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
+                            android:onClick="diseaseTypeHF"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -622,7 +622,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
+                            android:onClick="diseaseTypeStroke"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -684,7 +684,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionYes"
+                            android:onClick="diseaseTypeNAFLD"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -737,7 +737,7 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
+                            android:onClick="diseaseTypeT2D"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 

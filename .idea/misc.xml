@@ -25,9 +25,12 @@
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_micase_exclusion_inclusion_criteria.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_nafldcase_exclu_inclu_criteria.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_pgrform.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_recruitment_general_exclusion_and_specific_disease.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_splash.xml" value="0.22" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_stroke_case_exclu_inclu_criteria.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_type_two_diabetes_exclu_inclu_criteria.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/family_row.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/fragment_fragment1.xml" value="0.32958984375" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/fragment_fragment2.xml" value="0.25" />
@@ -46,8 +49,11 @@
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_main2.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_micase_exclusion_inclusion_criteria.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_nafldcase_exclu_inclu_criteria.xml" value="0.29234234234234235" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_recruitment_general_exclusion_and_specific_disease.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_splash.xml" value="0.3515625" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_stroke_case_exclu_inclu_criteria.xml" value="0.30405405405405406" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_type_two_diabetes_exclu_inclu_criteria.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/family_row.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/fragment_fragment1.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/fragment_fragment2.xml" value="0.25" />

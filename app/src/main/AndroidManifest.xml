@@ -10,6 +10,15 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.First">
         <activity
+            android:name=".UIs.TypeTwoDiabetesExcluIncluCriteriaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UIs.NAFLDCaseExcluIncluCriteriaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UIs.StrokeCaseExcluIncluCriteriaActivity"
+            android:exported="true" />
+        <activity
             android:name=".UIs.HfCaseExcIncCriteriaActivity"
             android:exported="true" />
         <activity
@@ -17,7 +26,7 @@
             android:exported="true" />
         <activity
             android:name=".UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".UIs.FamilySheetActivity"
             android:exported="true" />

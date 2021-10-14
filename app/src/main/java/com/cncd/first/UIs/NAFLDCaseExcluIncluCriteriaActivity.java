@@ -12,43 +12,41 @@ import android.widget.LinearLayout;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 
-public class HfCaseExcIncCriteriaActivity extends AppCompatActivity {
+public class NAFLDCaseExcluIncluCriteriaActivity extends AppCompatActivity {
 
-    LinearLayout layoutHFExclusion, layoutHFInclusion;
+    LinearLayout layoutNAFLDExclusion, layoutNAFLDInclusion;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hf_case_exc_inc_criteria);
+        setContentView(R.layout.activity_nafldcase_exclu_inclu_criteria);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
 
         loadUI();
 
-
     }
 
     private void loadUI() {
-        layoutHFExclusion = findViewById(R.id.layoutHFExclusion);
-        layoutHFInclusion = findViewById(R.id.layoutHFInclusion);
+        layoutNAFLDExclusion = findViewById(R.id.layoutNAFLDExclusion);
+        layoutNAFLDInclusion = findViewById(R.id.layoutNAFLDInclusion);
     }
 
     public void CloseForm(View view) {
         finish();
     }
 
-    public void HfExclusionYes(View view) {
-        GeneralUtils.alertDialogBoxSimpleCloseActivity(HfCaseExcIncCriteriaActivity.this, "Info", "This case can not be registered");
-
+    public void NAFLDExclusionYes(View view) {
+        GeneralUtils.alertDialogBoxSimpleCloseActivity(this, "Info", "This case can not be registered");
     }
 
-    public void HfExclusionNo(View view) {
+    public void NAFLDExclusionNo(View view) {
 
-        layoutHFExclusion.setVisibility(View.GONE);
-        layoutHFInclusion.setVisibility(View.VISIBLE);
+        layoutNAFLDExclusion.setVisibility(View.GONE);
+        layoutNAFLDInclusion.setVisibility(View.VISIBLE);
         Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_in_bottom);
-        layoutHFInclusion.startAnimation(slide_up);
+        layoutNAFLDInclusion.startAnimation(slide_up);
     }
 }

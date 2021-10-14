@@ -12,15 +12,15 @@ import android.widget.LinearLayout;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 
-public class HfCaseExcIncCriteriaActivity extends AppCompatActivity {
+public class StrokeCaseExcluIncluCriteriaActivity extends AppCompatActivity {
 
-    LinearLayout layoutHFExclusion, layoutHFInclusion;
+    LinearLayout layoutStrokeExclusion, layoutStrokeInclusion;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hf_case_exc_inc_criteria);
+        setContentView(R.layout.activity_stroke_case_exclu_inclu_criteria);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
 
@@ -30,25 +30,25 @@ public class HfCaseExcIncCriteriaActivity extends AppCompatActivity {
     }
 
     private void loadUI() {
-        layoutHFExclusion = findViewById(R.id.layoutHFExclusion);
-        layoutHFInclusion = findViewById(R.id.layoutHFInclusion);
+        layoutStrokeExclusion = findViewById(R.id.layoutStrokeExclusion);
+        layoutStrokeInclusion = findViewById(R.id.layoutStrokeInclusion);
     }
 
     public void CloseForm(View view) {
         finish();
     }
 
-    public void HfExclusionYes(View view) {
-        GeneralUtils.alertDialogBoxSimpleCloseActivity(HfCaseExcIncCriteriaActivity.this, "Info", "This case can not be registered");
+    public void StrokeExclusionYes(View view) {
+        GeneralUtils.alertDialogBoxSimpleCloseActivity(this, "Info", "This case can not be registered");
 
     }
 
-    public void HfExclusionNo(View view) {
+    public void StrokeExclusionNo(View view) {
 
-        layoutHFExclusion.setVisibility(View.GONE);
-        layoutHFInclusion.setVisibility(View.VISIBLE);
+        layoutStrokeExclusion.setVisibility(View.GONE);
+        layoutStrokeInclusion.setVisibility(View.VISIBLE);
         Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_in_bottom);
-        layoutHFInclusion.startAnimation(slide_up);
+        layoutStrokeInclusion.startAnimation(slide_up);
     }
 }

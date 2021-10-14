@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UIs.MICaseExclusionInclusionCriteriaActivity">
+    tools:context=".UIs.NAFLDCaseExcluIncluCriteriaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Myocardial Infarction Case Exclusion &amp; Inclusion Criteria"
+                android:text="Non-Alcoholic Fatty Liver Disease Case Exclusion &amp; Inclusion Criteria"
                 android:textColor="@color/White"
                 android:textSize="22dp" />
 
@@ -55,11 +55,10 @@
 
 
         <LinearLayout
-            android:id="@+id/layoutMIExclusion"
+            android:id="@+id/layoutNAFLDExclusion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
 
             <androidx.cardview.widget.CardView
@@ -84,7 +83,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:text="MI Case Exclusion Criteria"
+                        android:text="NAFLD Case Exclusion Criteria"
                         android:textColor="@color/White"
                         android:textSize="18dp" />
 
@@ -93,19 +92,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_regular"
-                        android:textSize="18sp"
-                        android:text="1 -  I have had a prior cardiac event"
-                        android:padding="10dp"/>
+                        android:padding="10dp"
+                        android:text="1 -  I have cirrhosis"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_regular"
-                        android:textSize="18sp"
-                        android:text="2 -  I have cardiogenic shock"
-                        android:padding="10dp"/>
+                        android:padding="10dp"
+                        android:text="2 -  I am HIV positive"
+                        android:textSize="18sp" />
 
-
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="10dp"
+                        android:text="3 -  I am on dialysis"
+                        android:textSize="18sp" />
 
 
                 </LinearLayout>
@@ -114,22 +119,21 @@
 
 
             <TextView
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_bold"
-                android:textSize="20sp"
+                android:padding="10dp"
                 android:text="If any of above is true select YES or NO"
-                android:padding="10dp"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
 
@@ -140,7 +144,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
-                    android:onClick="mIExclusionYes"
+                    android:onClick="NAFLDExclusionYes"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
 
@@ -201,7 +205,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
-                    android:onClick="mIExclusionNo"
+                    android:onClick="NAFLDExclusionNo"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
 
@@ -259,12 +263,11 @@
 
 
         <LinearLayout
-            android:visibility="gone"
-            android:id="@+id/layoutMIInclusion"
+            android:id="@+id/layoutNAFLDInclusion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:visibility="gone">
 
 
             <androidx.cardview.widget.CardView
@@ -289,7 +292,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:text="MI Case Inclusion Criteria"
+                        android:text="NAFLD Case Inclusion Criteria"
                         android:textColor="@color/White"
                         android:textSize="18dp" />
 
@@ -306,69 +309,26 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
-                            android:layout_marginBottom="20dp"
+                            android:layout_marginBottom="0dp"
                             android:fontFamily="@font/poppins_regular"
                             android:padding="10dp"
-                            android:text="1 -  This is my first ever acute myocardial infarction"
+                            android:text="1 -  I have fatty changes in liver on Ultrasound"
                             android:textSize="18sp" />
 
                         <RadioGroup
 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="20dp"
-                            android:layout_marginBottom="20dp"
                             android:layout_marginEnd="20dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0dp"
                             android:orientation="horizontal">
 
                             <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_marginEnd="20dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                android:text="@string/yes" />
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/no" />
-                        </RadioGroup>
-
-
-                    </RelativeLayout>
-
-
-                    <RelativeLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginBottom="0dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:padding="10dp"
-                            android:text="2 -  I have 1 mm ST elevation in any 2 or more contiguous limb leads"
-                            android:textSize="18sp" />
-
-                        <RadioGroup
-
-                            android:layout_marginBottom="0dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:layout_marginEnd="20dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
                                 android:checked="true"
                                 android:text="@string/yes" />
 
@@ -382,16 +342,17 @@
                     </RelativeLayout>
 
                     <LinearLayout
-                        android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/bttn_drk_stroke"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
 
                         <RelativeLayout
-                            android:layout_width="240dp"
+                            android:layout_width="330dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="0dp">
 
@@ -404,7 +365,7 @@
                                 android:background="@color/Transparent"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="start"
-                                android:text="Take ECG Picture"
+                                android:text="Take Ultrasound report Image"
                                 android:textColor="@color/Gray"
                                 android:textSize="18sp" />
 
@@ -426,10 +387,8 @@
                     </LinearLayout>
 
 
-
                     <RelativeLayout
 
-                        android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -439,25 +398,27 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
                             android:layout_marginBottom="0dp"
                             android:fontFamily="@font/poppins_regular"
                             android:padding="10dp"
-                            android:text="3 -  I have Non-ST elevation MI with Troponin positive"
+                            android:text="2 -  I have fatty changes in liver on fibro-scan"
                             android:textSize="18sp" />
 
                         <RadioGroup
 
-                            android:layout_marginBottom="0dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_alignParentEnd="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="0dp"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:layout_marginEnd="20dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginEnd="20dp"
                                 android:checked="true"
                                 android:text="@string/yes" />
 
@@ -470,18 +431,18 @@
 
                     </RelativeLayout>
 
-
                     <LinearLayout
-                        android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/bttn_drk_stroke"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
 
                         <RelativeLayout
-                            android:layout_width="240dp"
+                            android:layout_width="330dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="0dp">
 
@@ -494,7 +455,7 @@
                                 android:background="@color/Transparent"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="start"
-                                android:text="Take TP Test Picture"
+                                android:text="Take FibroScan report Image"
                                 android:textColor="@color/Gray"
                                 android:textSize="18sp" />
 
@@ -514,8 +475,6 @@
 
 
                     </LinearLayout>
-
-
 
 
 
@@ -526,8 +485,6 @@
 
 
         </LinearLayout>
-
-
 
 
     </LinearLayout>
