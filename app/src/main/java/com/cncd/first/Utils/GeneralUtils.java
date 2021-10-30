@@ -74,6 +74,9 @@ public class GeneralUtils {
 
                 if(context instanceof HfCaseExcIncCriteriaActivity){
                     ((HfCaseExcIncCriteriaActivity)context).finish(); }
+
+                if(context instanceof Activity){
+                    ((Activity)context).finish(); }
             }
         });
         builder.setIcon(android.R.drawable.ic_dialog_info);

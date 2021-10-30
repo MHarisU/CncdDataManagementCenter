@@ -1,6 +1,7 @@
 package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,16 +9,25 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
+import com.github.gcacace.signaturepad.views.SignaturePad;
 
 public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCompatActivity {
 
-    LinearLayout layoutGlobalExclusion, layoutSelectCaseControl, layoutSelectCaseType;
+    LinearLayout layoutGlobalExclusion, layoutSelectCaseControl, layoutSelectCaseType, layoutParticipant, layoutNameAge;
+
+    CardView consentCard;
 
     String disease;
+    String type;
+
+    SignaturePad mSignaturePad;
+
+    EditText participantAgeEdit;
 
 
     @Override
@@ -36,6 +46,13 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         layoutGlobalExclusion = findViewById(R.id.layoutGlobalExclusion);
         layoutSelectCaseControl = findViewById(R.id.layoutSelectCaseControl);
         layoutSelectCaseType = findViewById(R.id.layoutSelectCaseType);
+        layoutParticipant = findViewById(R.id.layoutParticipant);
+        layoutNameAge = findViewById(R.id.layoutNameAge);
+        consentCard = findViewById(R.id.consentCard);
+        mSignaturePad = (SignaturePad) findViewById(R.id.signature_pad);
+
+        participantAgeEdit = findViewById(R.id.participantAgeEdit);
+
 
     }
 
@@ -140,6 +157,55 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_in_bottom);
         layoutSelectCaseControl.startAnimation(slide_up);
+
+    }
+
+    public void selectControl(View view) {
+        Intent intent = null;
+        if (disease.equals("MI")){
+            intent = new Intent(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, MIControlExclusionInclusionCriteriaActivity.class);
+        }
+        else if (disease.equals("HF")){
+            intent = new Intent(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, HfControlExcIncCriteriaActivity.class);
+        }
+        else if (disease.equals("STR")){
+            intent = new Intent(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, StrokeControlExcluIncluCriteriaActivity.class);
+        }
+        else if (disease.equals("NAFLD")){
+            intent = new Intent(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, NAFLDControlExcluIncluCriteriaActivity.class);
+        }
+        else if (disease.equals("T2D")){
+            intent = new Intent(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, TypeTwoDiabetesControlExcluIncluCriteriaActivity.class);
+        }
+
+
+        startActivity(intent);
+        finish();
+    }
+
+    public void clearPad(View view) {
+        mSignaturePad.clear();
+    }
+
+    public void participantNameAgeEntered(View view) {
+
+        GeneralUtils.hideSoftKeyboard(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantAgeEdit);
+        layoutNameAge.setVisibility(View.GONE);
+        consentCard.setVisibility(View.VISIBLE);
+        Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide_in_bottom);
+        consentCard.startAnimation(slide_up);
+
+    }
+
+    public void consentFormAgree(View view) {
+
+
+        consentCard.setVisibility(View.GONE);
+        layoutGlobalExclusion.setVisibility(View.VISIBLE);
+        Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide_in_bottom);
+        layoutGlobalExclusion.startAnimation(slide_up);
 
     }
 }

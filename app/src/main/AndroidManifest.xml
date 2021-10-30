@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First">
         <activity
+            android:name=".UIs.TypeTwoDiabetesControlExcluIncluCriteriaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UIs.NAFLDControlExcluIncluCriteriaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UIs.StrokeControlExcluIncluCriteriaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UIs.HfControlExcIncCriteriaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UIs.MIControlExclusionInclusionCriteriaActivity"
+            android:exported="true" />
+        <activity
             android:name=".UIs.TypeTwoDiabetesExcluIncluCriteriaActivity"
             android:exported="true" />
         <activity
