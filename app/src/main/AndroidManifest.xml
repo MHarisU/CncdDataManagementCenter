@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.First">
         <activity
+            android:name=".UIs.BaselineQuestionnaireRecruitmentActivity"
+            android:exported="true" />
+        <activity
             android:name=".UIs.TypeTwoDiabetesControlExcluIncluCriteriaActivity"
             android:exported="true" />
         <activity

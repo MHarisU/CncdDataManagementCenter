@@ -16,6 +16,7 @@
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_setting_blue.xml" value="0.31801801801801804" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_user_baseline_blue.xml" value="0.31801801801801804" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_user_blue.xml" value="0.31801801801801804" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment.xml" value="0.33" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form2.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_call_back_form3.xml" value="0.25" />
@@ -30,7 +31,7 @@
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_nafldcase_exclu_inclu_criteria.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_nafldcontrol_exclu_inclu_criteria.xml" value="0.33" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_pgrform.xml" value="0.25" />
-        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_recruitment_general_exclusion_and_specific_disease.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_recruitment_general_exclusion_and_specific_disease.xml" value="0.22" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_stroke_case_exclu_inclu_criteria.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/activity_stroke_control_exclu_inclu_criteria.xml" value="0.25" />
@@ -44,6 +45,7 @@
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/search_medicine_dialog_layout.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/select_form_type_dialog_layout.xml" value="0.25" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout-large/select_language_dialog_layout.xml" value="0.25" />
+        <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_baseline_questionnaire_recruitment.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form2.xml" value="0.30405405405405406" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/layout/activity_call_back_form3.xml" value="0.30405405405405406" />

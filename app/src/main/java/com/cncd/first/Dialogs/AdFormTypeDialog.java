@@ -38,6 +38,7 @@ public class AdFormTypeDialog {
                 dialog.dismiss();
             }
         });
+/*
 
         LinearLayout buttonPgr = (LinearLayout) dialog.findViewById(R.id.buttonPgr);
         buttonPgr.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +49,7 @@ public class AdFormTypeDialog {
 
             }
         });
+*/
 
         LinearLayout buttonCallBackForm = (LinearLayout) dialog.findViewById(R.id.buttonCallBackForm);
         buttonCallBackForm.setOnClickListener(new View.OnClickListener() {
