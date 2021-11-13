@@ -29,7 +29,8 @@ import com.cncd.first.Utils.LoadListToMenu;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CallBackForm2Activity extends AppCompatActivity {
+public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity {
+
 
     LinearLayout layoutAddNewMed, layoutAddNewFamily;
     ImageView closeAddNewMed, closeAddNewFamily;
@@ -48,10 +49,11 @@ public class CallBackForm2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (GeneralUtils.getLanguage(CallBackForm2Activity.this).equals("ur"))
-            GeneralUtils.changeIntoUrdu(CallBackForm2Activity.this);
-        setContentView(R.layout.activity_call_back_form2);
+        if (GeneralUtils.getLanguage(BaselineQuestionnaireRecruitment2Activity.this).equals("ur"))
+            GeneralUtils.changeIntoUrdu(BaselineQuestionnaireRecruitment2Activity.this);
+        setContentView(R.layout.activity_baseline_questionnaire_recruitment2);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
 
 
         loadUIs();
@@ -61,6 +63,7 @@ public class CallBackForm2Activity extends AppCompatActivity {
         loadFamily();
 
     }
+
 
     private void loadUIs() {
 
@@ -92,7 +95,7 @@ public class CallBackForm2Activity extends AppCompatActivity {
         medicationLists.add(new MedicationList("2.", "Gabica", "Pregablin", "30"));
         medicationLists.add(new MedicationList("3.", "ESSO 40mg", "Esomeperazol", "30"));*/
 
-        MedicationAdapter adapter = new MedicationAdapter(medicationLists, CallBackForm2Activity.this);
+        MedicationAdapter adapter = new MedicationAdapter(medicationLists, BaselineQuestionnaireRecruitment2Activity.this);
         medicationRecycler.setAdapter(adapter);
     }
 
@@ -106,13 +109,14 @@ public class CallBackForm2Activity extends AppCompatActivity {
         medicationLists.add(new MedicationList("2.", "Gabica", "Pregablin", "30"));
         medicationLists.add(new MedicationList("3.", "ESSO 40mg", "Esomeperazol", "30"));*/
 
-        FamilyAdapter adapter = new FamilyAdapter(familyLists, CallBackForm2Activity.this);
+        FamilyAdapter adapter = new FamilyAdapter(familyLists, BaselineQuestionnaireRecruitment2Activity.this);
         familyRecycler.setAdapter(adapter);
     }
 
     public void openAddMed(View view) {
         layoutAddNewMed.setVisibility(View.VISIBLE);
     }
+
 
     public void closeAddNewMedButton(View view) {
 
@@ -144,22 +148,22 @@ public class CallBackForm2Activity extends AppCompatActivity {
             }
 
             //medicationLists.notify();
-            MedicationAdapter adapter = new MedicationAdapter(medicationLists, CallBackForm2Activity.this);
+            MedicationAdapter adapter = new MedicationAdapter(medicationLists, BaselineQuestionnaireRecruitment2Activity.this);
             medicationRecycler.setAdapter(adapter);
 
-            GeneralUtils.hideSoftKeyboard(CallBackForm2Activity.this, drugDurationEdit);
+            GeneralUtils.hideSoftKeyboard(BaselineQuestionnaireRecruitment2Activity.this, drugDurationEdit);
 
             drugNameEdit.setText("");
             drugGenericEdit.setText("");
             drugDurationEdit.setText("");
             layoutAddNewMed.setVisibility(View.GONE);
 
-            //GeneralUtils.hideSoftKeyboard(CallBackForm2Activity.this, drugDurationEdit);
-            GeneralUtils.alertDialogBoxSimple(CallBackForm2Activity.this, "Info", "Medical History Added");
+            //GeneralUtils.hideSoftKeyboard(BaselineQuestionnaireRecruitment2Activity.this, drugDurationEdit);
+            GeneralUtils.alertDialogBoxSimple(BaselineQuestionnaireRecruitment2Activity.this, "Info", "Medical History Added");
 
 
         } else {
-            GeneralUtils.alertDialogBoxSimple(CallBackForm2Activity.this, "Alert", "Please fill all fields correctly");
+            GeneralUtils.alertDialogBoxSimple(BaselineQuestionnaireRecruitment2Activity.this, "Alert", "Please fill all fields correctly");
 
         }
     }
@@ -178,11 +182,11 @@ public class CallBackForm2Activity extends AppCompatActivity {
     public void addMedicalConditionName(View view) {
 
 
-        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(CallBackForm2Activity.this, "medical_conditions.json");
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(BaselineQuestionnaireRecruitment2Activity.this, "medical_conditions.json");
         Log.d("CallBackActivity", jsonArray);
-        List<String> list = JsonArrayToList.createList(CallBackForm2Activity.this, jsonArray);
+        List<String> list = JsonArrayToList.createList(BaselineQuestionnaireRecruitment2Activity.this, jsonArray);
 
-        PopupMenu menu = LoadListToMenu.loadMenu(CallBackForm2Activity.this, list, view);
+        PopupMenu menu = LoadListToMenu.loadMenu(BaselineQuestionnaireRecruitment2Activity.this, list, view);
 
         //registering popup with OnMenuItemClickListener
         menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -198,14 +202,13 @@ public class CallBackForm2Activity extends AppCompatActivity {
         menu.show(); //showing popup menu
     }
 
-
     public void addRelation(View view) {
 
-        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(CallBackForm2Activity.this, "relations.json");
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(BaselineQuestionnaireRecruitment2Activity.this, "relations.json");
         Log.d("CallBackActivity", jsonArray);
-        List<String> list = JsonArrayToList.createList(CallBackForm2Activity.this, jsonArray);
+        List<String> list = JsonArrayToList.createList(BaselineQuestionnaireRecruitment2Activity.this, jsonArray);
 
-        PopupMenu menu = LoadListToMenu.loadMenu(CallBackForm2Activity.this, list, view);
+        PopupMenu menu = LoadListToMenu.loadMenu(BaselineQuestionnaireRecruitment2Activity.this, list, view);
 
 
         //registering popup with OnMenuItemClickListener
@@ -269,10 +272,10 @@ public class CallBackForm2Activity extends AppCompatActivity {
             }
 
             //medicationLists.notify();
-            FamilyAdapter adapter = new FamilyAdapter(familyLists, CallBackForm2Activity.this);
+            FamilyAdapter adapter = new FamilyAdapter(familyLists, BaselineQuestionnaireRecruitment2Activity.this);
             familyRecycler.setAdapter(adapter);
 
-            GeneralUtils.hideSoftKeyboard(CallBackForm2Activity.this, ageDiagnosedEdit);
+            GeneralUtils.hideSoftKeyboard(BaselineQuestionnaireRecruitment2Activity.this, ageDiagnosedEdit);
 
             medConditionEdit.setText("");
             specifyConditionEdit.setText("");
@@ -280,11 +283,11 @@ public class CallBackForm2Activity extends AppCompatActivity {
             ageDiagnosedEdit.setText("");
             layoutAddNewFamily.setVisibility(View.GONE);
 
-            GeneralUtils.alertDialogBoxSimple(CallBackForm2Activity.this, "Info", "Family History Added");
+            GeneralUtils.alertDialogBoxSimple(BaselineQuestionnaireRecruitment2Activity.this, "Info", "Family History Added");
 
 
         } else {
-            GeneralUtils.alertDialogBoxSimple(CallBackForm2Activity.this, "Alert", "Please fill all fields correctly");
+            GeneralUtils.alertDialogBoxSimple(BaselineQuestionnaireRecruitment2Activity.this, "Alert", "Please fill all fields correctly");
 
         }
 
@@ -296,27 +299,30 @@ public class CallBackForm2Activity extends AppCompatActivity {
 
 
     public void selectFirstSecondCousin(View view) {
-        GeneralUtils.selectFirstSecondCousinStatus(CallBackForm2Activity.this, view);
+        GeneralUtils.selectFirstSecondCousinStatus(BaselineQuestionnaireRecruitment2Activity.this, view);
 
     }
 
     public void selectSpouseRelation(View view) {
-        GeneralUtils.selectSpousRelationStatus(CallBackForm2Activity.this, view);
+        GeneralUtils.selectSpousRelationStatus(BaselineQuestionnaireRecruitment2Activity.this, view);
 
     }
 
     public void selectEmployment(View view) {
-        GeneralUtils.selectEmploymentStatus(CallBackForm2Activity.this, view);
+        GeneralUtils.selectEmploymentStatus(BaselineQuestionnaireRecruitment2Activity.this, view);
 
     }
 
+    public void selectMaritalStatus(View view) {
+        GeneralUtils.selectMaritalStatus(BaselineQuestionnaireRecruitment2Activity.this, view);
 
+    }
 
     public void moveToThirdForm(View view) {
         //startActivity(new Intent(CallBackForm2Activity.this, CallBackForm3Activity.class));
         //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
 
-        Intent intent = new Intent(this, CallBackForm3Activity.class);
+        Intent intent = new Intent(this, BaselineQuestionnaireRecruitment3Activity.class);
         startActivityForResult(intent, 1);
 
     }
@@ -329,9 +335,6 @@ public class CallBackForm2Activity extends AppCompatActivity {
             this.finish();
         }
     }
-    public void selectMaritalStatus(View view) {
-        GeneralUtils.selectMaritalStatus(CallBackForm2Activity.this, view);
 
-    }
 
 }

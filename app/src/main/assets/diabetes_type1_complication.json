@@ -1,0 +1,14 @@
+[
+  {
+    name: "Diabetic Retinopathy "
+  },
+  {
+    name: "Diabetic Nephropathy"
+  },
+  {
+    name: "Diabetic Neuropathy"
+  },
+  {
+    name: "Not Answered"
+  }
+]

@@ -2,6 +2,7 @@ package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -49,5 +50,10 @@ public class TypeTwoDiabetesControlExcluIncluCriteriaActivity extends AppCompatA
         Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_in_bottom);
         layoutT2DInclusion.startAnimation(slide_up);
+    }
+
+    public void ContinueClick(View view) {
+        startActivity(new Intent(TypeTwoDiabetesControlExcluIncluCriteriaActivity.this, BaselineQuestionnaireRecruitmentActivity.class));
+        finish();
     }
 }

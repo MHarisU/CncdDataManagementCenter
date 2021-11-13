@@ -3,7 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment.xml" value="0.1" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment.xml" value="0.25" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment2.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment3.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment4.xml" value="0.25" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_call_back_form.xml" value="0.1806640625" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_call_back_form2.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_call_back_form3.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_call_back_form4.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_micase_exclusion_inclusion_criteria.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_recruitment_general_exclusion_and_specific_disease.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_type_two_diabetes_control_exclu_inclu_criteria.xml" value="0.25" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/diabetes_mellitus_dialog_layout.xml" value="0.25" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/select_form_type_dialog_layout.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout/activity_baseline_questionnaire_recruitment2.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout/activity_baseline_questionnaire_recruitment3.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout/activity_baseline_questionnaire_recruitment4.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout/diabetes_mellitus_dialog_layout.xml" value="0.32568359375" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/bttn_drk_stroke.xml" value="0.36770833333333336" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/button_gray_stock_small.xml" value="0.31801801801801804" />
         <entry key="..\:/Users/HS/AndroidStudioProjects/First/app/src/main/res/drawable/ic_arrow_forward_gray.xml" value="0.31801801801801804" />
