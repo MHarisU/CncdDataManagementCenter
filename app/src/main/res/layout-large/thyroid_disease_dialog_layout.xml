@@ -26,7 +26,7 @@
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Diabetes Mellitus"
+            android:text="Thyroid Disease"
             android:textColor="@color/White"
             android:textSize="20dp" />
 
@@ -58,7 +58,7 @@
 
 
         <LinearLayout
-            android:id="@+id/diabetesYesNoLayout"
+            android:id="@+id/YesNoLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:textSize="20sp"
-                android:text="Has any doctor ever told you that you have diabetes?"
+                android:text="Has any doctor ever told you that you have thyroid disease?"
                 android:padding="10dp"/>
 
             <LinearLayout
@@ -214,7 +214,7 @@
 
             android:visibility="gone"
 
-            android:id="@+id/diabetesTypeLayout"
+            android:id="@+id/typeLayout"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -230,7 +230,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:textSize="20sp"
-                android:text="Which type of Diabetes you have?"
+                android:text="Which type of Thyroid Disease you have?"
                 android:padding="10dp"/>
 
             <LinearLayout
@@ -241,14 +241,14 @@
 
                 <androidx.cardview.widget.CardView
 
-                    android:layout_width="180dp"
+                    android:layout_width="220dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
-                    android:id="@+id/diabetesType1"
+                    android:id="@+id/hypothyroidismType"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
 
@@ -274,7 +274,7 @@
                                 android:background="@color/Transparent"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
-                                android:text="Type 1"
+                                android:text="Hypothyroidism"
                                 android:textColor="@color/white"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
@@ -293,7 +293,7 @@
 
                 <androidx.cardview.widget.CardView
 
-                    android:layout_width="180dp"
+                    android:layout_width="220dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
@@ -326,7 +326,7 @@
                                 android:background="@color/Transparent"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
-                                android:text="Type 2"
+                                android:text="Hyperthyroidism"
                                 android:textColor="@color/white"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
@@ -376,7 +376,7 @@
                                 android:background="@color/Transparent"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
-                                android:text="Gestational"
+                                android:text="Goitre"
                                 android:textColor="@color/white"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
@@ -417,7 +417,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:textSize="20sp"
-                android:text="Type 1 Diabetes"
+                android:text="Hypothyroidism"
                 android:padding="10dp"/>
 
             <LinearLayout
@@ -583,7 +583,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:textSize="20sp"
-                android:text="Type 2 Diabetes"
+                android:text="Hyperthyroidism"
                 android:padding="10dp"/>
 
             <LinearLayout
@@ -768,7 +768,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:textSize="20sp"
-                android:text="Gestational Diabetes"
+                android:text="Goitre"
                 android:padding="10dp"/>
 
             <LinearLayout

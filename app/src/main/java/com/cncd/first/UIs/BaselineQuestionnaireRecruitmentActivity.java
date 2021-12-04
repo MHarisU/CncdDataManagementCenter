@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.cncd.first.Dialogs.DiabeteMellitusDialog;
+import com.cncd.first.Dialogs.ThyroidDiseaseDialog;
 import com.cncd.first.R;
 import com.cncd.first.Utils.DatePicker;
 import com.cncd.first.Utils.GeneralUtils;
@@ -41,6 +42,7 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     }
 
     public void lastMealDate(View view) {
+
         TextView dateLastMeal = findViewById(R.id.dateLastMeal);
         DatePicker datePicker = new DatePicker(BaselineQuestionnaireRecruitmentActivity.this, dateLastMeal);
         String selected_date = datePicker.pickDate();
@@ -86,6 +88,12 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 
     public void DiabetesSelect(View view) {
         DiabeteMellitusDialog dialog = new DiabeteMellitusDialog();
+        dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
+    }
+
+    public void ThyroidDiseaseSelect(View view) {
+
+        ThyroidDiseaseDialog dialog = new ThyroidDiseaseDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
 }
