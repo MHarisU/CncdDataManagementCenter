@@ -2,19 +2,25 @@ package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 
-public class StrokeControlExcluIncluCriteriaActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class StrokeControlExclusionInclusionCriteriaActivity extends AppCompatActivity {
 
     LinearLayout layoutStrokeExclusion, layoutStrokeInclusion;
+
+    ArrayList<String> participantDetails = new ArrayList<>();
 
 
     @Override
@@ -25,10 +31,14 @@ public class StrokeControlExcluIncluCriteriaActivity extends AppCompatActivity {
 
 
         loadUI();
-
-
+        loadParticipantData();
     }
 
+    private void loadParticipantData() {
+        Intent intent = getIntent();
+        participantDetails = intent.getStringArrayListExtra("participantData");
+        Toast.makeText(StrokeControlExclusionInclusionCriteriaActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
+    }
 
     private void loadUI() {
         layoutStrokeExclusion = findViewById(R.id.layoutStrokeExclusion);
@@ -51,5 +61,12 @@ public class StrokeControlExcluIncluCriteriaActivity extends AppCompatActivity {
         Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_in_bottom);
         layoutStrokeInclusion.startAnimation(slide_up);
+    }
+
+    public void ContinueClick(View view) {
+        Intent intent = new Intent(StrokeControlExclusionInclusionCriteriaActivity.this, BaselineQuestionnaireRecruitmentActivity.class);
+        intent.putStringArrayListExtra("participantData", participantDetails);
+        startActivity(intent);
+        finish();
     }
 }

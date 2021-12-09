@@ -1,0 +1,32 @@
+[
+  {
+    name: "Mitral stenosis (MS) "
+  },
+  {
+    name: "Mitral regurgitation (MR)  "
+  },
+  {
+    name: "Aortic Stenosis (AS)"
+  },
+  {
+    name: "Aortic regurgitation (AR)"
+  },
+  {
+    name: "Pulmonary stenosis (PS)"
+  },
+  {
+    name: "Pulmonary regurgitation (PR)"
+  },
+  {
+    name: "Tricuspid stenosis (TS)"
+  },
+  {
+    name: "Tricuspid regurgitation (TR)"
+  },
+  {
+    name: "Unknown"
+  },
+  {
+    name: "Not Answered"
+  }
+]

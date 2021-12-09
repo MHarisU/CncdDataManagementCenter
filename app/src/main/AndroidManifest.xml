@@ -22,31 +22,31 @@
             android:name=".UIs.BaselineQuestionnaireRecruitmentActivity"
             android:exported="true" />
         <activity
-            android:name=".UIs.TypeTwoDiabetesControlExcluIncluCriteriaActivity"
+            android:name=".UIs.TypeTwoDiabetesControlExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
-            android:name=".UIs.NAFLDControlExcluIncluCriteriaActivity"
+            android:name=".UIs.NAFLDControlExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
-            android:name=".UIs.StrokeControlExcluIncluCriteriaActivity"
+            android:name=".UIs.StrokeControlExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
-            android:name=".UIs.HfControlExcIncCriteriaActivity"
+            android:name=".UIs.HfControlExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
             android:name=".UIs.MIControlExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
-            android:name=".UIs.TypeTwoDiabetesExcluIncluCriteriaActivity"
+            android:name=".UIs.TypeTwoDiabetesExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
-            android:name=".UIs.NAFLDCaseExcluIncluCriteriaActivity"
+            android:name=".UIs.NAFLDCaseExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
-            android:name=".UIs.StrokeCaseExcluIncluCriteriaActivity"
+            android:name=".UIs.StrokeCaseExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
-            android:name=".UIs.HfCaseExcIncCriteriaActivity"
+            android:name=".UIs.HfCaseExclusionInclusionCriteriaActivity"
             android:exported="true" />
         <activity
             android:name=".UIs.MICaseExclusionInclusionCriteriaActivity"

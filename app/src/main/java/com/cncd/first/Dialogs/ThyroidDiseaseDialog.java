@@ -55,25 +55,8 @@ public class ThyroidDiseaseDialog {
         });
 
 
-        TextView type1ComplicationButton = (TextView) dialog.findViewById(R.id.type1ComplicationButton);
-        type1ComplicationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                GeneralUtils.selectDiabetesType1Complications(context, view);
 
 
-            }
-        });
-
-        TextView type2ComplicationButton = (TextView) dialog.findViewById(R.id.type2ComplicationButton);
-        type2ComplicationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                GeneralUtils.selectDiabetesType1Complications(context, view);
-
-
-            }
-        });
 
         diabetesNo.setOnClickListener(new View.OnClickListener() {
             @Override

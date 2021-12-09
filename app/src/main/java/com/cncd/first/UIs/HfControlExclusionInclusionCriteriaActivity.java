@@ -16,18 +16,18 @@ import com.cncd.first.Utils.GeneralUtils;
 
 import java.util.ArrayList;
 
-public class MIControlExclusionInclusionCriteriaActivity extends AppCompatActivity {
+public class HfControlExclusionInclusionCriteriaActivity extends AppCompatActivity {
 
-    LinearLayout layoutMIExclusion, layoutMIInclusion;
+    LinearLayout layoutHFExclusion, layoutHFInclusion;
 
     ArrayList<String> participantDetails = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_micontrol_exclusion_inclusion_criteria);
+        setContentView(R.layout.activity_hf_control_exc_inc_criteria);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-
 
         loadUI();
         loadParticipantData();
@@ -36,11 +36,12 @@ public class MIControlExclusionInclusionCriteriaActivity extends AppCompatActivi
     private void loadParticipantData() {
         Intent intent = getIntent();
         participantDetails = intent.getStringArrayListExtra("participantData");
-        Toast.makeText(MIControlExclusionInclusionCriteriaActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(HfControlExclusionInclusionCriteriaActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
     }
+
     private void loadUI() {
-        layoutMIExclusion = findViewById(R.id.layoutMIExclusion);
-        layoutMIInclusion = findViewById(R.id.layoutMIInclusion);
+        layoutHFExclusion = findViewById(R.id.layoutHFExclusion);
+        layoutHFInclusion = findViewById(R.id.layoutHFInclusion);
     }
 
 
@@ -48,20 +49,23 @@ public class MIControlExclusionInclusionCriteriaActivity extends AppCompatActivi
         finish();
     }
 
-    public void mIExclusionYes(View view) {
-        GeneralUtils.alertDialogBoxSimpleCloseActivity(MIControlExclusionInclusionCriteriaActivity.this, "Info", "This case can not be registered");
+
+    public void HfExclusionYes(View view) {
+        GeneralUtils.alertDialogBoxSimpleCloseActivity(HfControlExclusionInclusionCriteriaActivity.this, "Info", "This case can not be registered");
+
     }
 
-    public void mIExclusionNo(View view) {
-        layoutMIExclusion.setVisibility(View.GONE);
-        layoutMIInclusion.setVisibility(View.VISIBLE);
+    public void HfExclusionNo(View view) {
+
+        layoutHFExclusion.setVisibility(View.GONE);
+        layoutHFInclusion.setVisibility(View.VISIBLE);
         Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_in_bottom);
-        layoutMIInclusion.startAnimation(slide_up);
+        layoutHFInclusion.startAnimation(slide_up);
     }
 
     public void ContinueClick(View view) {
-        Intent intent = new Intent(MIControlExclusionInclusionCriteriaActivity.this, BaselineQuestionnaireRecruitmentActivity.class);
+        Intent intent = new Intent(HfControlExclusionInclusionCriteriaActivity.this, BaselineQuestionnaireRecruitmentActivity.class);
         intent.putStringArrayListExtra("participantData", participantDetails);
         startActivity(intent);
         finish();

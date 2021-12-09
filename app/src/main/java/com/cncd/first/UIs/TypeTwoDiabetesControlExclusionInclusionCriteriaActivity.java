@@ -9,13 +9,18 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 
-public class TypeTwoDiabetesControlExcluIncluCriteriaActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class TypeTwoDiabetesControlExclusionInclusionCriteriaActivity extends AppCompatActivity {
 
     LinearLayout layoutT2DExclusion, layoutT2DInclusion;
+
+    ArrayList<String> participantDetails = new ArrayList<>();
 
 
     @Override
@@ -26,9 +31,14 @@ public class TypeTwoDiabetesControlExcluIncluCriteriaActivity extends AppCompatA
 
 
         loadUI();
-
+        loadParticipantData();
     }
 
+    private void loadParticipantData() {
+        Intent intent = getIntent();
+        participantDetails = intent.getStringArrayListExtra("participantData");
+        Toast.makeText(TypeTwoDiabetesControlExclusionInclusionCriteriaActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
+    }
 
     private void loadUI() {
         layoutT2DExclusion = findViewById(R.id.layoutT2DExclusion);
@@ -53,7 +63,9 @@ public class TypeTwoDiabetesControlExcluIncluCriteriaActivity extends AppCompatA
     }
 
     public void ContinueClick(View view) {
-        startActivity(new Intent(TypeTwoDiabetesControlExcluIncluCriteriaActivity.this, BaselineQuestionnaireRecruitmentActivity.class));
+        Intent intent = new Intent(TypeTwoDiabetesControlExclusionInclusionCriteriaActivity.this, BaselineQuestionnaireRecruitmentActivity.class);
+        intent.putStringArrayListExtra("participantData", participantDetails);
+        startActivity(intent);
         finish();
     }
 }

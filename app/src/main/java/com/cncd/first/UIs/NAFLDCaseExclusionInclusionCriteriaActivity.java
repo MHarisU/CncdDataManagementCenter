@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 
-public class NAFLDCaseExcluIncluCriteriaActivity extends AppCompatActivity {
+public class NAFLDCaseExclusionInclusionCriteriaActivity extends AppCompatActivity {
 
     LinearLayout layoutNAFLDExclusion, layoutNAFLDInclusion;
 

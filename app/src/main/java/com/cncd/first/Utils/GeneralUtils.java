@@ -15,8 +15,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import com.cncd.first.UIs.CallBackForm3Activity;
-import com.cncd.first.UIs.HfCaseExcIncCriteriaActivity;
+import com.cncd.first.UIs.HfCaseExclusionInclusionCriteriaActivity;
 import com.cncd.first.UIs.MICaseExclusionInclusionCriteriaActivity;
 import com.cncd.first.UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity;
 
@@ -72,8 +71,8 @@ public class GeneralUtils {
                 if(context instanceof MICaseExclusionInclusionCriteriaActivity){
                     ((MICaseExclusionInclusionCriteriaActivity)context).finish(); }
 
-                if(context instanceof HfCaseExcIncCriteriaActivity){
-                    ((HfCaseExcIncCriteriaActivity)context).finish(); }
+                if(context instanceof HfCaseExclusionInclusionCriteriaActivity){
+                    ((HfCaseExclusionInclusionCriteriaActivity)context).finish(); }
 
                 if(context instanceof Activity){
                     ((Activity)context).finish(); }
@@ -700,6 +699,60 @@ public class GeneralUtils {
         menu.show(); //showing popup menu
 
     }
+
+    public static void selectTypeOfValvularHeartDisease(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "valvular_heart_disease_types.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+
+    public static void selectSurgicalManagement(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "surgical_management_types.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+
+
 
 
 

@@ -2,7 +2,6 @@ package com.cncd.first.Dialogs;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
@@ -12,19 +11,15 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 
 import com.cncd.first.R;
-import com.cncd.first.UIs.BaselineQuestionnaireRecruitmentActivity;
-import com.cncd.first.UIs.CallBackFormActivity;
-import com.cncd.first.UIs.FamilySheetActivity;
-import com.cncd.first.UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity;
 import com.cncd.first.Utils.GeneralUtils;
 
-public class DiabeteMellitusDialog {
+public class ValvularHeartDiseaseDialog {
 
 
     Dialog dialog;
     Context context;
 
-    public DiabeteMellitusDialog() {
+    public ValvularHeartDiseaseDialog() {
     }
 
     public void showDialog(final Context activity) {
@@ -32,32 +27,23 @@ public class DiabeteMellitusDialog {
         dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(false);
-        dialog.setContentView(R.layout.diabetes_mellitus_dialog_layout);
+        dialog.setContentView(R.layout.valvular_heart_disease_dialog_layout);
 
 
-        LinearLayout diabetesYesNoLayout, diabetesTypeLayout, diabetesType1Layout, diabetesType2Layout,  diabetesGestationalLayout;
-        diabetesYesNoLayout = (LinearLayout) dialog.findViewById(R.id.diabetesYesNoLayout);
-        diabetesTypeLayout = (LinearLayout) dialog.findViewById(R.id.diabetesTypeLayout);
+        LinearLayout YesNoLayout, typeLayout, diabetesType1Layout, diabetesType2Layout,  diabetesGestationalLayout;
+        YesNoLayout = (LinearLayout) dialog.findViewById(R.id.YesNoLayout);
+        typeLayout = (LinearLayout) dialog.findViewById(R.id.typeLayout);
         diabetesType1Layout = (LinearLayout) dialog.findViewById(R.id.diabetesType1Layout);
         diabetesType2Layout = (LinearLayout) dialog.findViewById(R.id.diabetesType2Layout);
         diabetesGestationalLayout = (LinearLayout) dialog.findViewById(R.id.diabetesGestationalLayout);
 
-        CardView diabetesYes,diabetesNo, diabetesType1, diabetesType2, diabetesGestational;
+        CardView diabetesYes,diabetesNo, diabetesType2, diabetesGestational;
         diabetesYes = (CardView) dialog.findViewById(R.id.diabetesYes);
 
         diabetesNo = (CardView) dialog.findViewById(R.id.diabetesNo);
-        diabetesType1 = (CardView) dialog.findViewById(R.id.diabetesType1);
+      //  hypothyroidismType = (CardView) dialog.findViewById(R.id.hypothyroidismType);
         diabetesType2 = (CardView) dialog.findViewById(R.id.diabetesType2);
         diabetesGestational = (CardView) dialog.findViewById(R.id.diabetesGestational);
-
-        ImageView backToYesNoButton, backToTypeDiabetesType1, backToTypeDiabetesType2, backToTypeDiabetesGestational;
-        backToYesNoButton = (ImageView) dialog.findViewById(R.id.backToYesNoButton);
-        backToTypeDiabetesType1 = (ImageView) dialog.findViewById(R.id.backToTypeDiabetesType1);
-        backToTypeDiabetesType2 = (ImageView) dialog.findViewById(R.id.backToTypeDiabetesType2);
-        backToTypeDiabetesGestational = (ImageView) dialog.findViewById(R.id.backToTypeDiabetesGestational);
-
-
-
 
 
         ImageView closeButton = (ImageView) dialog.findViewById(R.id.closeButton);
@@ -68,57 +54,29 @@ public class DiabeteMellitusDialog {
             }
         });
 
-        backToYesNoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                diabetesYesNoLayout.setVisibility(View.VISIBLE);
-                diabetesTypeLayout.setVisibility(View.GONE);
-
-            }
-        });
-
-        backToTypeDiabetesType1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                diabetesType1Layout.setVisibility(View.GONE);
-                diabetesTypeLayout.setVisibility(View.VISIBLE);
-
-            }
-        });
-
-        backToTypeDiabetesType2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                diabetesType2Layout.setVisibility(View.GONE);
-                diabetesTypeLayout.setVisibility(View.VISIBLE);
-
-            }
-        });
-
-        backToTypeDiabetesGestational.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                diabetesGestationalLayout.setVisibility(View.GONE);
-                diabetesTypeLayout.setVisibility(View.VISIBLE);
-
-            }
-        });
 
         TextView type1ComplicationButton = (TextView) dialog.findViewById(R.id.type1ComplicationButton);
         type1ComplicationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                GeneralUtils.selectDiabetesType1Complications(context, view);
+                GeneralUtils.selectTypeOfValvularHeartDisease(context, view);
 
 
             }
         });
+
+        TextView surgicalManagementButton = (TextView) dialog.findViewById(R.id.surgicalManagementButton);
+        surgicalManagementButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GeneralUtils.selectSurgicalManagement(context, view);
+
+
+            }
+        });
+
+
+
 
         TextView type2ComplicationButton = (TextView) dialog.findViewById(R.id.type2ComplicationButton);
         type2ComplicationButton.setOnClickListener(new View.OnClickListener() {
@@ -143,29 +101,31 @@ public class DiabeteMellitusDialog {
             @Override
             public void onClick(View view) {
 
-                diabetesYesNoLayout.setVisibility(View.GONE);
-                diabetesTypeLayout.setVisibility(View.VISIBLE);
+                YesNoLayout.setVisibility(View.GONE);
+               // typeLayout.setVisibility(View.VISIBLE);
+                diabetesType1Layout.setVisibility(View.VISIBLE);
+
 
             }
         });
 
 
-        diabetesType1.setOnClickListener(new View.OnClickListener() {
+       /* hypothyroidismType.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 diabetesType1Layout.setVisibility(View.VISIBLE);
-                diabetesTypeLayout.setVisibility(View.GONE);
+                typeLayout.setVisibility(View.GONE);
 
             }
-        });
+        });*/
 
         diabetesType2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 diabetesType2Layout.setVisibility(View.VISIBLE);
-                diabetesTypeLayout.setVisibility(View.GONE);
+                typeLayout.setVisibility(View.GONE);
 
             }
         });
@@ -175,7 +135,7 @@ public class DiabeteMellitusDialog {
             public void onClick(View view) {
 
                 diabetesGestationalLayout.setVisibility(View.VISIBLE);
-                diabetesTypeLayout.setVisibility(View.GONE);
+                typeLayout.setVisibility(View.GONE);
 
             }
         });

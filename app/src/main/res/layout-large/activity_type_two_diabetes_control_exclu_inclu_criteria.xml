@@ -6,7 +6,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
-tools:context=".UIs.TypeTwoDiabetesControlExcluIncluCriteriaActivity">
+tools:context=".UIs.TypeTwoDiabetesControlExclusionInclusionCriteriaActivity">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -258,7 +258,7 @@ tools:context=".UIs.TypeTwoDiabetesControlExcluIncluCriteriaActivity">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible">
 
 
         <androidx.cardview.widget.CardView
