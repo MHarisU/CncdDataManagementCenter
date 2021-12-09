@@ -54,7 +54,10 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
         setContentView(R.layout.activity_baseline_questionnaire_recruitment2);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
+/*
+nothing
 
+        */
 
         loadUIs();
 
