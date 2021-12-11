@@ -167,4 +167,5 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         ValvularHeartDiseaseDialog dialog = new ValvularHeartDiseaseDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
+
 }
