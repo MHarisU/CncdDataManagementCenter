@@ -1,0 +1,23 @@
+[
+  {
+    name: "Hepatitis B"
+  },
+  {
+    name: "Hepatitis C"
+  },
+  {
+    name: "NAFLD / Non-alcoholic fatty liver "
+  },
+  {
+    name: "Hepatomegaly"
+  },
+  {
+    name: "Hepatic cyst"
+  },
+  {
+    name: "Chronic liver disease / Cirrhosis"
+  },
+  {
+    name: "Not Answered"
+  }
+]

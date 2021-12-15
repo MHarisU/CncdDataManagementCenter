@@ -13,6 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cncd.first.Dialogs.DiabeteMellitusDialog;
+import com.cncd.first.Dialogs.DyslipidemiaDialog;
+import com.cncd.first.Dialogs.HypertensionDialog;
+import com.cncd.first.Dialogs.LiverDiseaseDialog;
+import com.cncd.first.Dialogs.MyocardialInfarctionDialog;
+import com.cncd.first.Dialogs.SeizuresDialog;
 import com.cncd.first.Dialogs.ThyroidDiseaseDialog;
 import com.cncd.first.Dialogs.ValvularHeartDiseaseDialog;
 import com.cncd.first.R;
@@ -90,6 +95,8 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
             radioFemale.setChecked(true);
         }
         participantAddressEdit.setText(participantDetails.get(3));
+        participantTelephoneEdit.setText(participantDetails.get(4));
+        participantWhatsappEdit.setText(participantDetails.get(5));
         //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
     }
 
@@ -151,6 +158,11 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         finish();
     }
 
+    public void selectTypeOfMI(View view) {
+        GeneralUtils.selectTypeOfMIView(BaselineQuestionnaireRecruitmentActivity.this, view);
+
+    }
+
     public void DiabetesSelect(View view) {
         DiabeteMellitusDialog dialog = new DiabeteMellitusDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
@@ -168,4 +180,32 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
 
+
+
+    public void dyslipidemiaSelect(View view) {
+
+        DyslipidemiaDialog dialog = new DyslipidemiaDialog();
+        dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
+    }
+
+    public void hypertensionSelect(View view) {
+        HypertensionDialog dialog = new HypertensionDialog();
+        dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
+    }
+
+    public void liverDiseaseSelect(View view) {
+
+        LiverDiseaseDialog dialog = new LiverDiseaseDialog();
+        dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
+    }
+
+    public void miDiseaseSelect(View view) {
+        MyocardialInfarctionDialog dialog = new MyocardialInfarctionDialog();
+        dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
+    }
+
+    public void seizuresSelect(View view) {
+        SeizuresDialog dialog = new SeizuresDialog();
+        dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
+    }
 }

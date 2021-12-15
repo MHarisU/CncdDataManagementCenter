@@ -212,7 +212,7 @@
 
         <LinearLayout
 
-            android:visibility="gone"
+            android:visibility="visible"
 
             android:id="@+id/diabetesTypeLayout"
 
@@ -416,7 +416,7 @@
 
 
         <LinearLayout
-            android:visibility="gone"
+            android:visibility="visible"
 
             android:id="@+id/diabetesType1Layout"
             android:layout_width="match_parent"
@@ -598,7 +598,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:visibility="gone"
+            android:visibility="visible"
 
             android:id="@+id/diabetesType2Layout"
             android:layout_width="match_parent"
@@ -798,7 +798,7 @@
 
         <LinearLayout
 
-            android:visibility="gone"
+            android:visibility="visible"
 
             android:id="@+id/diabetesGestationalLayout"
             android:layout_width="match_parent"

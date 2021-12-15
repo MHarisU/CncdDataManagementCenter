@@ -13,7 +13,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.Toast;
 
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
@@ -33,7 +32,7 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
     SignaturePad mSignaturePad;
     boolean signCheck = false;
 
-    EditText participantAgeEdit, participantNameEdit, participantAddressEdit;
+    EditText participantAgeEdit, participantNameEdit, participantAddressEdit, participantNumberEdit, participantWhatsappEdit;
 
     RadioButton radioMale, radioFemale;
 
@@ -41,6 +40,8 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
     String participantAge;
     String participantAddress;
     String participantGender;
+    String participantNumber;
+    String participantWhatsapp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,9 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         participantNameEdit = findViewById(R.id.participantName);
         participantAgeEdit = findViewById(R.id.participantAgeEdit);
         participantAddressEdit = findViewById(R.id.participantAddress);
+        participantNumberEdit = findViewById(R.id.participantNumber);
+        participantWhatsappEdit = findViewById(R.id.participantWhatsapp);
+
 
         radioMale = findViewById(R.id.radioMale);
         radioFemale = findViewById(R.id.radioFemale);
@@ -105,6 +109,8 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         participantDetails.add(participantAge);
         participantDetails.add(participantGender);
         participantDetails.add(participantAddress);
+        participantDetails.add(participantNumber);
+        participantDetails.add(participantWhatsapp);
 
         Intent intent = null;
 
@@ -196,6 +202,9 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         participantDetails.add(participantAge);
         participantDetails.add(participantGender);
         participantDetails.add(participantAddress);
+        participantDetails.add(participantNumber);
+        participantDetails.add(participantWhatsapp);
+
 
         Intent intent = null;
         if (disease.equals("MI")) {
@@ -227,6 +236,8 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         participantAge = participantAgeEdit.getText().toString();
         participantAddress = participantAddressEdit.getText().toString();
         participantGender = "Male";
+        participantNumber = participantNumberEdit.getText().toString();
+        participantWhatsapp = participantWhatsappEdit.getText().toString();
 
         if (radioMale.isChecked()) {
             participantGender = "Male";
@@ -234,19 +245,34 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
             participantGender = "Female";
         }
 
+
         if (participantName != null && !participantName.equals("") &&
                 participantAge != null && !participantAge.equals("") &&
                 participantAddress != null && !participantAddress.equals("") &&
-                participantGender != null && !participantGender.equals("")) {
+                participantGender != null && !participantGender.equals("") &&
+                participantNumber != null && !participantNumber.equals("") &&
+                participantWhatsapp != null && !participantWhatsapp.equals("")) {
 
-            GeneralUtils.hideSoftKeyboard(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantAgeEdit);
-            layoutNameAge.setVisibility(View.GONE);
-            consentCard.setVisibility(View.VISIBLE);
-            Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
-                    R.anim.slide_in_bottom);
-            consentCard.startAnimation(slide_up);
 
-           //Toast.makeText(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantName + "\n" + participantAge + "\n" + participantAddress + "\n" + participantGender + "\n", Toast.LENGTH_SHORT).show();
+
+            if (Integer.parseInt(participantAge) < 18) {
+
+                GeneralUtils.alertDialogBoxSimpleCloseActivity(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Info", "Your are under 18 years, case can not be registered.");
+
+
+            }else {
+
+
+                GeneralUtils.hideSoftKeyboard(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantAgeEdit);
+                layoutNameAge.setVisibility(View.GONE);
+                consentCard.setVisibility(View.VISIBLE);
+                Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.slide_in_bottom);
+                consentCard.startAnimation(slide_up);
+            }
+
+
+            //Toast.makeText(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantName + "\n" + participantAge + "\n" + participantAddress + "\n" + participantGender + "\n", Toast.LENGTH_SHORT).show();
         } else {
             GeneralUtils.alertDialogBoxSimple(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Info", "Please fill all fields correctly");
 
@@ -257,10 +283,10 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
     public void consentFormAgree(View view) {
 
-        if (!signCheck){
+        if (!signCheck) {
             GeneralUtils.alertDialogBoxSimple(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Info", "Please sign to agree");
 
-        }else {
+        } else {
 
             consentCard.setVisibility(View.GONE);
             layoutGlobalExclusion.setVisibility(View.VISIBLE);

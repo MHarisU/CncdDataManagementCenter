@@ -80,6 +80,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -115,13 +116,13 @@
                                 app:cardElevation="0dp">
 
                                 <EditText
-                                    android:maxLength="2"
                                     android:id="@+id/participantAgeEdit"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
                                     android:hint="Participant Age"
                                     android:inputType="number"
+                                    android:maxLength="2"
                                     android:padding="10dp"
                                     android:textSize="18sp" />
 
@@ -225,6 +226,8 @@
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
                                     android:hint="Participant Number"
+                                    android:inputType="number"
+                                    android:maxLength="11"
                                     android:padding="10dp"
                                     android:textSize="18sp" />
 
@@ -240,13 +243,13 @@
                                 app:cardElevation="0dp">
 
                                 <EditText
-                                    android:maxLength="2"
                                     android:id="@+id/participantWhatsapp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
                                     android:hint="Participant Whatsapp Number"
                                     android:inputType="number"
+                                    android:maxLength="11"
                                     android:padding="10dp"
                                     android:textSize="18sp" />
 
@@ -256,10 +259,6 @@
 
 
                     </LinearLayout>
-
-
-
-
 
 
                 </androidx.cardview.widget.CardView>
@@ -330,11 +329,8 @@
                     </androidx.cardview.widget.CardView>
 
 
-
                 </LinearLayout>
             </LinearLayout>
-
-
 
 
             <androidx.cardview.widget.CardView
@@ -347,20 +343,20 @@
                 android:visibility="gone"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="2dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="20dp"
                         android:layout_width="200dp"
                         android:layout_height="120dp"
-                        android:src="@drawable/logo"/>
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/logo" />
 
                     <TextView
-                        android:textColor="@color/Black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -368,8 +364,9 @@
                         android:fontFamily="@font/proxima_nova"
                         android:padding="0dp"
                         android:text="CONSENT FORM"
+                        android:textColor="@color/Black"
                         android:textSize="30sp"
-                        android:textStyle=""/>
+                        android:textStyle="" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -379,7 +376,6 @@
                         android:fontFamily="@font/proxima_nova"
                         android:text="Please read the consent form carefully and digitally sign it."
                         android:textSize="16sp" />
-
 
 
                     <TextView
@@ -456,11 +452,9 @@
                         app:cardElevation="1dp">
 
                         <RelativeLayout
-                            android:background="@drawable/bttn_drk_stroke"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bttn_drk_stroke">
 
 
                             <LinearLayout
@@ -479,39 +473,37 @@
                                     app:penColor="@android:color/black" />
 
                                 <TextView
-                                    android:padding="5dp"
-                                    android:textColor="@color/white"
-                                    android:background="@color/bluelight"
-                                    android:gravity="center"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="0dp"
+                                    android:background="@color/bluelight"
                                     android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:padding="5dp"
                                     android:text="Please sign here"
+                                    android:textColor="@color/white"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
 
                             <TextView
-                                android:onClick="clearPad"
-                                android:background="@color/white"
-                                android:textColor="@color/bluelight"
-                                android:layout_alignParentEnd="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="10dp"
+                                android:layout_alignParentEnd="true"
                                 android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@color/white"
                                 android:fontFamily="@font/poppins_regular"
+                                android:onClick="clearPad"
                                 android:text="CLEAR PAD"
+                                android:textColor="@color/bluelight"
                                 android:textSize="18sp" />
 
 
                         </RelativeLayout>
 
 
-
                     </androidx.cardview.widget.CardView>
-
 
 
                     <LinearLayout
@@ -580,7 +572,6 @@
                         </androidx.cardview.widget.CardView>
 
 
-
                     </LinearLayout>
 
 
@@ -589,19 +580,15 @@
             </androidx.cardview.widget.CardView>
 
 
-
-
-
-
         </LinearLayout>
 
 
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/layoutGlobalExclusion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
 
             <androidx.cardview.widget.CardView

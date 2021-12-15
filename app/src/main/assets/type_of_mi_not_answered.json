@@ -1,0 +1,26 @@
+[
+  {
+    name: "Anterior"
+  },
+  {
+    name: "Antero_Septal"
+  },
+  {
+    name: "Inferior"
+  },
+  {
+    name: "Lateral"
+  },
+  {
+    name: "Posterior"
+  },
+  {
+    name: "Right Ventricle"
+  },
+  {
+    name: "NSTEMI"
+  },
+  {
+    name: "Not Answered"
+  }
+]

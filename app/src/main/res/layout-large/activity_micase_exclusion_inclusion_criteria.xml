@@ -312,28 +312,34 @@
                             android:text="1 -  This is my first ever acute myocardial infarction"
                             android:textSize="18sp" />
 
-                        <RadioGroup
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_alignParentEnd="true"
 
                             android:layout_marginTop="20dp"
                             android:layout_marginBottom="20dp"
                             android:layout_marginEnd="20dp"
-                            android:layout_alignParentEnd="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
 
-                            <RadioButton
-                                android:layout_marginEnd="20dp"
+                            <TextView
+                                android:id="@+id/firstAcuteMIEdit"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                android:text="@string/yes" />
+                                android:layout_height="40dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:inputType="text"
+                                android:onClick="selectYesNoNot"
+                                android:padding="10dp"
+                                android:text="@string/not_answered"
+                                android:textColor="@color/Black80"
+                                android:textSize="14sp" />
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/no" />
-                        </RadioGroup>
+                        </androidx.cardview.widget.CardView>
 
 
                     </RelativeLayout>
@@ -356,32 +362,38 @@
                             android:text="2 -  I have 1 mm ST elevation in any 2 or more contiguous limb leads"
                             android:textSize="18sp" />
 
-                        <RadioGroup
-
-                            android:layout_marginBottom="0dp"
-                            android:layout_marginEnd="20dp"
+                        <androidx.cardview.widget.CardView
                             android:layout_alignParentEnd="true"
+
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginEnd="20dp"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
 
-                            <RadioButton
-                                android:layout_marginEnd="20dp"
+                            <TextView
+                                android:id="@+id/stElevationEdit"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                android:text="@string/yes" />
+                                android:layout_height="40dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:inputType="text"
+                                android:onClick="selectYesNoNot"
+                                android:padding="10dp"
+                                android:text="@string/not_answered"
+                                android:textColor="@color/Black80"
+                                android:textSize="14sp" />
 
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/no" />
-                        </RadioGroup>
+                        </androidx.cardview.widget.CardView>
 
 
                     </RelativeLayout>
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -429,7 +441,7 @@
 
                     <RelativeLayout
 
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="0dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -445,33 +457,40 @@
                             android:text="3 -  I have Non-ST elevation MI with Troponin positive"
                             android:textSize="18sp" />
 
-                        <RadioGroup
-
-                            android:layout_marginBottom="0dp"
-                            android:layout_marginEnd="20dp"
+                        <androidx.cardview.widget.CardView
                             android:layout_alignParentEnd="true"
+
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginEnd="20dp"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
 
-                            <RadioButton
-                                android:layout_marginEnd="20dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:checked="true"
-                                android:text="@string/yes" />
+                            <TextView
+                                android:id="@+id/troponinPositiveEdit"
 
-                            <RadioButton
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/no" />
-                        </RadioGroup>
+                                android:layout_height="40dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:inputType="text"
+                                android:onClick="selectYesNoNot"
+                                android:padding="10dp"
+                                android:text="@string/not_answered"
+                                android:textColor="@color/Black80"
+                                android:textSize="14sp" />
+
+                        </androidx.cardview.widget.CardView>
 
 
                     </RelativeLayout>
 
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -523,6 +542,76 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="240dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical"
+                    android:onClick="ContinueClick"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bluelight"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="0sp"
+                                android:background="@color/Transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:text="@string/continue_c"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="0dp"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_yes" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
