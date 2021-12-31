@@ -4,16 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.cncd.first.Dialogs.AdFormTypeDialog;
+import com.cncd.first.Network.SessionManager;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 
+import java.util.HashMap;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +35,21 @@ public class MainActivity extends AppCompatActivity {
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
+        getUserInfo();
+
+    }
+
+    private void getUserInfo() {
+        sessionManager = new SessionManager(MainActivity.this);
+
+
+        HashMap<String, String> user = sessionManager.getUserDetail();
+        String name = user.get(sessionManager.NAME);
+
+        TextView Name;
+        Name = findViewById(R.id.userNameTextView);
+        Name.setText(name);
+       // Log.d("DoctorMainActivity",user_id);
     }
 
     public void adForm(View view) {

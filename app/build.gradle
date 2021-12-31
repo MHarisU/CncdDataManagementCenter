@@ -77,6 +77,10 @@ dependencies {
     implementation 'com.airbnb.android:lottie:3.5.0'
     //  implementation 'com.airbnb.android:lottie:3.0.0-beta1'
 
+    //barcode
+    implementation 'com.google.zxing:core:3.2.1'
+
+
 
 
 }
