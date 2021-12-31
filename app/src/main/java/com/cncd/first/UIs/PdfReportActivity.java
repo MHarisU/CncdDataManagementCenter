@@ -47,7 +47,7 @@ import java.util.List;
 
 public class PdfReportActivity extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener {
     private static final String TAG = PdfReportActivity.class.getSimpleName();
-  //  public static final String SAMPLE_FILE = "android_tutorial.pdf";
+    //  public static final String SAMPLE_FILE = "android_tutorial.pdf";
     PDFView pdfView;
     Integer pageNumber = 0;
     Button viewPDF;
@@ -97,11 +97,8 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         });
 
 
-
-
-
         viewPDF = findViewById(R.id.viewPDF);
-        pdfView= (PDFView)findViewById(R.id.pdfView);
+        pdfView = (PDFView) findViewById(R.id.pdfView);
         viewPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,11 +147,9 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
     }
 
 
-
-
     @Override
     public void loadComplete(int nbPages) {
-       // PdfDocument.Meta
+        // PdfDocument.Meta
 
         com.shockwave.pdfium.PdfDocument.Meta meta = pdfView.getDocumentMeta();
         printBookmarksTree(pdfView.getTableOfContents(), "-");
@@ -200,7 +195,6 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         // one is our variable for paint.
         Paint paint = new Paint();
         canvas.drawBitmap(scaledbmp, 80, 50, paint);
-
 
 
         // two variables for paint "paint" is used
@@ -254,8 +248,6 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         canvas.drawText("CASE", 660, 170, regular);
 
 
-
-
         header.setTextSize(20);
         regular.setTextSize(15);
         regularBold.setTextSize(16);
@@ -265,7 +257,6 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         header.setColor(ContextCompat.getColor(this, R.color.blue));
         regular.setColor(ContextCompat.getColor(this, R.color.black));
         regularBold.setColor(ContextCompat.getColor(this, R.color.Gray));
-
 
 
         canvas.drawText("Name : ", 82, 230, regularBold);
@@ -278,9 +269,7 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         canvas.drawText("43 years", 640, 230, regular);
 
         canvas.drawLine(82, 250, 780, 250, paint);
-       // canvas.drawLine(20, 0, 0, 20, paint);
-
-
+        // canvas.drawLine(20, 0, 0, 20, paint);
 
 
         canvas.drawText("Mobile No. : ", 82, 280, regularBold);
@@ -293,7 +282,6 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         canvas.drawText("45403-2947846-7", 650, 280, regular);
 
         canvas.drawLine(82, 300, 780, 300, paint);
-
 
 
         canvas.drawText("Address : ", 82, 330, regularBold);

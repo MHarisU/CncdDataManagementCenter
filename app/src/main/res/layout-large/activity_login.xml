@@ -189,22 +189,18 @@
                 app:boxBackgroundColor="@color/colorBg"
                 app:endIconMode="clear_text"
                 app:errorEnabled="true"
-
-
                 >
 
                 <EditText
-                    android:id="@+id/frag_log1_emailET"
-
+                    android:id="@+id/editTextEmail"
                     android:layout_width="match_parent"
-
                     android:layout_height="wrap_content"
                     android:drawablePadding="@dimen/material_fields_drawable_padding"
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
-                    android:maxLength="23"
+                    android:maxLength="50"
                     android:singleLine="true"
-                    android:text=""
+                    android:text="harish@cncd.org"
                     android:textSize="@dimen/sizeEditTextsInput"
                     android:textStyle="normal"
 
@@ -240,7 +236,8 @@
                 >
 
                 <EditText
-                    android:id="@+id/frag_log2_passET"
+
+                    android:id="@+id/editTextPassword"
 
                     android:layout_width="match_parent"
 
@@ -278,9 +275,15 @@
                 android:gravity="center|bottom"
                 android:orientation="vertical">
 
+                <ProgressBar
+                    android:id="@+id/progressBarLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone" />
+
                 <com.google.android.material.button.MaterialButton
-                    android:onClick="signIn"
-                    android:id="@+id/frag_log2_loginBttn"
+                    android:id="@+id/loginButton"
                     style="@style/AppSubtitleTexts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -293,6 +296,7 @@
                     android:backgroundTint="@color/colorPrimaryDark"
                     android:ellipsize="end"
                     android:maxLines="1"
+                    android:onClick="signIn"
                     android:padding="10dp"
                     android:text="@string/signin"
                     android:textAllCaps="false"
