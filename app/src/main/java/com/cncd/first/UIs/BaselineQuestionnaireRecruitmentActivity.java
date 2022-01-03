@@ -20,6 +20,7 @@ import com.cncd.first.Dialogs.MyocardialInfarctionDialog;
 import com.cncd.first.Dialogs.SeizuresDialog;
 import com.cncd.first.Dialogs.ThyroidDiseaseDialog;
 import com.cncd.first.Dialogs.ValvularHeartDiseaseDialog;
+import com.cncd.first.Models.BaseParticipant.ParticipantDataList;
 import com.cncd.first.R;
 import com.cncd.first.Utils.DatePicker;
 import com.cncd.first.Utils.GeneralUtils;
@@ -35,10 +36,13 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 
     ArrayList<String> participantDetails = new ArrayList<>();
 
-    TextView interviewDateText, dateLastMeal, dateBloodSample;
+    TextView interviewDateText, dateLastMeal, dateBloodSample, lastMealTime, bloodsampleTime;
     EditText interviewInitialsEdit, refTargetEdit, participantNameEdit, participantFatherHusbandEdit, participantAddressEdit, participantTelephoneEdit, participantWhatsappEdit;
     EditText participantAgeEdit, participantCnicEdit;
     RadioButton radioMale, radioFemale;
+
+
+    ParticipantDataList participantDataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +70,7 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     private void loadUI() {
         interviewDateText = findViewById(R.id.interviewDateText);
         interviewInitialsEdit = findViewById(R.id.interviewInitialsEdit);
-        refTargetEdit = findViewById(R.id.refTargetEdit);
+        //refTargetEdit = findViewById(R.id.refTargetEdit);
 
         participantNameEdit = findViewById(R.id.participantNameEdit);
         participantFatherHusbandEdit = findViewById(R.id.participantFatherHusbandEdit);
@@ -79,6 +83,12 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 
         radioMale = findViewById(R.id.radioMale);
         radioFemale = findViewById(R.id.radioFemale);
+
+        dateLastMeal = findViewById(R.id.dateLastMeal);
+        dateBloodSample = findViewById(R.id.dateBloodSample);
+        lastMealTime = findViewById(R.id.lastMealTime);
+        bloodsampleTime = findViewById(R.id.bloodsampleTime);
+
 
     }
 
@@ -108,28 +118,24 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     }
 
     public void lastMealTime(View view) {
-        TextView lastMealTime = findViewById(R.id.lastMealTime);
         TimePicker timePicker = new TimePicker(BaselineQuestionnaireRecruitmentActivity.this, lastMealTime);
         timePicker.pickDate();
     }
 
     public void lastMealDate(View view) {
 
-        dateLastMeal = findViewById(R.id.dateLastMeal);
         DatePicker datePicker = new DatePicker(BaselineQuestionnaireRecruitmentActivity.this, dateLastMeal);
         String selected_date = datePicker.pickDate();
 
     }
 
     public void bloodSampleDate(View view) {
-        dateBloodSample = findViewById(R.id.dateBloodSample);
         DatePicker datePicker = new DatePicker(BaselineQuestionnaireRecruitmentActivity.this, dateBloodSample);
         String selected_date = datePicker.pickDate();
 
     }
 
     public void bloodSampleTime(View view) {
-        TextView bloodsampleTime = findViewById(R.id.bloodsampleTime);
         TimePicker timePicker = new TimePicker(BaselineQuestionnaireRecruitmentActivity.this, bloodsampleTime);
         timePicker.pickDate();
     }
@@ -137,8 +143,15 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     public void moveToSecondForm(View view) {
         //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
 
-        Intent intent = new Intent(this, BaselineQuestionnaireRecruitment2Activity.class);
+        participantDataList = new ParticipantDataList("KL54862",participantDetails.get(0).toString(), participantFatherHusbandEdit.getText().toString(), participantDetails.get(3),
+                participantDetails.get(2), participantDetails.get(1),participantCnicEdit.getText().toString(),participantDetails.get(4), participantDetails.get(5),
+                dateLastMeal.getText().toString(), lastMealTime.getText().toString(),dateBloodSample.getText().toString(),bloodsampleTime.getText().toString());
+
+        Intent intent = new Intent(BaselineQuestionnaireRecruitmentActivity.this, BaselineQuestionnaireRecruitment2Activity.class);
+        intent.putStringArrayListExtra("participantData", participantDetails);
+        intent.putExtra("participantDataList", participantDataList);
         startActivityForResult(intent, 1);
+
 
     }
 

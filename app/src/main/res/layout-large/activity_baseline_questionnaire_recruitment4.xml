@@ -74,7 +74,7 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp">
 
@@ -988,7 +988,7 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp">
 
@@ -1402,7 +1402,7 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp">
 
@@ -1758,7 +1758,7 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp">
 

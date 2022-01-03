@@ -23,6 +23,7 @@ import android.graphics.pdf.PdfDocument;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -34,7 +35,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cncd.first.Models.BaseParticipant.ParticipantDataList;
 import com.cncd.first.R;
+import com.cncd.first.Utils.GenerateBarCode;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
@@ -47,6 +50,7 @@ import com.google.zxing.common.BitMatrix;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PdfReportActivity extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener {
@@ -66,10 +70,13 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
 
     // creating a bitmap variable
     // for storing our images
-    Bitmap bmp, scaledbmp;
+    Bitmap bmp, barcode_bitmap, scaledbmp;
 
     // constant code for runtime permissions
     private static final int PERMISSION_REQUEST_CODE = 200;
+
+    ParticipantDataList participantDataList;
+
 
 
     @Override
@@ -77,10 +84,15 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_report);
 
+        loadParticipantData();
+
+
 
         // initializing our variables.
         generatePDFbtn = findViewById(R.id.idBtnGeneratePDF);
         bmp = BitmapFactory.decodeResource(getResources(), R.drawable.app_logo_two);
+        barcode_bitmap = GenerateBarCode.getBarCodeImageBitmap(this, "KL54862");
+        barcode_bitmap = Bitmap.createScaledBitmap(barcode_bitmap, 165, 25, false);
         scaledbmp = Bitmap.createScaledBitmap(bmp, 80, 80, false);
 
         // below code is used for
@@ -91,14 +103,17 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
             requestPermission();
         }
 
-        generatePDFbtn.setOnClickListener(new View.OnClickListener() {
+       /* generatePDFbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // calling method to
                 // generate our PDF file.
                 generatePDF();
             }
-        });
+        });*/
+
+        generatePDF();
+
 
 
         viewPDF = findViewById(R.id.viewPDF);
@@ -112,9 +127,28 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         });
 
 
+
     }
 
+  //  ArrayList<String> participantDetails = new ArrayList<>();
 
+    private void loadParticipantData() {
+        Intent intent = getIntent();
+       // participantDetails = intent.getStringArrayListExtra("participantData");
+        participantDataList = (ParticipantDataList) getIntent().getSerializableExtra("participantDataList");
+
+/*
+        participantDetails.add("Haris Unar");
+        participantDetails.add("45");
+        participantDetails.add("Male");
+        participantDetails.add("DHA phase 5 karachi");
+        participantDetails.add("03473647030");
+        participantDetails.add("03473647030");*/
+
+        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "" + participantDataList.getName(), Toast.LENGTH_SHORT).show();
+
+    }
 
     private void displayFromAsset() {
 
@@ -201,6 +235,7 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         // one is our variable for paint.
         Paint paint = new Paint();
         canvas.drawBitmap(scaledbmp, 80, 50, paint);
+        canvas.drawBitmap(barcode_bitmap, 70, 180, paint);
 
 
         // two variables for paint "paint" is used
@@ -234,7 +269,7 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         // and then we are passing our variable of paint which is title.
         canvas.drawText("Center for Non-Communicable Disease", 170, 105, header);
         canvas.drawText("Recruitment Report", 170, 125, header);
-        canvas.drawText("Date : 25/12/2021", 650, 105, regularBold);
+        canvas.drawText("Date : 03/01/2021", 650, 105, regularBold);
 
 
         // below line is used for setting
@@ -266,32 +301,36 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
 
 
         canvas.drawText("Name : ", 82, 230, regularBold);
-        canvas.drawText("Muhammad Haris", 140, 230, regular);
+        canvas.drawText(participantDataList.getName(), 140, 230, regular);
 
         canvas.drawText("Gender : ", 330, 230, regularBold);
-        canvas.drawText("Male", 400, 230, regular);
+        if (participantDataList.getGender().equals("Male")) {
+            canvas.drawText("Male", 400, 230, regular);
+        } else if (participantDataList.getGender().equals("Female")) {
+            canvas.drawText("Female", 400, 230, regular);
+        }
 
         canvas.drawText("Age : ", 600, 230, regularBold);
-        canvas.drawText("43 years", 640, 230, regular);
+        canvas.drawText((participantDataList.getAge()) + " years", 640, 230, regular);
 
         canvas.drawLine(82, 250, 780, 250, paint);
         // canvas.drawLine(20, 0, 0, 20, paint);
 
 
         canvas.drawText("Mobile No. : ", 82, 280, regularBold);
-        canvas.drawText("03473647030", 180, 280, regular);
+        canvas.drawText(participantDataList.getPhone_no(), 180, 280, regular);
 
         canvas.drawText("Whatsapp No. : ", 330, 280, regularBold);
-        canvas.drawText("03473647030", 450, 280, regular);
+        canvas.drawText(participantDataList.getWhatsapp_no(), 450, 280, regular);
 
         canvas.drawText("CNIC : ", 600, 280, regularBold);
-        canvas.drawText("45403-2947846-7", 650, 280, regular);
+        canvas.drawText(participantDataList.getCnic_no(), 650, 280, regular);
 
         canvas.drawLine(82, 300, 780, 300, paint);
 
 
         canvas.drawText("Address : ", 82, 330, regularBold);
-        canvas.drawText("CC-65/1, Defence View, Main Service Road, Near Iqra University Main Campus, Karachi", 160, 330, regular);
+        canvas.drawText(participantDataList.getAddress(), 160, 330, regular);
 
         canvas.drawLine(82, 350, 780, 350, paint);
 
@@ -327,6 +366,15 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
             // below line is to print toast message
             // on completion of PDF generation.
             Toast.makeText(PdfReportActivity.this, "PDF file generated successfully.", Toast.LENGTH_SHORT).show();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                     displayFromAsset();
+
+                }
+            }, 1000);
+
         } catch (IOException e) {
             // below line is used
             // to handle error

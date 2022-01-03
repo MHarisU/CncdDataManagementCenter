@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         InitUI();
-     //   Login("harish@cncd.org", "123");
+        //   Login("harish@cncd.org", "123");
 
 
     }
@@ -190,7 +190,7 @@ public class LoginActivity extends AppCompatActivity {
                                     finish();
                                 }
                                 */
-                              //  Toast.makeText(LoginActivity.this, id + "\n" + name + "\n" +  email + "\n" + role + "\n" + contact + "\n" + jsonToken, Toast.LENGTH_LONG).show();
+                                //  Toast.makeText(LoginActivity.this, id + "\n" + name + "\n" +  email + "\n" + role + "\n" + contact + "\n" + jsonToken, Toast.LENGTH_LONG).show();
 
                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                 startActivity(intent);

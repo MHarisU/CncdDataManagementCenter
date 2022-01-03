@@ -11,17 +11,20 @@ import android.view.WindowManager;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.cncd.first.Models.BaseParticipant.ParticipantDataList;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 import com.cncd.first.Utils.JsonArrayToList;
 import com.cncd.first.Utils.JsonListToJsonArray;
 import com.cncd.first.Utils.LoadListToMenu;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BaselineQuestionnaireRecruitment3Activity extends AppCompatActivity {
 
     TextView sheeshUsedText;
+    ParticipantDataList participantDataList;
 
 
     @Override
@@ -33,9 +36,20 @@ public class BaselineQuestionnaireRecruitment3Activity extends AppCompatActivity
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         loadUI();
+
+        loadParticipantData();
+
     }
 
+   // ArrayList<String> participantDetails = new ArrayList<>();
 
+    private void loadParticipantData() {
+        Intent intent = getIntent();
+        participantDataList = (ParticipantDataList) getIntent().getSerializableExtra("participantDataList");
+
+       // participantDetails = intent.getStringArrayListExtra("participantData");
+        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
+    }
     private void loadUI() {
         sheeshUsedText = findViewById(R.id.sheeshUsedText);
     }
@@ -123,7 +137,10 @@ public class BaselineQuestionnaireRecruitment3Activity extends AppCompatActivity
         //startActivity(new Intent(CallBackForm3Activity.this, CallBackForm4Activity.class));
         //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
 
-        Intent intent = new Intent(this, BaselineQuestionnaireRecruitment4Activity.class);
+
+        Intent intent = new Intent(BaselineQuestionnaireRecruitment3Activity.this, BaselineQuestionnaireRecruitment4Activity.class);
+        intent.putExtra("participantDataList", participantDataList);
+      //  intent.putStringArrayListExtra("participantData", participantDetails);
         startActivityForResult(intent, 1);
 
     }

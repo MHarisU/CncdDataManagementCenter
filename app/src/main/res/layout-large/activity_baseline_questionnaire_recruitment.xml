@@ -132,13 +132,12 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp">
 
-                <EditText
-                    android:id="@+id/refTargetEdit"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
-                    android:hint="@string/ref_target_4"
                     android:padding="10dp"
+                    android:text="3. Center : KHA"
                     android:textSize="18sp" />
 
             </androidx.cardview.widget.CardView>
@@ -250,13 +249,13 @@
                         app:cardElevation="0dp">
 
                         <EditText
-                            android:maxLength="11"
                             android:id="@+id/participantTelephoneEdit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
                             android:hint="@string/tel_number_8"
                             android:inputType="phone"
+                            android:maxLength="11"
                             android:padding="10dp"
                             android:textSize="18sp" />
 
@@ -271,13 +270,13 @@
                         app:cardElevation="0dp">
 
                         <EditText
-                            android:maxLength="11"
                             android:id="@+id/participantWhatsappEdit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
                             android:hint="@string/whatsapp_number_9"
                             android:inputType="phone"
+                            android:maxLength="11"
                             android:padding="10dp"
                             android:textSize="18sp" />
 
@@ -754,7 +753,6 @@
                         android:background="@color/gray" />
 
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -860,7 +858,6 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:background="@color/gray" />
-
 
 
                     <LinearLayout
@@ -970,9 +967,6 @@
                         android:background="@color/gray" />
 
 
-
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1078,7 +1072,6 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:background="@color/gray" />
-
 
 
                     <LinearLayout
@@ -1188,7 +1181,6 @@
                         android:background="@color/gray" />
 
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1294,8 +1286,6 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:background="@color/gray" />
-
-
 
 
                     <LinearLayout
@@ -1405,7 +1395,6 @@
                         android:background="@color/gray" />
 
 
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -1442,13 +1431,13 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:visibility="visible"
-                        android:layout_margin="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
                         android:background="@drawable/bttn_drk_stroke"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="visible">
 
 
                         <RelativeLayout
@@ -1700,7 +1689,6 @@
                         android:background="@color/gray" />
 
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1853,10 +1841,10 @@
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
+                                    android:hint="Enter"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:padding="10dp"
-                                    android:hint="Enter"
                                     android:textColor="@color/Black80"
                                     android:textSize="14sp" />
 
@@ -2126,7 +2114,6 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:background="@color/gray" />
-
 
 
                     <LinearLayout
@@ -2446,7 +2433,6 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:background="@color/gray" />
-
 
 
                     <LinearLayout
@@ -3026,10 +3012,10 @@
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
+                                    android:hint="Enter"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:padding="10dp"
-                                    android:hint="Enter"
                                     android:textColor="@color/Black80"
                                     android:textSize="14sp" />
 
@@ -3132,10 +3118,10 @@
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
+                                    android:hint="Enter"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:padding="10dp"
-                                    android:hint="Enter"
                                     android:textColor="@color/Black80"
                                     android:textSize="14sp" />
 
@@ -3238,10 +3224,10 @@
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
+                                    android:hint="Enter"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:padding="10dp"
-                                    android:hint="Enter"
                                     android:textColor="@color/Black80"
                                     android:textSize="14sp" />
 
@@ -3344,10 +3330,10 @@
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
+                                    android:hint="Enter"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:padding="10dp"
-                                    android:hint="Enter"
                                     android:textColor="@color/Black80"
                                     android:textSize="14sp" />
 
@@ -3831,16 +3817,11 @@
                         android:background="@color/gray" />
 
 
-
-
-
-
-
                     <LinearLayout
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
 
                         <LinearLayout

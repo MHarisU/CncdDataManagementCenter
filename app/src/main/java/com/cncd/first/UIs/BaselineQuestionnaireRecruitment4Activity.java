@@ -2,23 +2,44 @@ package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.cncd.first.Models.BaseParticipant.ParticipantDataList;
 import com.cncd.first.R;
 import com.cncd.first.Utils.DatePicker;
 import com.cncd.first.Utils.GeneralUtils;
 import com.cncd.first.Utils.TimePicker;
 
+import java.util.ArrayList;
+
 public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity {
+
+    ParticipantDataList participantDataList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_baseline_questionnaire_recruitment4);
+
+
+        loadParticipantData();
+
     }
 
+  //  ArrayList<String> participantDetails = new ArrayList<>();
+
+    private void loadParticipantData() {
+        Intent intent = getIntent();
+        participantDataList = (ParticipantDataList) getIntent().getSerializableExtra("participantDataList");
+
+      //  participantDetails = intent.getStringArrayListExtra("participantData");
+        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
+    }
 
 
     public void CloseForm(View view) {
@@ -60,6 +81,15 @@ public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity
 
 
     public void submitForm(View view) {
+
+
+
+        Intent intent = new Intent(BaselineQuestionnaireRecruitment4Activity.this, PdfReportActivity.class);
+        intent.putExtra("participantDataList", participantDataList);
+       // intent.putStringArrayListExtra("participantData", participantDetails);
+        startActivity(intent);
+
+
         this.setResult(1);
         this.finish();
     }

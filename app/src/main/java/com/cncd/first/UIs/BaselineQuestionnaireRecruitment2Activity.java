@@ -15,7 +15,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.cncd.first.Models.BaseParticipant.ParticipantDataList;
 import com.cncd.first.Models.FamilyModel.FamilyAdapter;
 import com.cncd.first.Models.FamilyModel.FamilyList;
 import com.cncd.first.Models.MedicationModel.MedicationAdapter;
@@ -46,6 +48,8 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
     EditText specifyConditionEdit, ageDiagnosedEdit;
     TextView medConditionEdit, relationEdit;
 
+    ParticipantDataList participantDataList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +66,18 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
 
         loadFamily();
 
+        loadParticipantData();
+
+    }
+
+   // ArrayList<String> participantDetails = new ArrayList<>();
+
+    private void loadParticipantData() {
+        Intent intent = getIntent();
+
+        participantDataList = (ParticipantDataList) getIntent().getSerializableExtra("participantDataList");
+       // participantDetails = intent.getStringArrayListExtra("participantData");
+        //Toast.makeText(BaselineQuestionnaireRecruitment2Activity.this, ""+participantDataList.getName(), Toast.LENGTH_SHORT).show();
     }
 
 
@@ -322,8 +338,11 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
         //startActivity(new Intent(CallBackForm2Activity.this, CallBackForm3Activity.class));
         //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
 
-        Intent intent = new Intent(this, BaselineQuestionnaireRecruitment3Activity.class);
+        Intent intent = new Intent(BaselineQuestionnaireRecruitment2Activity.this, BaselineQuestionnaireRecruitment3Activity.class);
+        intent.putExtra("participantDataList", participantDataList);
         startActivityForResult(intent, 1);
+
+
 
     }
 
