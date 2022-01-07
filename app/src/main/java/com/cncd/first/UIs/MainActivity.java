@@ -2,6 +2,7 @@ package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -55,5 +56,9 @@ public class MainActivity extends AppCompatActivity {
     public void adForm(View view) {
         AdFormTypeDialog formTypeDialog = new AdFormTypeDialog();
         formTypeDialog.showDialog(MainActivity.this);
+    }
+
+    public void openMyForms(View view) {
+        startActivity(new Intent(this, MyFormsActivity.class));
     }
 }

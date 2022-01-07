@@ -25,7 +25,7 @@
             android:fontFamily="@font/poppins_regular"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Dyslipidemia"
+            android:text="Hypertension"
             android:textColor="@color/White"
             android:textSize="20dp" />
 
@@ -69,7 +69,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="10dp"
-                android:text="Has any doctor ever told you that you have Dyslipidemia?"
+                android:text="Has any doctor ever told you that you have Hypertension?"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -234,7 +234,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="1.1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -267,7 +267,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.3"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -304,7 +304,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.3"
+                    android:layout_weight="1."
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -323,6 +323,43 @@
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
                             android:hint="Medication"
+                            android:inputType="text"
+                            android:maxLength="2"
+                            android:padding="10dp"
+                            android:textSize="14sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1."
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="2dp">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@drawable/bttn_drk_stroke"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:hint="Dietary change"
                             android:inputType="text"
                             android:maxLength="2"
                             android:padding="10dp"

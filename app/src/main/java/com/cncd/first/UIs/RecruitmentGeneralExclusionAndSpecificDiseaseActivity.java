@@ -13,6 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
@@ -295,5 +296,13 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
             layoutGlobalExclusion.startAnimation(slide_up);
         }
 
+    }
+
+    public void viewAllConsentForms(View view) {
+        LinearLayout all_consent_layout = findViewById(R.id.all_consent_layout);
+        TextView view_all_button = findViewById(R.id.view_all_button);
+
+        view_all_button.setVisibility(View.GONE);
+        all_consent_layout.setVisibility(View.VISIBLE);
     }
 }

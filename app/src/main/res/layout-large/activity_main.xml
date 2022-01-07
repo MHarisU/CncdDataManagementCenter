@@ -6,8 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray10"
+    android:background="@color/white"
     android:orientation="vertical"
+
     tools:context=".UIs.MainActivity">
 
     <LinearLayout
@@ -17,6 +18,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:background="@color/gray10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
@@ -31,18 +33,18 @@
 
                     android:layout_centerHorizontal="true"
                     android:id="@+id/profileImageCard"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="20dp"
-                    app:cardCornerRadius="70dp"
+                    app:cardCornerRadius="50dp"
                     app:cardElevation="1dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:padding="0dp"
-                        android:src="@drawable/profile" />
+                        android:src="@drawable/user" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -314,6 +316,7 @@
                         android:background="@color/gray50"/>
 
                     <LinearLayout
+                        android:onClick="openMyForms"
                         android:gravity="center_vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -337,7 +340,7 @@
                             android:background="@color/Transparent"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center_vertical"
-                            android:text="@string/tasks"
+                            android:text="@string/my_forms"
                             android:textColor="@color/Black80"
                             android:textSize="15sp" />
 

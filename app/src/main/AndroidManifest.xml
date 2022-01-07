@@ -2,12 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cncd.first">
 
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-
 
     <application
         android:allowBackup="true"
@@ -18,20 +15,22 @@
         android:roundIcon="@mipmap/ic_app_icon_round"
         android:supportsRtl="false"
         android:theme="@style/Theme.First"
-        android:windowSoftInputMode="adjustResize"
-        android:usesCleartextTraffic="true">
-
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize">
+        <activity
+            android:name=".UIs.MyFormsActivity"
+            android:exported="true" />
         <activity
             android:name=".UIs.PdfReportActivity"
             android:exported="true">
 
-
-        <!--    <intent-filter>
+            <!--
+                <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
-
+            </intent-filter>
+            -->
 
         </activity>
         <activity
@@ -103,23 +102,23 @@
         <activity
             android:name=".UIs.SplashActivity"
             android:exported="true">
-             <!--<intent-filter>
+
+            <!--
+             <intent-filter>
                  <action android:name="android.intent.action.MAIN" />
 
                  <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>-->
+             </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".UIs.MainActivity"
-            android:exported="true" >
-
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

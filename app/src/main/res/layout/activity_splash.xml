@@ -9,31 +9,40 @@
     android:orientation="vertical"
     tools:context=".UIs.SplashActivity">
 
-    <ImageView
-        android:visibility="invisible"
-        android:id="@+id/topImageView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:layout_marginEnd="10dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/splash_low" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <ImageView
-        android:visibility="invisible"
-        android:id="@+id/secondImageView"
+        <ImageView
+            android:id="@+id/topImageView"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/splash_low" />
 
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/splash_graphic" />
+        <ImageView
+            android:id="@+id/secondImageView"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/splash_graphic" />
+
+
+    </LinearLayout>
+
+
 
     <com.airbnb.lottie.LottieAnimationView
 
         android:visibility="invisible"
         android:id="@+id/animation_view"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_gravity="center"
         android:scaleType="centerInside"
         app:lottie_autoPlay="true"
@@ -49,12 +58,13 @@
 
 
         <TextView
+            android:textSize="20sp"
             android:fontFamily="@font/proxima_nova"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="10dp"
-            android:text="@string/copy_right"
+            android:text="All rights © reserved by Center for Non-Communicable Diseases"
             android:textColor="@color/Black80" />
 
 

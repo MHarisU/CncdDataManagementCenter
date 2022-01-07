@@ -369,6 +369,7 @@
                         android:textStyle="" />
 
                     <TextView
+                        android:textColor="@color/Black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="22dp"
@@ -378,66 +379,141 @@
                         android:textSize="16sp" />
 
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="22dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="1 - I agree to participant in CNCD research work"
-                        android:textSize="16sp" />
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="1 - I agree to participant in CNCD research work"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="2 - I don't have any objection over CNCD to collect my blood and urine samples"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="3 - I don't have any objection over to perform research on my samples"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="4 - I agree to participant in CNCD research work"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="5 - I don't have any objection over CNCD to collect my blood and urine samples"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="6 - I don't have any objection over to perform research on my samples"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="900dp"
+                            android:src="@drawable/consent1" />
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/all_consent_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="900dp"
+                                android:src="@drawable/consent2" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="900dp"
+                                android:src="@drawable/consent3" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="900dp"
+                                android:src="@drawable/consent4" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="900dp"
+                                android:src="@drawable/consent5" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="900dp"
+                                android:src="@drawable/consent6" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:onClick="viewAllConsentForms"
+                            android:id="@+id/view_all_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/proxima_nova"
+                            android:text="View All 6 Pages"
+                            android:textColor="@color/blue"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="22dp"
-                        android:layout_marginTop="0dp"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="2 - I don't have any objection over CNCD to collect my blood and urine samples"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="22dp"
-                        android:layout_marginTop="0dp"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="3 - I don't have any objection over to perform research on my samples"
-                        android:textSize="16sp" />
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="22dp"
-                        android:layout_marginTop="0dp"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="4 - I agree to participant in CNCD research work"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="22dp"
-                        android:layout_marginTop="0dp"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="5 - I don't have any objection over CNCD to collect my blood and urine samples"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="22dp"
-                        android:layout_marginTop="0dp"
-                        android:fontFamily="@font/poppins_light"
-                        android:text="6 - I don't have any objection over to perform research on my samples"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="22dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_regular"
                         android:text="I do agree to above points"
                         android:textSize="18sp" />
