@@ -13,10 +13,12 @@
     <string name="signin">لاگ ان کریں</string>
     <string name="search">تلاش کریں</string>
     <string name="new_notification">نئی اطلاعات</string>
+    <string name="notification">اطلاعات</string>
+
     <string name="account">صارف اکاؤنٹ</string>
     <string name="activity_log">سرگرمی کا لاگ</string>
     <string name="tasks">کام</string>
-    <string name="my_forms">My Forms</string>
+    <string name="my_forms">میرے فارم</string>
     <string name="settings">ترتیبات</string>
     <string name="faqs">عمومی سوالات</string>
     <string name="logout">لاگ آوٹ</string>
@@ -29,8 +31,9 @@
     <string name="search_form">فارم تلاش کریں</string>
     <string name="delete_form">فارم ختم کریں</string>
     <string name="pgr">پی جی آر</string>
-    <string name="hospital_recruitment">HOSPITAL RECRUITMENT</string>
-    <string name="callback_recruitment">CALL BACK RECRUITMENT</string>
+    <string name="hospital_recruitment">ہسپتال بھرتی</string>
+    <string name="hospital_recruitment_form">ہسپتال بھرتی فارم</string>
+    <string name="callback_recruitment">کال بیک بھرتی</string>
     <string name="english">انگریزی</string>
     <string name="urdu">اردو</string>
     <string name="select_type_of_form">فارم منتخب کریں</string>
@@ -53,7 +56,7 @@
     <string name="tel_number_8">۸. ٹیلی فون نمبر</string>
     <string name="whatsapp_number_9">۹. واٹس ایپ نمبر</string>
     <string name="age_10">۱۰. عمر</string>
-    <string name="gender_11">۱۱. صنف</string>
+    <string name="gender_11">۱۱. جںس</string>
     <string name="male">مرد</string>
     <string name="female">عورت</string>
 
@@ -62,6 +65,7 @@
     <string name="date_ddmmyyyy">تاریخ</string>
     <string name="time_hrmm">وقت</string>
     <string name="blood_sampling_time_14">۱۴. خون کے نمونے لینے کا وقت</string>
+    <string name="samples">نمونے</string>
     <string name="past_medical_history_15">۱۵. ماضی کا میڈیکل ریکارڈ</string>
     <string name="s_no">سیریل نمبر</string>
     <string name="medical_conditions">طبی احوال</string>
@@ -77,7 +81,7 @@
     <string name="hypertension_htn">ہائی بلڈ پریشر</string>
     <string name="heart_attack_mi">دل کا دورہ</string>
     <string name="angina_cad">انجائنا سی اے ڈی</string>
-    <string name="heart_failure">قلب کی ناکامی</string>
+    <string name="heart_failure">دل بند ہو</string>
     <string name="stroke">فالج</string>
     <string name="chronic_liver_disease">دائمی جگر کی بیماری</string>
     <string name="cancer">کینسر</string>
@@ -95,7 +99,7 @@
     <string name="recurrent_chest_infections">بار بار سینے میں انفیکشن</string>
     <string name="any_other_disease">کوئی اور بیماری</string>
     <string name="continue_c">اگے بڑھیں</string>
-    <string name="submit_c">SUBMIT</string>
+    <string name="submit_c">مکمل</string>
     <string name="medication_history_16">۱٦. ادویات کا ریکارڈ</string>
     <string name="add_f_c">شامل کریں</string>
     <string name="add_new_medication">نئی دوا شامل کریں</string>
@@ -106,7 +110,7 @@
     <string name="add">شامل کریں</string>
     <string name="drug_name">دوا کا نام</string>
     <string name="generic_name">دوا کا عام نام</string>
-    <string name="duration_in_months">دورانیہ (مہینوں میں)</string>
+    <string name="duration_in_months">دورانیہ مہینوں میں</string>
 
     <string name="no_medical_history_added">کوئی میڈیکل ہسٹری شامل نہیں کی گئی</string>
     <string name="family_history_17">۱۷. فیملی کا ریکارڈ</string>
@@ -133,7 +137,7 @@
 
 
     <string name="tobacco_usage_19">۱۹. ٹوباکو کا استعمال</string>
-    <string name="alcohol_consumption_20">20. ALCOHOL CONSUMPTION</string>
+    <string name="alcohol_consumption_20">الکحل کا استعمال</string>
     <string name="which_best_describes_subjects_history_of_tobacco_use">کیا آپ تمباکو استعمال کرتے ہو؟</string>
     <string name="never_use">کبھی استعمال نہیں کیا</string>
     <string name="does_did_the_patient_use_following_tobacco">کیا مریض مندرجہ ذیل تمباکو کی مصنوعات میں سے کوئی استعمال کرتا ہے؟</string>
@@ -156,67 +160,70 @@
     <string name="both">دونوں</string>
     <string name="at_what_age_did_subject_start">کس عمر میں مریض نے اسے استعمال کرنا شروع کیا؟</string>
     <string name="at_what_age_did_subject_quit">کس عمر میں مریض نے چھوڑ دیا؟</string>
+    <string name="has_the_subject_smoked_100">کیا مریض نے زندگی میں 100 سے زیادہ سگریٹ/بیڈی پیی ہے؟</string>
     <string name="yes">جی ہاں</string>
     <string name="no">نہیں</string>
     <string name="if_yes_to_huqqa_chilum">اگر حق / چلم کے لیے ہاں۔</string>
-    <string name="how_many_years_patients_has_smoked">How many years patient has drink it?</string>
+    <string name="how_many_years_patients_has_smoked">مریض کتنے سالوں سے اسے استعمال کر رہا ہے؟</string>
     <string name="if_yes_to_sheesha">اگر شیشہ کے لیے ہاں</string>
     <string name="how_often_used">مریض اسے کتنی بار استعمال کرتا ہے؟</string>
-    <string name="tambako_type">Tambako Type</string>
-    <string name="naswar_type">Naswar Type</string>
 
 
-    <string name="if_yes_to_paan">If Yes to Paan</string>
-    <string name="tambako">Tambako</string>
-    <string name="non_tambako">Non-tambako</string>
+    <string name="tambako_type">تمباکو کی قسم</string>
+    <string name="naswar_type">نسوار کی قسم</string>
 
-    <string name="if_yes_to_gutka">If Yes to Gutka</string>
+    <string name="if_yes_to_paan">اگر پان استعمال کرتے ہیں تو</string>
+    <string name="tambako">تمباکو</string>
+    <string name="non_tambako">-بغیر تمباکو</string>
 
-    <string name="if_yes_to_supari">If Yes to Supari</string>
+    <string name="if_yes_to_gutka">اگر گٹکا استعمال کرتے ہیں تو</string>
 
-    <string name="if_yes_to_naswar">If Yes to Naswar</string>
-    <string name="black">Black</string>
-    <string name="green">Green</string>
-    <string name="kashmiri">Kashmiri</string>
-    <string name="how_many_packets_per_day">How many packets per day?</string>
+    <string name="if_yes_to_supari">اگر سپاری استعمال کرتے ہیں تو</string>
 
-    <string name="if_yes_to_gul">If Yes to Gul</string>
-
-    <string name="if_yes_to_naas">If Yes to Naas</string>
-
-    <string name="are_you_exposed_to_other_peoples_smoke">Are you exposed to other peoples smoke (Passive Smoke)</string>
-
-    <string name="never">Never</string>
-    <string name="work_place">Work Place</string>
-    <string name="home">Home</string>
-    <string name="with_friends">With Friends</string>
+    <string name="if_yes_to_naswar">اگر نسوار استعمال کرتے ہیں تو</string>
+    <string name="black">سیاہ</string>
+    <string name="green">سبز</string>
+    <string name="kashmiri">کشمیری</string>
+    <string name="how_many_packets_per_day">فی دن کتنے پیکٹ؟</string>
 
 
-    <string name="has_the_subject_ever_had_drink_of_beer">Has the subject ever had a drink of beer, wine, or any other Alcoholic Beverage</string>
-    <string name="for_women_only">21. FOR WOMEN ONLY - QUESTIONS</string>
-    <string name="state_of_subject">State of subject</string>
+    <string name="if_yes_to_gul">اگر گل استعمال کرتے ہیں تو</string>
+
+    <string name="if_yes_to_naas">اگر ناس استعمال کرتے ہیں تو</string>
+
+    <string name="are_you_exposed_to_other_peoples_smoke">کیا آپ کو دوسرے لوگوں کے سگریٹ نوشی کا سامنا ہے؟</string>
+
+    <string name="never">کبھی نہیں</string>
+    <string name="work_place">کام کی جگہ</string>
+    <string name="home">گھر</string>
+    <string name="with_friends">دوستوں کے ساتھ</string>
+
+
+    <string name="has_the_subject_ever_had_drink_of_beer">کیا مریض نے کبھی بیئر، شراب، یا کوئی اور الکوحل مشروبات پیا ہے؟</string>
+    <string name="for_women_only">صرف خواتین کے لیے - سوالات</string>
+    <string name="state_of_subject">مریض کی حالت</string>
     <string name="pre_menopausal">Pre-menopausal</string>
     <string name="peri_menopausal">Peri-menopausal</string>
     <string name="post_menopausal">Post-menopausal</string>
-    <string name="has_the_subject_had_menstrual_period">Has the subject had a menstrual period in the last 12 months</string>
-    <string name="at_what_age_did_they_stop">At what age did they stop?</string>
-    <string name="why_did_they_stop">Why did they stop?</string>
+    <string name="has_the_subject_had_menstrual_period">کیا اس مضمون کو پچھلے 12 مہینوں میں ماہواری آئی ہے؟</string>
+    <string name="at_what_age_did_they_stop">وہ کس عمر میں رک گئے؟</string>
+    <string name="why_did_they_stop">وہ کیوں رک گئے؟</string>
     <string name="menopause">Menopause</string>
     <string name="hysterectomy">Hysterectomy</string>
     <string name="radiation">Radiation</string>
     <string name="other_s">Other</string>
-    <string name="have_you_ever_used_female_hormone_replacements">Have you ever used female hormone replacements?</string>
-    <string name="have_you_ever_had_any_abortion">Have you ever had any abortion or miscarriage?</string>
-    <string name="if_yes_so_how_many_times">If Yes, so how many times?</string>
-    <string name="have_you_ever_had_eclampsia">Have you ever had Eclampsia, Pre-eclampsia or high blood pressure complication during pregnancy?</string>
-    <string name="have_you_ever_develop_gestational_diabetes">Have you ever develop gestational diabetes during pregnancy?</string>
-    <string name="have_you_ever_delivered_premature_baby">Have you ever delivered premature birth to baby?</string>
+    <string name="have_you_ever_used_female_hormone_replacements">کیا آپ نے کبھی خواتین کے ہارمون کی تبدیلی کا استعمال کیا ہے؟</string>
+    <string name="have_you_ever_had_any_abortion">کیا آپ کا اسقاط حمل ہوا؟</string>
+    <string name="if_yes_so_how_many_times">اگر ہاں، تو کتنی بار؟</string>
+    <string name="have_you_ever_had_eclampsia">کیا آپ کو حمل کے دوران کبھی ایکلیمپسیا، پری ایکلیمپسیا یا ہائی بلڈ پریشر کی پیچیدگی ہوئی ہے؟</string>
+    <string name="have_you_ever_develop_gestational_diabetes">کیا آپ کو کبھی حمل کے دوران حمل کی ذیابیطس ہوئی ہے؟</string>
+    <string name="have_you_ever_delivered_premature_baby">کیا آپ نے کبھی بچے کو قبل از وقت جنم دیا ہے؟</string>
 
 
-    <string name="age_in_years">Age in Years</string>
-    <string name="number">Number</string>
+    <string name="age_in_years">سال میں عمر</string>
+    <string name="number">نمبر</string>
 
-    <string name="physical_examination">22. PHYSICAL EXAMINATION</string>
+    <string name="physical_examination">جسمانی تشخیص</string>
     <string name="systolic_blood_pressure">Systolic Blood Pressure</string>
     <string name="mmhg">mmHg</string>
     <string name="diastolic_blood_pressure">Diastolic Blood Pressure</string>
@@ -232,9 +239,9 @@
     <string name="kg">KG</string>
 
 
-    <string name="abi_examination">23. ABI - EXAMINATION</string>
-    <string name="important_before_measuring_abi_please_allow_the_patient_to_lay_down">Important: Before measuring ABI please allow the patient to lay down for atleast 15 minutes</string>
-    <string name="date_and_time_of_test">Date and Time of Test</string>
+    <string name="abi_examination">تABI تشخیص</string>
+    <string name="important_before_measuring_abi_please_allow_the_patient_to_lay_down">اہم: ABI کی پیمائش کرنے سے پہلے براہ کرم مریض کو کم از کم 15 منٹ تک لیٹنے دیں۔</string>
+    <string name="date_and_time_of_test">ٹیسٹ کی تاریخ اور وقت</string>
     <string name="right_side">Right Side</string>
     <string name="result">Result</string>
     <string name="left_side">Left Side</string>
@@ -246,9 +253,9 @@
     <string name="ankle_pressure_result">Ankle Pressure (mmHg) Result</string>
 
 
-    <string name="body_composition_analysis">24. BODY COMPOSITION ANALYSIS</string>
-    <string name="age">Age</string>
-    <string name="gender">Gender</string>
+    <string name="body_composition_analysis">جسمانی ساخت کا تجزیہ</string>
+    <string name="age">عمر</string>
+    <string name="gender">جںس</string>
     <string name="clothes_weight">Clothes Weight</string>
     <string name="body_type">Body Type</string>
     <string name="standard">Standard</string>
@@ -270,18 +277,19 @@
     <string name="thank_you_c">THANK YOU</string>
 
 
-    <string name="family_data_form_c">FAMILY DATA FORM</string>
+    <string name="family_data_form_c">فیملی ڈیٹا فارم</string>
     <string name="name_of_call_back_participant">Name of the Call Back Participant</string>
     <string name="ref_point">Ref. Point</string>
     <string name="family_study_id">Family Study ID</string>
     <string name="_search_participant_with_family_study_id">Search participant with Family Study ID</string>
-    <string name="address">Address</string>
+    <string name="address">گھر کا پتہ</string>
     <string name="cnic_no">CNIC No.</string>
     <string name="cell_no">Cell No.</string>
-    <string name="whatsapp_no">Whatsapp No.</string>
+    <string name="phone_no">فون نمبر</string>
+    <string name="whatsapp_no">واٹس ایپ نمبر</string>
     <string name="email_id">Email ID</string>
     <string name="subject_id">Subject ID</string>
-    <string name="name">Name</string>
+    <string name="name">نام</string>
     <string name="father_husband">Father / Husband</string>
     <string name="relationship_with_cb_participant">Relationship with Call Back participant</string>
     <string name="relationship_with_spouse">Relationship with spouse</string>
@@ -321,6 +329,98 @@
     <string name="n28">۲۸.</string>
     <string name="n29">۲۹.</string>
     <string name="n30">۳۰.</string>
+
+
+
+
+    <string name="consent_form">باخبراجازت نامہ</string>
+    <string name="read_consent_form_carefully">براہ کرم اجازت نامہ کو غور سے پڑھیں اور اس پر ڈیجیٹل دستخط کریں۔</string>
+    <string name="view_all_six_pages">تمام 6 صفحات دیکھیں</string>
+    <string name="i_do_agree_to_above_points">کیا آپ متفق ہیں</string>
+    <string name="clear_pad">پیڈ صاف کریں۔</string>
+    <string name="please_sign_here">براہ کرم یہاں دستخط کریں۔</string>
+    <string name="i_agree">میں راضی ہوں</string>
+
+
+    <string name="global_recruitment_exclusion_criteria">عالمی بھرتی کے اخراج کا معیار</string>
+    <string name="i_have_been_diagnosed_with_blood_cancer">مجھے بلڈ کینسر ہے۔(Leukaemia, Lymphoma, and Myeloma)</string>
+    <string name="i_am_pregnant">میں حاملہ ہوں</string>
+    <string name="i_had_fever_in_the_past_week">مجھے پچھلے ہفتے بخار تھا۔</string>
+    <string name="i_am_17_years_or_younger">میری عمر 17 سال یا اس سے کم ہے۔</string>
+    <string name="i_have_not_signed_the_consent_form">میں نے رضامندی کے فارم پر دستخط نہیں کیے ہیں۔</string>
+    <string name="if_any_of_above_is_true_select_yes_or_no">اگر اوپر میں سے کوئی بھی سچ ہے تو ہاں یا نہیں کو منتخب کریں۔</string>
+
+
+    <string name="type_of_disease">بیماری کی قسم</string>
+    <string name="please_select_type_of_disease">براہ کرم بیماری کی قسم منتخب کریں۔</string>
+    <string name="myocardial_infarction">مایوکارڈیل انفارکشن</string>
+    <string name="nafld">این اے ایف ایل ڈی</string>
+    <string name="type_2_diabetes">ٹائپ 2 ذیابیطس</string>
+
+
+    <string name="type_of_recruitment">بھرتی کی قسم</string>
+    <string name="please_select_type_of_recruitment">براہ کرم بھرتی کی قسم منتخب کریں۔</string>
+    <string name="casse">کیس</string>
+    <string name="control">کنٹرول</string>
+
+
+    <string name="myocardial_infarction_case_exclusion_inclusion_criteria">مایوکارڈیل انفارکشن کیس اخراج اور شمولیت کا معیار</string>
+    <string name="mi_case_exclusion_criteria">ایم-ای کیس اخراج کا معیار</string>
+    <string name="i_had_prior_cardiac_event">مجھے پہلے ہی کارڈیک ایونٹ ہوا ہے۔</string>
+    <string name="i_had_cardiogenic_shock">مجھے کارڈیوجینک جھٹکا لگا ہے۔</string>
+
+
+    <string name="mi_case_inclusion_criteria">ایم-ای کیس شمولیت کا معیار</string>
+    <string name="this_is_my_first_ever_acute_myocardial_infaction">یہ میرا پہلا شدید مایوکارڈیل انفارکشن ہے۔</string>
+    <string name="i_have_1_mm_st_elevation">مجھے یہ ہے۔  1mm ST elevation in any 2 or more contiguous limb leads</string>
+    <string name="i_have_non_st_elevation">مجھے یہ ہے۔ Non-ST elevation MI with Troponin positive</string>
+
+
+    <string name="baseline_recruitment">بیس لائن بھرتی</string>
+    <string name="notes">نوٹس</string>
+    <string name="form_completed_10">فارم مکمل %10</string>
+    <string name="form_completed_25">فارم مکمل %25</string>
+    <string name="form_completed_55">فارم مکمل %55</string>
+    <string name="form_completed_70">فارم مکمل %70</string>
+    <string name="center_fz">مرکز : FZ</string>
+    <string name="study_id_fz5435">اسٹڈی آئی ڈی : FZ5435</string>
+    <string name="thyroid_disease">تائرواڈ کی بیماری</string>
+    <string name="vulvular_heart_disease">والوولر دل کی بیماری</string>
+    <string name="dyslipidemia">دسلپدمیا</string>
+    <string name="hypertension">ہائی بلڈ پریشر</string>
+    <string name="liver_disease">جگر کی بیماری</string>
+    <string name="myocardial_infarction_mi">مایوکارڈیل انفارکشن (MI)</string>
+    <string name="seizures">دورے</string>
+
+
+
+
+    <string name="ecg_record">ای سی جی ریکارڈ</string>
+    <string name="take_ecg_picture">ای سی جی کی تصویر لیں۔</string>
+    <string name="st_segment_elevation_1mm">ST segment elevation in two or more contiguous leads with reciprocal changes > 1mm</string>
+    <string name="new_onset_left_bundle_branch_block">New onset left bundle branch block</string>
+    <string name="new_pathological_q_waves">New pathological Q Waves</string>
+    <string name="any_other_ecg_changes">Any other ECG Changes</string>
+    <string name="s_lead_v1_r_v5_35mm">S in Lead V1+ R in V5/V6 => 35 mm</string>
+    <string name="s_v3_R_28mm">S in V3 + R in avl > 28mm in men</string>
+    <string name="s_v3_r_av1_20mm">S in V3 + R in avl > 20mm in women</string>
+    <string name="r_av1_11mm">R in avl > 11mm</string>
+    <string name="s_v13_25">S in V1 3 > 25mm</string>
+    <string name="r_v5_35mm">R in V5 or V6 > 35mm</string>
+    <string name="r_v4_25mm">R in V4 6 > 25mm</string>
+    <string name="r_1s_25mm">R 1+S 111 > 25mm</string>
+    <string name="s_v1_35mm">S in V1 or V2 > 35mm</string>
+    <string name="atrial_fibrillation">Atrial Fibrillation</string>
+    <string name="qt_interval">QT Interval</string>
+    <string name="qrs_complex_duration">QRS complex duration</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="type_of_mi">Type of MI</string>
+    <string name="reversal_of_symptoms">Reversal of symptoms on Streptokinase infusion</string>
+    <string name="reversal_of_st_segment">Reversal of ST-segment elevation by > 50% on streptokinase infusion</string>
+    <string name="troponin">Troponin</string>
+
+    <string name="lab_investagation">لیب کی تحقیقات</string>
+
 
 
 </resources>

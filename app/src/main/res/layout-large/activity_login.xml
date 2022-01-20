@@ -145,7 +145,7 @@
                 style="@style/AppSubtitleTexts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="0dp"
                 android:paddingStart="25dp"
                 android:paddingEnd="25dp"
                 android:text="@string/welcome_back"
@@ -166,7 +166,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="0dp"
                 android:fontFamily="@font/poppins_regular"
                 android:paddingStart="25dp"
                 android:paddingEnd="25dp"
@@ -188,8 +188,7 @@
                 android:hint="@string/email"
                 app:boxBackgroundColor="@color/colorBg"
                 app:endIconMode="clear_text"
-                app:errorEnabled="true"
-                >
+                app:errorEnabled="true">
 
                 <EditText
                     android:id="@+id/editTextEmail"
@@ -267,7 +266,7 @@
                 android:textColor="@color/colorETHints"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -289,7 +288,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bttn_drk_stroke"

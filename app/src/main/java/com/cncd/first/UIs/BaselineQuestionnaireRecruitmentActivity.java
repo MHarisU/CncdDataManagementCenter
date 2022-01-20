@@ -1,6 +1,7 @@
 package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.text.Editable;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +46,12 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 
     ParticipantDataList participantDataList;
 
+
+    //Note Views
+    CardView notesLayout;
+    EditText notesEdit;
+    Boolean notesOpenCheck = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +72,13 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 
         SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
         String formattedDate = df.format(c);
-        interviewDateText.setText("1. Date of Interview: "+formattedDate);
+        if (GeneralUtils.getLanguage(BaselineQuestionnaireRecruitmentActivity.this).equals("ur")) {
+            interviewDateText.setText(formattedDate+"انٹرویو کی تاریخ: " );
+
+        }else {
+            interviewDateText.setText("1. Date of Interview: " + formattedDate);
+
+        }
     }
 
     private void loadUI() {
@@ -89,6 +103,9 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         lastMealTime = findViewById(R.id.lastMealTime);
         bloodsampleTime = findViewById(R.id.bloodsampleTime);
 
+        notesLayout = findViewById(R.id.notesLayout);
+        notesEdit = findViewById(R.id.notesEdit);
+
 
     }
 
@@ -97,10 +114,10 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         participantDetails = intent.getStringArrayListExtra("participantData");
         participantNameEdit.setText(participantDetails.get(0).toString());
         participantAgeEdit.setText(participantDetails.get(1));
-        if (participantDetails.get(2).equals("Male")){
+        if (participantDetails.get(2).equals("Male")) {
             radioMale.setChecked(true);
             radioFemale.setChecked(false);
-        }else if (participantDetails.get(2).equals("Female")){
+        } else if (participantDetails.get(2).equals("Female")) {
             radioMale.setChecked(false);
             radioFemale.setChecked(true);
         }
@@ -143,9 +160,9 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     public void moveToSecondForm(View view) {
         //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
 
-        participantDataList = new ParticipantDataList("KL54862",participantDetails.get(0).toString(), participantFatherHusbandEdit.getText().toString(), participantDetails.get(3),
-                participantDetails.get(2), participantDetails.get(1),participantCnicEdit.getText().toString(),participantDetails.get(4), participantDetails.get(5),
-                dateLastMeal.getText().toString(), lastMealTime.getText().toString(),dateBloodSample.getText().toString(),bloodsampleTime.getText().toString());
+        participantDataList = new ParticipantDataList("KL54862", participantDetails.get(0).toString(), participantFatherHusbandEdit.getText().toString(), participantDetails.get(3),
+                participantDetails.get(2), participantDetails.get(1), participantCnicEdit.getText().toString(), participantDetails.get(4), participantDetails.get(5),
+                dateLastMeal.getText().toString(), lastMealTime.getText().toString(), dateBloodSample.getText().toString(), bloodsampleTime.getText().toString());
 
         Intent intent = new Intent(BaselineQuestionnaireRecruitmentActivity.this, BaselineQuestionnaireRecruitment2Activity.class);
         intent.putStringArrayListExtra("participantData", participantDetails);
@@ -158,7 +175,7 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1 && resultCode == 1) {
+        if (requestCode == 1 && resultCode == 1) {
             this.finish();
         }
     }
@@ -194,7 +211,6 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     }
 
 
-
     public void dyslipidemiaSelect(View view) {
 
         DyslipidemiaDialog dialog = new DyslipidemiaDialog();
@@ -220,5 +236,15 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     public void seizuresSelect(View view) {
         SeizuresDialog dialog = new SeizuresDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
+    }
+
+    public void openNotes(View view) {
+        if (notesOpenCheck) {
+            notesLayout.setVisibility(View.GONE);
+            notesOpenCheck = false;
+        } else {
+            notesLayout.setVisibility(View.VISIBLE);
+            notesOpenCheck = true;
+        }
     }
 }

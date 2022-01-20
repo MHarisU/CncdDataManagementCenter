@@ -46,7 +46,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Hospital Recruitment Form"
+                android:text="@string/hospital_recruitment_form"
                 android:textColor="@color/White"
                 android:textSize="22dp" />
 
@@ -54,17 +54,21 @@
         </RelativeLayout>
 
 
+        <!-- Name,age,address and consent layout-->
         <LinearLayout
             android:id="@+id/layoutParticipant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
+            <!-- Name age address layout-->
             <LinearLayout
                 android:id="@+id/layoutNameAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="visible">
 
 
                 <androidx.cardview.widget.CardView
@@ -100,7 +104,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:hint="Participant Name"
+                                    android:hint="@string/name"
                                     android:padding="10dp"
                                     android:textSize="18sp" />
 
@@ -120,7 +124,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:hint="Participant Age"
+                                    android:hint="@string/age"
                                     android:inputType="number"
                                     android:maxLength="2"
                                     android:padding="10dp"
@@ -142,13 +146,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:gravity="center"
+                                android:gravity=""
                                 android:orientation="horizontal">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
                                     android:fontFamily="@font/poppins_regular"
                                     android:hint="@string/gender"
                                     android:padding="10dp"
@@ -157,25 +162,22 @@
                                 <RadioGroup
 
                                     android:id="@+id/radio_group"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_above="@+id/view_below"
-                                    android:layout_weight="1"
                                     android:orientation="horizontal">
 
                                     <RadioButton
                                         android:id="@+id/radioMale"
-                                        android:layout_width="0dp"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_weight="1"
                                         android:checked="true"
                                         android:text="@string/male" />
 
                                     <RadioButton
                                         android:id="@+id/radioFemale"
-                                        android:layout_width="0dp"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_weight="1"
                                         android:text="@string/female" />
                                 </RadioGroup>
 
@@ -225,7 +227,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:hint="Participant Number"
+                                    android:hint="@string/phone_no"
                                     android:inputType="number"
                                     android:maxLength="11"
                                     android:padding="10dp"
@@ -247,7 +249,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:hint="Participant Whatsapp Number"
+                                    android:hint="@string/whatsapp_no"
                                     android:inputType="number"
                                     android:maxLength="11"
                                     android:padding="10dp"
@@ -333,6 +335,7 @@
             </LinearLayout>
 
 
+            <!-- Consent Form-->
             <androidx.cardview.widget.CardView
 
 
@@ -361,21 +364,23 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="0dp"
+                        android:layout_marginEnd="20dp"
                         android:fontFamily="@font/proxima_nova"
                         android:padding="0dp"
-                        android:text="CONSENT FORM"
+                        android:text="@string/consent_form"
                         android:textColor="@color/Black"
                         android:textSize="30sp"
                         android:textStyle="" />
 
                     <TextView
-                        android:textColor="@color/Black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="22dp"
                         android:layout_marginTop="0dp"
+                        android:layout_marginEnd="22dp"
                         android:fontFamily="@font/proxima_nova"
-                        android:text="Please read the consent form carefully and digitally sign it."
+                        android:text="@string/read_consent_form_carefully"
+                        android:textColor="@color/Black"
                         android:textSize="16sp" />
 
 
@@ -456,12 +461,12 @@
                             android:src="@drawable/consent1" />
 
                         <LinearLayout
-                            android:visibility="gone"
                             android:id="@+id/all_consent_layout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="0dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -492,7 +497,6 @@
 
 
                         <TextView
-                            android:onClick="viewAllConsentForms"
                             android:id="@+id/view_all_button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -500,7 +504,8 @@
                             android:layout_marginStart="22dp"
                             android:layout_marginTop="0dp"
                             android:fontFamily="@font/proxima_nova"
-                            android:text="View All 6 Pages"
+                            android:onClick="viewAllConsentForms"
+                            android:text="@string/view_all_six_pages"
                             android:textColor="@color/blue"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -510,12 +515,12 @@
 
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="22dp"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_regular"
-                        android:text="I do agree to above points"
+                        android:text="@string/i_do_agree_to_above_points"
                         android:textSize="18sp" />
 
                     <androidx.cardview.widget.CardView
@@ -556,7 +561,7 @@
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
                                     android:padding="5dp"
-                                    android:text="Please sign here"
+                                    android:text="@string/please_sign_here"
                                     android:textColor="@color/white"
                                     android:textSize="18sp" />
 
@@ -571,7 +576,7 @@
                                 android:background="@color/white"
                                 android:fontFamily="@font/poppins_regular"
                                 android:onClick="clearPad"
-                                android:text="CLEAR PAD"
+                                android:text="@string/clear_pad"
                                 android:textColor="@color/bluelight"
                                 android:textSize="18sp" />
 
@@ -622,7 +627,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="I Agree"
+                                        android:text="@string/i_agree"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -659,12 +664,13 @@
         </LinearLayout>
 
 
+        <!-- Sampling Form -->
         <LinearLayout
-            android:id="@+id/layoutGlobalExclusion"
+            android:id="@+id/layoutSampling"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
 
             <androidx.cardview.widget.CardView
@@ -681,6 +687,463 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/samples"
+                        android:textColor="@color/black"
+                        android:textSize="22dp" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="1"
+                            android:background="@color/blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Raw"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="1"
+                            android:background="@drawable/bttn_drk_stroke_square"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Processed"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/samplesTemperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/bttn_drk_stroke"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:hint="Temperature"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+
+
+                    <!-- Raw sample layout   -->
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/edtaCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="EDTA" />
+
+
+                            <EditText
+                                android:id="@+id/edtaEdit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="No. of Tubes"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/edtaQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="Quantity -ml"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/geltubeCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gel Tube" />
+
+
+                            <EditText
+                                android:id="@+id/geltubeEdit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="No. of Tubes"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+
+                            <EditText
+                                android:id="@+id/geltubeQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="Quantity -ml"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/urineCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Urine" />
+
+
+                            <EditText
+                                android:id="@+id/urineEdit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="No. of Tubes"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+
+
+                            <EditText
+                                android:id="@+id/urineQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="Quantity -ml"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                    <!-- Processed sample layout   -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/serumCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Serum" />
+
+
+                            <EditText
+                                android:id="@+id/serumEdit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="No. of Tubes"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/serumQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="Quantity -ml"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/plasmaCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Plasma" />
+
+
+                            <EditText
+                                        android:id="@+id/plasmaEdit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="No. of Tubes"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+
+                            <EditText
+                                android:id="@+id/plasmaQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="Quantity -ml"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/urineAliquotCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Urine Aliquot" />
+
+
+                            <EditText
+                                android:id="@+id/urineAliquotEdit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="No. of Tubes"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+
+
+                            <EditText
+                                android:id="@+id/urineAliquotQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:hint="Quantity -ml"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="10dp"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical"
+                    android:onClick="samplesCollected"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bluelight"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="0sp"
+                                android:background="@color/Transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:text="@string/continue_c"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="0dp"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_yes" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Global Exclusion Criteria-->
+        <LinearLayout
+            android:id="@+id/layoutGlobalExclusion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -689,50 +1152,319 @@
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:text="Global Recruitment Exclusion Criteria"
+                        android:text="@string/global_recruitment_exclusion_criteria"
                         android:textColor="@color/White"
                         android:textSize="18dp" />
 
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:padding="10dp"
-                        android:text="1 -  I have been diagnosed with blood cancer (Leukaemia, Lymphoma, and Myeloma)"
-                        android:textSize="18sp" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:padding="10dp"
-                        android:text="2 -  I am pregnant"
-                        android:textSize="18sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:padding="10dp"
-                        android:text="3 -  I had fever in the past week"
-                        android:textSize="18sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:padding="10dp"
-                        android:text="4 -  I am 17 years or younger"
-                        android:textSize="18sp" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:text="@string/i_have_been_diagnosed_with_blood_cancer"
+                            android:textSize="18sp" />
 
-                    <TextView
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <LinearLayout
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/globalExclusionText1"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:inputType="text"
+                                    android:onClick="selectYesNoNot"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="@string/no"
+                                    android:textColor="@color/Black80"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_down_arrow_black"
+                                    android:padding="5dp"/>
+
+
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:padding="10dp"
-                        android:text="5 -  I have not signed the consent form"
-                        android:textSize="18sp" />
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:text="@string/i_am_pregnant"
+                            android:textSize="18sp" />
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <LinearLayout
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/globalExclusionText2"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:inputType="text"
+                                    android:onClick="selectYesNoNot"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="@string/no"
+                                    android:textColor="@color/Black80"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_down_arrow_black"
+                                    android:padding="5dp"/>
+
+
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:text="@string/i_had_fever_in_the_past_week"
+                            android:textSize="18sp" />
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <LinearLayout
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/globalExclusionText3"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:inputType="text"
+                                    android:onClick="selectYesNoNot"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="@string/no"
+                                    android:textColor="@color/Black80"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_down_arrow_black"
+                                    android:padding="5dp"/>
+
+
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:text="@string/i_am_17_years_or_younger"
+                            android:textSize="18sp" />
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <LinearLayout
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/globalExclusionText4"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:inputType="text"
+                                    android:onClick="selectYesNoNot"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="@string/no"
+                                    android:textColor="@color/Black80"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_down_arrow_black"
+                                    android:padding="5dp"/>
+
+
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:text="@string/i_have_not_signed_the_consent_form"
+                            android:textSize="18sp" />
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <LinearLayout
+                                android:background="@drawable/bttn_drk_stroke"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/globalExclusionText5"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:inputType="text"
+                                    android:onClick="selectYesNoNot"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="@string/no"
+                                    android:textColor="@color/Black80"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_down_arrow_black"
+                                    android:padding="5dp"/>
+
+
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+
 
 
                 </LinearLayout>
@@ -747,7 +1479,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="10dp"
-                android:text="If any of above is true select YES or NO"
+                android:text="@string/if_any_of_above_is_true_select_yes_or_no"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -759,6 +1491,7 @@
 
                 <androidx.cardview.widget.CardView
 
+                    android:visibility="gone"
                     android:layout_width="180dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="20dp"
@@ -820,14 +1553,14 @@
 
                 <androidx.cardview.widget.CardView
 
-                    android:layout_width="180dp"
+                    android:layout_width="220dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
-                    android:onClick="globalRecruitmentExclusionNo"
+                    android:onClick="globalRecruitmentExclusionContinue"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
 
@@ -853,7 +1586,7 @@
                                 android:background="@color/Transparent"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
-                                android:text="@string/no"
+                                android:text="@string/continue_c"
                                 android:textColor="@color/white"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
@@ -867,7 +1600,7 @@
                                 android:layout_centerVertical="true"
                                 android:layout_marginEnd="0dp"
                                 android:padding="5dp"
-                                android:src="@drawable/ic_exit_white" />
+                                android:src="@drawable/ic_yes" />
 
 
                         </RelativeLayout>
@@ -884,6 +1617,7 @@
         </LinearLayout>
 
 
+        <!-- Select Type of Disease-->
         <LinearLayout
             android:id="@+id/layoutSelectCaseType"
             android:layout_width="match_parent"
@@ -897,7 +1631,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="visible"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp">
 
@@ -914,7 +1647,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:text="Type of Disease"
+                        android:text="@string/type_of_disease"
                         android:textColor="@color/White"
                         android:textSize="18dp" />
 
@@ -926,7 +1659,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_bold"
                         android:padding="10dp"
-                        android:text="Please select type of disease"
+                        android:text="@string/please_select_type_of_disease"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -939,7 +1672,7 @@
                         <androidx.cardview.widget.CardView
 
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="20dp"
@@ -972,7 +1705,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Myocardial Infarction"
+                                        android:text="@string/myocardial_infarction"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -987,17 +1720,20 @@
                         </androidx.cardview.widget.CardView>
 
 
+                        <!--
+                                                    android:onClick="diseaseTypeHF"
+
+                        -->
                         <androidx.cardview.widget.CardView
 
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:onClick="diseaseTypeHF"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1023,8 +1759,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Heart Failure
-"
+                                        android:text="@string/heart_failure"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1039,17 +1774,20 @@
                         </androidx.cardview.widget.CardView>
 
 
-                        <androidx.cardview.widget.CardView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginBottom="20dp"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
+                        <!--
                             android:onClick="diseaseTypeStroke"
+
+                        -->
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1075,7 +1813,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Stroke"
+                                        android:text="@string/stroke"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1092,23 +1830,25 @@
 
                     </LinearLayout>
 
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <androidx.cardview.widget.CardView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginBottom="20dp"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
+                    <!--
                             android:onClick="diseaseTypeNAFLD"
+
+                                            -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1134,7 +1874,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="NFLD"
+                                        android:text="@string/nafld"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1149,17 +1889,20 @@
                         </androidx.cardview.widget.CardView>
 
 
-                        <androidx.cardview.widget.CardView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginBottom="20dp"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
+                        <!--
                             android:onClick="diseaseTypeT2D"
+
+                                                -->
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1185,7 +1928,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Type 2 Diabetes"
+                                        android:text="@string/type_2_diabetes"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1200,17 +1943,21 @@
                         </androidx.cardview.widget.CardView>
 
 
+                        <!--
+                            android:onClick="globalRecruitmentExclusionNo"
+
+                                                -->
+
                         <androidx.cardview.widget.CardView
 
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1236,7 +1983,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="CAD"
+                                        android:text="@string/cad"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1261,14 +2008,13 @@
                         <androidx.cardview.widget.CardView
 
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionYes"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1294,7 +2040,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Other"
+                                        android:text="@string/other"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1312,14 +2058,13 @@
                         <androidx.cardview.widget.CardView
 
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1345,7 +2090,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Other"
+                                        android:text="@string/other"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1363,14 +2108,13 @@
                         <androidx.cardview.widget.CardView
 
                             android:layout_width="match_parent"
-                            android:layout_height="60dp"
+                            android:layout_height="80dp"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1396,7 +2140,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Other"
+                                        android:text="@string/other"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1422,6 +2166,7 @@
         </LinearLayout>
 
 
+        <!-- select type of recruitment case or control-->
         <LinearLayout
             android:id="@+id/layoutSelectCaseControl"
             android:layout_width="match_parent"
@@ -1435,7 +2180,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:visibility="visible"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp">
 
@@ -1452,7 +2196,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:text="Type of Recruitment"
+                        android:text="@string/type_of_recruitment"
                         android:textColor="@color/White"
                         android:textSize="18dp" />
 
@@ -1464,7 +2208,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_bold"
                         android:padding="10dp"
-                        android:text="Please select type of recruitment"
+                        android:text="@string/please_select_type_of_recruitment"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -1509,7 +2253,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Case"
+                                        android:text="@string/casse"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />
@@ -1524,6 +2268,10 @@
                         </androidx.cardview.widget.CardView>
 
 
+                        <!--
+                                                    android:onClick="selectControl"
+
+                        -->
                         <androidx.cardview.widget.CardView
 
                             android:layout_width="180dp"
@@ -1533,7 +2281,6 @@
                             android:layout_marginEnd="20dp"
                             android:layout_marginBottom="20dp"
                             android:gravity="center_vertical"
-                            android:onClick="selectControl"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1559,7 +2306,7 @@
                                         android:background="@color/Transparent"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
-                                        android:text="Control"
+                                        android:text="@string/control"
                                         android:textColor="@color/white"
                                         android:textSize="22sp"
                                         android:textStyle="bold" />

@@ -57,7 +57,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2.5"
+            android:layout_weight="2.2"
             android:background="@color/gray10"
             android:orientation="vertical">
 
@@ -108,23 +108,6 @@
                             android:textColor="@color/Black80"
                             android:textSize="15sp" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-
-                            <ImageView
-
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginEnd="0dp"
-                                android:padding="17dp"
-                                android:src="@drawable/ic_arrow_forward_gray" />
-
-
-                        </RelativeLayout>
 
 
                     </LinearLayout>
@@ -163,27 +146,10 @@
                             android:background="@color/Transparent"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center_vertical"
-                            android:text="PENDING FORMS"
+                            android:text="PENDING"
                             android:textColor="@color/Black80"
                             android:textSize="15sp" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-
-                            <ImageView
-
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginEnd="0dp"
-                                android:padding="17dp"
-                                android:src="@drawable/ic_arrow_forward_gray" />
-
-
-                        </RelativeLayout>
 
 
                     </LinearLayout>
@@ -221,27 +187,10 @@
                             android:background="@color/Transparent"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center_vertical"
-                            android:text="COMPLETED FORMS"
+                            android:text="COMPLETED "
                             android:textColor="@color/Black80"
                             android:textSize="15sp" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-
-                            <ImageView
-
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginEnd="0dp"
-                                android:padding="17dp"
-                                android:src="@drawable/ic_arrow_forward_gray" />
-
-
-                        </RelativeLayout>
 
 
                     </LinearLayout>

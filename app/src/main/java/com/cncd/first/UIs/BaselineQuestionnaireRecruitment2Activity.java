@@ -1,6 +1,7 @@
 package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -49,6 +50,12 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
     TextView medConditionEdit, relationEdit;
 
     ParticipantDataList participantDataList;
+
+
+
+    CardView notesLayout;
+    EditText notesEdit;
+    Boolean notesOpenCheck = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,6 +106,10 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
         specifyConditionEdit = findViewById(R.id.specifyConditionEdit);
         relationEdit = findViewById(R.id.relationEdit);
         ageDiagnosedEdit = findViewById(R.id.ageDiagnosedEdit);
+
+
+        notesLayout = findViewById(R.id.notesLayout);
+        notesEdit = findViewById(R.id.notesEdit);
     }
 
     private void loadMedications() {
@@ -356,4 +367,13 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
     }
 
 
+    public void openNotes(View view) {
+        if (notesOpenCheck){
+            notesLayout.setVisibility(View.GONE);
+            notesOpenCheck = false;
+        }else {
+            notesLayout.setVisibility(View.VISIBLE);
+            notesOpenCheck = true;
+        }
+    }
 }

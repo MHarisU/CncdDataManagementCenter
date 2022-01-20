@@ -751,7 +751,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
-                    android:onClick="globalRecruitmentExclusionNo"
+                    android:onClick="globalRecruitmentExclusionContinue"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="2dp">
 
@@ -1134,7 +1134,7 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
+                            android:onClick="globalRecruitmentExclusionContinue"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1243,7 +1243,7 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
+                            android:onClick="globalRecruitmentExclusionContinue"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
@@ -1294,7 +1294,7 @@
                             android:layout_marginBottom="20dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:onClick="globalRecruitmentExclusionNo"
+                            android:onClick="globalRecruitmentExclusionContinue"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 

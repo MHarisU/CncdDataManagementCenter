@@ -12,6 +12,7 @@
     <string name="signin">Sign In</string>
     <string name="search">Search</string>
     <string name="new_notification">New Notifications</string>
+    <string name="notification">Notifications</string>
     <string name="account">Account</string>
     <string name="activity_log">Activity Log</string>
     <string name="tasks">Tasks</string>
@@ -29,6 +30,7 @@
     <string name="delete_form">Delete Form</string>
     <string name="pgr">PGR</string>
     <string name="hospital_recruitment">HOSPITAL RECRUITMENT</string>
+    <string name="hospital_recruitment_form">HOSPITAL RECRUITMENT FORM</string>
     <string name="callback_recruitment">CALL BACK RECRUITMENT</string>
     <string name="english">ENGLISH</string>
     <string name="urdu">URDU</string>
@@ -61,6 +63,7 @@
     <string name="date_ddmmyyyy">Date DD/MM/YYYY</string>
     <string name="time_hrmm">Time HR/MM</string>
     <string name="blood_sampling_time_14">14. Blood Sampling Time</string>
+    <string name="samples">Samples</string>
     <string name="past_medical_history_15">15. PAST MEDICAL HISTORY</string>
     <string name="s_no">S. No</string>
     <string name="medical_conditions">Medical Conditions</string>
@@ -105,7 +108,7 @@
     <string name="add">Add</string>
     <string name="drug_name">Drug Name</string>
     <string name="generic_name">Generic Name</string>
-    <string name="duration_in_months">Duration (In months)</string>
+    <string name="duration_in_months">Duration in months</string>
 
     <string name="no_medical_history_added">No Medical History Added</string>
     <string name="family_history_17">17. FAMILY HISTORY</string>
@@ -155,12 +158,14 @@
     <string name="both">Both</string>
     <string name="at_what_age_did_subject_start">At what age did subject start?</string>
     <string name="at_what_age_did_subject_quit">At what age did subject quit?</string>
+    <string name="has_the_subject_smoked_100">Has the subject smoked > 100 Cigarettes/Beedies in life?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="if_yes_to_huqqa_chilum">If Yes to Huqqa/Chilum</string>
     <string name="how_many_years_patients_has_smoked">How many years patient has smoked?</string>
     <string name="if_yes_to_sheesha">If Yes to Sheesha</string>
     <string name="how_often_used">How often used?</string>
+
     <string name="tambako_type">Tambako Type</string>
     <string name="naswar_type">Naswar Type</string>
 
@@ -275,6 +280,7 @@
     <string name="address">Address</string>
     <string name="cnic_no">CNIC No.</string>
     <string name="cell_no">Cell No.</string>
+    <string name="phone_no">Phone No.</string>
     <string name="whatsapp_no">Whatsapp No.</string>
     <string name="email_id">Email ID</string>
     <string name="subject_id">Subject ID</string>
@@ -318,6 +324,103 @@
     <string name="n28">28.</string>
     <string name="n29">29.</string>
     <string name="n30">30.</string>
+
+
+
+    <string name="consent_form">CONSENT FORM</string>
+    <string name="read_consent_form_carefully">Please read the consent form carefully and digitally sign it.</string>
+    <string name="view_all_six_pages">View All 6 Pages</string>
+    <string name="i_do_agree_to_above_points">I do agree to above points</string>
+    <string name="clear_pad">CLEAR PAD</string>
+    <string name="please_sign_here">Please sign here</string>
+    <string name="i_agree">I Agree</string>
+
+
+
+    <string name="global_recruitment_exclusion_criteria">Global Recruitment Exclusion Criteria</string>
+    <string name="i_have_been_diagnosed_with_blood_cancer">I have been diagnosed with blood cancer (Leukaemia, Lymphoma, and Myeloma)</string>
+    <string name="i_am_pregnant">I am pregnant</string>
+    <string name="i_had_fever_in_the_past_week">I had fever in the past week</string>
+    <string name="i_am_17_years_or_younger">I am 17 years or younger</string>
+    <string name="i_have_not_signed_the_consent_form">I have not signed the consent form</string>
+    <string name="if_any_of_above_is_true_select_yes_or_no">If any of above is true select YES</string>
+
+
+    <string name="type_of_disease">Type of Disease</string>
+    <string name="please_select_type_of_disease">Please select type of disease</string>
+    <string name="myocardial_infarction">Myocardial Infarction</string>
+    <string name="nafld">NAFLD</string>
+    <string name="type_2_diabetes">Type 2 Diabetes</string>
+
+    <string name="type_of_recruitment">Type of Recruitment</string>
+    <string name="please_select_type_of_recruitment">Please select type of recruitment</string>
+    <string name="casse">Case</string>
+    <string name="control">Control</string>
+
+
+    <string name="myocardial_infarction_case_exclusion_inclusion_criteria">Myocardial Infarction Case Exclusion &amp; Inclusion Criteria</string>
+    <string name="mi_case_exclusion_criteria">MI Case Exclusion Criteria</string>
+    <string name="i_had_prior_cardiac_event">I have had a prior cardiac event</string>
+    <string name="i_had_cardiogenic_shock">I have had cardiogenic shock</string>
+
+
+    <string name="mi_case_inclusion_criteria">MI Case Inclusion Criteria</string>
+    <string name="this_is_my_first_ever_acute_myocardial_infaction">This is my first ever acute myocardial infarction</string>
+    <string name="i_have_1_mm_st_elevation">I have 1 mm ST elevation in any 2 or more contiguous limb leads</string>
+    <string name="i_have_non_st_elevation">I have Non-ST elevation MI with Troponin positive</string>
+
+    <string name="baseline_recruitment">Baseline Recruitment</string>
+    <string name="notes">Notes</string>
+    <string name="form_completed_10">Form Completed 10%</string>
+    <string name="form_completed_25">Form Completed 25%</string>
+    <string name="form_completed_55">Form Completed 55%</string>
+    <string name="form_completed_70">Form Completed 70%</string>
+    <string name="center_fz">Center : FZ</string>
+    <string name="study_id_fz5435">Study ID : FZ5435</string>
+    <string name="thyroid_disease">Thyroid Disease</string>
+    <string name="vulvular_heart_disease">Valvular Heart Disease</string>
+    <string name="dyslipidemia">Dyslipidemia</string>
+    <string name="hypertension">Hypertension</string>
+    <string name="liver_disease">Liver Disease</string>
+    <string name="myocardial_infarction_mi">Myocardial Infarction (MI)</string>
+    <string name="seizures">Seizures</string>
+
+
+    <string name="ecg_record">ECG Record</string>
+    <string name="take_ecg_picture">Take ECG Picture</string>
+    <string name="st_segment_elevation_1mm">ST segment elevation in two or more contiguous leads with reciprocal changes > 1mm</string>
+    <string name="new_onset_left_bundle_branch_block">New onset left bundle branch block</string>
+    <string name="new_pathological_q_waves">New pathological Q Waves</string>
+    <string name="any_other_ecg_changes">Any other ECG Changes</string>
+    <string name="s_lead_v1_r_v5_35mm">S in Lead V1+ R in V5/V6 => 35 mm</string>
+    <string name="s_v3_R_28mm">S in V3 + R in avl > 28mm in men</string>
+    <string name="s_v3_r_av1_20mm">S in V3 + R in avl > 20mm in women</string>
+    <string name="r_av1_11mm">R in avl > 11mm</string>
+    <string name="s_v13_25">S in V1 3 > 25mm</string>
+    <string name="r_v5_35mm">R in V5 or V6 > 35mm</string>
+    <string name="r_v4_25mm">R in V4 6 > 25mm</string>
+    <string name="r_1s_25mm">R 1+S 111 > 25mm</string>
+    <string name="s_v1_35mm">S in V1 or V2 > 35mm</string>
+    <string name="atrial_fibrillation">Atrial Fibrillation</string>
+    <string name="qt_interval">QT Interval</string>
+    <string name="qrs_complex_duration">QRS complex duration</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="type_of_mi">Type of MI</string>
+    <string name="reversal_of_symptoms">Reversal of symptoms on Streptokinase infusion</string>
+    <string name="reversal_of_st_segment">Reversal of ST-segment elevation by > 50% on streptokinase infusion</string>
+    <string name="troponin">Troponin</string>
+
+    <string name="lab_investagation">LAB INVESTIGATIONS</string>
+
+
+    <!--
+
+        <string name="fat_">Fat</string>
+        <string name="fat_">Fat</string>
+        <string name="fat_">Fat</string>
+        <string name="fat_">Fat</string>
+        <string name="fat_">Fat</string>
+    -->
 
 
 </resources>

@@ -4,12 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/DS-MHaris/.gradle/caches/transforms-3/129e5aec11ca482924b35f53b66ee551/transformed/jetified-appcompat-resources-1.2.0/res/drawable/abc_vector_test.xml" value="0.3408203125" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/drawable/bttn_drk_stroke_square.xml" value="0.5453125" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/drawable/ic_complete_blue.xml" value="0.328125" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/drawable/ic_log_blue.xml" value="0.328125" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/drawable/ic_log_white.xml" value="0.3209635416666667" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/drawable/ic_pending_blue.xml" value="0.328125" />
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment.xml" value="0.25" />
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment2.xml" value="0.32568359375" />
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment3.xml" value="0.32568359375" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment.xml" value="0.67" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment2.xml" value="0.67" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment3.xml" value="0.25" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_baseline_questionnaire_recruitment4.xml" value="0.25" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_call_back_form.xml" value="0.1806640625" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_call_back_form2.xml" value="0.32568359375" />
@@ -18,16 +20,16 @@
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_family_sheet.xml" value="0.32568359375" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_hf_case_exc_inc_criteria.xml" value="0.32568359375" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_hf_control_exc_inc_criteria.xml" value="0.25" />
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_login.xml" value="0.22" />
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_micase_exclusion_inclusion_criteria.xml" value="0.25" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_micase_exclusion_inclusion_criteria.xml" value="0.33" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_micontrol_exclusion_inclusion_criteria.xml" value="0.25" />
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_my_forms.xml" value="0.33" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_my_forms.xml" value="0.5" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_nafldcase_exclu_inclu_criteria.xml" value="0.32568359375" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_nafldcontrol_exclu_inclu_criteria.xml" value="0.25" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_pdf_report.xml" value="0.2" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_pgrform.xml" value="0.32568359375" />
-        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_recruitment_general_exclusion_and_specific_disease.xml" value="0.24432234432234431" />
+        <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_recruitment_general_exclusion_and_specific_disease.xml" value="0.67" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_splash.xml" value="0.32568359375" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_stroke_case_exclu_inclu_criteria.xml" value="0.32568359375" />
         <entry key="..\:/Users/DS-MHaris/AndroidStudioProjects/CncdDataManagementCenter/app/src/main/res/layout-large/activity_stroke_control_exclu_inclu_criteria.xml" value="0.2" />

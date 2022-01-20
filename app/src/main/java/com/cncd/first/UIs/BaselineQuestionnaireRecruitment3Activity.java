@@ -1,6 +1,7 @@
 package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
@@ -26,6 +28,10 @@ public class BaselineQuestionnaireRecruitment3Activity extends AppCompatActivity
     TextView sheeshUsedText;
     ParticipantDataList participantDataList;
 
+
+    CardView notesLayout;
+    EditText notesEdit;
+    Boolean notesOpenCheck = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +58,10 @@ public class BaselineQuestionnaireRecruitment3Activity extends AppCompatActivity
     }
     private void loadUI() {
         sheeshUsedText = findViewById(R.id.sheeshUsedText);
+
+
+        notesLayout = findViewById(R.id.notesLayout);
+        notesEdit = findViewById(R.id.notesEdit);
     }
 
     public void CloseForm(View view) {
@@ -154,4 +164,15 @@ public class BaselineQuestionnaireRecruitment3Activity extends AppCompatActivity
         }
     }
 
+    public void openNotes(View view) {
+
+        if (notesOpenCheck){
+            notesLayout.setVisibility(View.GONE);
+            notesOpenCheck = false;
+        }else {
+            notesLayout.setVisibility(View.VISIBLE);
+            notesOpenCheck = true;
+        }
+
+    }
 }
