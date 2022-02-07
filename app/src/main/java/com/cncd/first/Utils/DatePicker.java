@@ -51,7 +51,11 @@ public class DatePicker {
 
         DatePickerDialog datePickerDialog =new DatePickerDialog(context, AlertDialog.THEME_HOLO_LIGHT, dateSetListener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
 
-        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+        Calendar calendar1 = Calendar.getInstance();
+        datePickerDialog.getDatePicker().setMaxDate(calendar1.getTime().getTime());
+        calendar1.add(Calendar.DATE, -2);
+
+        datePickerDialog.getDatePicker().setMinDate(calendar1.getTime().getTime());
         datePickerDialog.show();
 
         return selected_date[0];

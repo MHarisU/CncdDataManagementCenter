@@ -35,9 +35,12 @@
     <string name="hospital_recruitment_form">ہسپتال بھرتی فارم</string>
     <string name="callback_recruitment">کال بیک بھرتی</string>
     <string name="english">انگریزی</string>
+    <string name="abd">ABD</string>
+    <string name="aa">AA</string>
     <string name="urdu">اردو</string>
     <string name="select_type_of_form">فارم منتخب کریں</string>
     <string name="select_language">زبان منتخب کریں</string>
+    <string name="select_center">Select Center</string>
     <string name="call_back_study_questionnaire">کال بیک فارم</string>
     <string name="promis">پرومس</string>
     <string name="cad">کید</string>
@@ -99,6 +102,7 @@
     <string name="recurrent_chest_infections">بار بار سینے میں انفیکشن</string>
     <string name="any_other_disease">کوئی اور بیماری</string>
     <string name="continue_c">اگے بڑھیں</string>
+    <string name="call">CALL</string>
     <string name="submit_c">مکمل</string>
     <string name="medication_history_16">۱٦. ادویات کا ریکارڈ</string>
     <string name="add_f_c">شامل کریں</string>
@@ -233,6 +237,7 @@
     <string name="f">(°F)</string>
     <string name="waist_standing">Waist Standing</string>
     <string name="cm">CM</string>
+    <string name="m">m</string>
     <string name="hip_standing">Hip Standing</string>
     <string name="height">Height</string>
     <string name="weight">Weight</string>
@@ -286,6 +291,7 @@
     <string name="cnic_no">CNIC No.</string>
     <string name="cell_no">Cell No.</string>
     <string name="phone_no">فون نمبر</string>
+    <string name="add_other_no">Add Other No.</string>
     <string name="whatsapp_no">واٹس ایپ نمبر</string>
     <string name="email_id">Email ID</string>
     <string name="subject_id">Subject ID</string>
@@ -384,6 +390,7 @@
     <string name="form_completed_70">فارم مکمل %70</string>
     <string name="center_fz">مرکز : FZ</string>
     <string name="study_id_fz5435">اسٹڈی آئی ڈی : FZ5435</string>
+    <string name="study_id_abd1">اسٹڈی آئی ڈی : ABD1</string>
     <string name="thyroid_disease">تائرواڈ کی بیماری</string>
     <string name="vulvular_heart_disease">والوولر دل کی بیماری</string>
     <string name="dyslipidemia">دسلپدمیا</string>

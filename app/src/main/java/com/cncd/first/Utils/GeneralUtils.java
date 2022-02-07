@@ -22,11 +22,12 @@ import com.cncd.first.UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class GeneralUtils {
 
     static String MY_PREFS_NAME = "language";
-
 
 
     public static void hideSoftKeyboard(Context context, View view) {
@@ -58,6 +59,23 @@ public class GeneralUtils {
         alert1.show();
     }
 
+    public static boolean checkNumberValidation(Context context, String number) {
+
+
+        //(0/91): number starts with (0/91)
+        //[7-9]: starting of the number may contain a digit between 0 to 9
+        //[0-9]: then contains digits 0 to 9
+        Pattern ptrn = Pattern.compile(
+                "^((\\+92)?(0092)?(92)?(0)?)(3)([0-9]{9})$" +
+                        "|^(\\((\\+|00)92\\)( )?|(\\+|00)92( )?|0)[1-24-9]([0-9]{1}( )?[0-9]{3}( )?[0-9]{3}( )?[0-9]{1,2}|[0-9]{2}( )?[0-9]{3}( )?[0-9]{3})$");
+        //the matcher() method creates a matcher that will match the given input against this pattern
+        Matcher match = ptrn.matcher(number);
+        //returns a boolean value
+        return (match.find() && match.group().equals(number));
+
+
+    }
+
     public static void alertDialogBoxSimpleCloseActivity(Context context, String title, String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(title);
@@ -66,17 +84,21 @@ public class GeneralUtils {
         builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                if(context instanceof RecruitmentGeneralExclusionAndSpecificDiseaseActivity){
-                    ((RecruitmentGeneralExclusionAndSpecificDiseaseActivity)context).finish(); }
+                if (context instanceof RecruitmentGeneralExclusionAndSpecificDiseaseActivity) {
+                    ((RecruitmentGeneralExclusionAndSpecificDiseaseActivity) context).finish();
+                }
 
-                if(context instanceof MICaseExclusionInclusionCriteriaActivity){
-                    ((MICaseExclusionInclusionCriteriaActivity)context).finish(); }
+                if (context instanceof MICaseExclusionInclusionCriteriaActivity) {
+                    ((MICaseExclusionInclusionCriteriaActivity) context).finish();
+                }
 
-                if(context instanceof HfCaseExclusionInclusionCriteriaActivity){
-                    ((HfCaseExclusionInclusionCriteriaActivity)context).finish(); }
+                if (context instanceof HfCaseExclusionInclusionCriteriaActivity) {
+                    ((HfCaseExclusionInclusionCriteriaActivity) context).finish();
+                }
 
-                if(context instanceof Activity){
-                    ((Activity)context).finish(); }
+                if (context instanceof Activity) {
+                    ((Activity) context).finish();
+                }
             }
         });
         builder.setIcon(android.R.drawable.ic_dialog_info);
@@ -163,8 +185,6 @@ public class GeneralUtils {
         menu.show(); //showing popup menu
 
     }
-
-
 
 
     public static void selectMaritalStatus(Context context, View view) {
@@ -415,8 +435,6 @@ public class GeneralUtils {
     }
 
 
-
-
     public static void selectEmploymentStatus(Context context, View view) {
 
         TextView textView = (TextView) view;
@@ -503,7 +521,6 @@ public class GeneralUtils {
         context.getResources().updateConfiguration(config,
                 context.getResources().getDisplayMetrics());
     }
-
 
 
     public static void setLanguage(Context context, String lan) {
@@ -675,7 +692,6 @@ public class GeneralUtils {
     }
 
 
-
     public static void selectRelationWithSpouse(Context context, View view) {
 
         TextView textView = (TextView) view;
@@ -779,7 +795,6 @@ public class GeneralUtils {
     }
 
 
-
     public static void selectTypeOfMIView(Context context, View view) {
 
         TextView textView = (TextView) view;
@@ -831,7 +846,6 @@ public class GeneralUtils {
         menu.show(); //showing popup menu
 
     }
-
 
 
 }

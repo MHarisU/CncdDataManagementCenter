@@ -33,9 +33,12 @@
     <string name="hospital_recruitment_form">HOSPITAL RECRUITMENT FORM</string>
     <string name="callback_recruitment">CALL BACK RECRUITMENT</string>
     <string name="english">ENGLISH</string>
+    <string name="abd">ABD</string>
+    <string name="aa">AA</string>
     <string name="urdu">URDU</string>
     <string name="select_type_of_form">Select Type of Form</string>
     <string name="select_language">Select Language</string>
+    <string name="select_center">Select Center</string>
     <string name="call_back_study_questionnaire">CALL BACK STUDY QUESTIONNAIRE</string>
     <string name="promis">PROMIS</string>
     <string name="cad">CAD</string>
@@ -97,6 +100,7 @@
     <string name="recurrent_chest_infections">Recurrent Chest Infections</string>
     <string name="any_other_disease">Any other disease</string>
     <string name="continue_c">CONTINUE</string>
+    <string name="call">CALL</string>
     <string name="submit_c">SUBMIT</string>
     <string name="medication_history_16">16. MEDICATION HISTORY</string>
     <string name="add_f_c">ADD</string>
@@ -229,6 +233,7 @@
     <string name="f">(°F)</string>
     <string name="waist_standing">Waist Standing</string>
     <string name="cm">CM</string>
+    <string name="m">m</string>
     <string name="hip_standing">Hip Standing</string>
     <string name="height">Height</string>
     <string name="weight">Weight</string>
@@ -281,6 +286,7 @@
     <string name="cnic_no">CNIC No.</string>
     <string name="cell_no">Cell No.</string>
     <string name="phone_no">Phone No.</string>
+    <string name="add_other_no">Add Other No.</string>
     <string name="whatsapp_no">Whatsapp No.</string>
     <string name="email_id">Email ID</string>
     <string name="subject_id">Subject ID</string>
@@ -377,6 +383,7 @@
     <string name="form_completed_70">Form Completed 70%</string>
     <string name="center_fz">Center : FZ</string>
     <string name="study_id_fz5435">Study ID : FZ5435</string>
+    <string name="study_id_abd1">Study ID : ABD1</string>
     <string name="thyroid_disease">Thyroid Disease</string>
     <string name="vulvular_heart_disease">Valvular Heart Disease</string>
     <string name="dyslipidemia">Dyslipidemia</string>

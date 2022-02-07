@@ -91,7 +91,7 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         // initializing our variables.
         generatePDFbtn = findViewById(R.id.idBtnGeneratePDF);
         bmp = BitmapFactory.decodeResource(getResources(), R.drawable.app_logo_two);
-        barcode_bitmap = GenerateBarCode.getBarCodeImageBitmap(this, "KL54862");
+        barcode_bitmap = GenerateBarCode.getBarCodeImageBitmap(this, "ABD1");
         barcode_bitmap = Bitmap.createScaledBitmap(barcode_bitmap, 165, 25, false);
         scaledbmp = Bitmap.createScaledBitmap(bmp, 80, 80, false);
 
@@ -269,7 +269,7 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
         // and then we are passing our variable of paint which is title.
         canvas.drawText("Center for Non-Communicable Disease", 170, 105, header);
         canvas.drawText("Recruitment Report", 170, 125, header);
-        canvas.drawText("Date : 03/01/2021", 650, 105, regularBold);
+        canvas.drawText("Date : 07/02/2022", 650, 105, regularBold);
 
 
         // below line is used for setting
@@ -280,10 +280,10 @@ public class PdfReportActivity extends AppCompatActivity implements OnPageChange
 
 
         canvas.drawText("Study ID : ", 82, 170, regularBold);
-        canvas.drawText("KL56847", 160, 170, regular);
+        canvas.drawText("ABD1", 160, 170, regular);
 
         canvas.drawText("Center : ", 330, 170, regularBold);
-        canvas.drawText("AKH", 390, 170, regular);
+        canvas.drawText("AA", 390, 170, regular);
 
         canvas.drawText("Status : ", 600, 170, regularBold);
         canvas.drawText("CASE", 660, 170, regular);

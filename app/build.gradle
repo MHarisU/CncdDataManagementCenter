@@ -80,6 +80,9 @@ dependencies {
     //barcode
     implementation 'com.google.zxing:core:3.2.1'
 
+    //Dexter karumi permissions
+    implementation 'com.karumi:dexter:6.2.3'
+
 
 
 

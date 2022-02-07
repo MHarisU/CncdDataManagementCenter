@@ -5,6 +5,8 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -16,6 +18,7 @@ import com.cncd.first.Utils.DatePicker;
 import com.cncd.first.Utils.GeneralUtils;
 import com.cncd.first.Utils.TimePicker;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity {
@@ -23,10 +26,11 @@ public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity
     ParticipantDataList participantDataList;
 
 
-
     CardView notesLayout;
     EditText notesEdit;
     Boolean notesOpenCheck = false;
+
+    EditText bmiEditBox, heightEditBox, weightEditBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +46,49 @@ public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity
 
     private void loadUI() {
 
-
         notesLayout = findViewById(R.id.notesLayout);
         notesEdit = findViewById(R.id.notesEdit);
+
+        heightEditBox = findViewById(R.id.heightEditBox);
+        weightEditBox = findViewById(R.id.weightEditBox);
+        bmiEditBox = findViewById(R.id.bmiEditBox);
+
+
+        weightEditBox.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+
+                DecimalFormat df = new DecimalFormat("0.00");
+
+
+                String height = heightEditBox.getText().toString();
+                String weight = weightEditBox.getText().toString();
+                if (height != null && !height.equals("") && s != null && !s.equals("")) {
+                    try {
+
+                        height = String.valueOf(Double.parseDouble(height) / 100);
+                        height = String.valueOf(Double.parseDouble(height) * Double.parseDouble(height));
+                        String bmi = String.valueOf(df.format(Double.parseDouble(weight) / Double.parseDouble(height)));
+                        bmiEditBox.setText(bmi);
+
+                    }catch (Exception e){
+                        bmiEditBox.setText("0");
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 
     //  ArrayList<String> participantDetails = new ArrayList<>();
@@ -53,7 +97,7 @@ public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity
         Intent intent = getIntent();
         participantDataList = (ParticipantDataList) getIntent().getSerializableExtra("participantDataList");
 
-      //  participantDetails = intent.getStringArrayListExtra("participantData");
+        //  participantDetails = intent.getStringArrayListExtra("participantData");
         //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
     }
 
@@ -95,14 +139,12 @@ public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity
     }
 
 
-
     public void submitForm(View view) {
-
 
 
         Intent intent = new Intent(BaselineQuestionnaireRecruitment4Activity.this, PdfReportActivity.class);
         intent.putExtra("participantDataList", participantDataList);
-       // intent.putStringArrayListExtra("participantData", participantDetails);
+        // intent.putStringArrayListExtra("participantData", participantDetails);
         startActivity(intent);
 
 
@@ -111,13 +153,12 @@ public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity
     }
 
 
-
     public void openNotes(View view) {
 
-        if (notesOpenCheck){
+        if (notesOpenCheck) {
             notesLayout.setVisibility(View.GONE);
             notesOpenCheck = false;
-        }else {
+        } else {
             notesLayout.setVisibility(View.VISIBLE);
             notesOpenCheck = true;
         }

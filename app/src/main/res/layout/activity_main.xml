@@ -21,7 +21,7 @@
             android:background="@color/gray10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2.5"
+            android:layout_weight="2"
             android:orientation="vertical">
 
 
@@ -96,6 +96,7 @@
 
             <androidx.cardview.widget.CardView
 
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
@@ -140,6 +141,7 @@
 
             <androidx.cardview.widget.CardView
 
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
@@ -163,7 +165,7 @@
                         android:background="@color/Transparent"
                         android:fontFamily="@font/poppins_regular"
                         android:gravity="center_vertical"
-                        android:text="@string/new_notification"
+                        android:text="@string/notification"
                         android:textColor="@color/red"
                         android:textSize="15sp" />
 
@@ -316,6 +318,7 @@
                         android:background="@color/gray50"/>
 
                     <LinearLayout
+                        android:onClick="openMyForms"
                         android:gravity="center_vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -652,12 +655,13 @@
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/proxima_nova"
                 android:text="@string/welcome_to_cncd_data_management_center"
                 android:textColor="@color/Black80"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="" />
 
             <LinearLayout
@@ -778,6 +782,7 @@
 
 
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

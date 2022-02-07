@@ -2011,8 +2011,8 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="0dp"
                         android:background="@color/gray" />
 
                     <LinearLayout
@@ -2025,7 +2025,7 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="10dp"
-                            android:layout_weight="1"
+                            android:layout_weight="1.1"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -2047,6 +2047,7 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                                 app:cardElevation="2dp">
 
                                 <EditText
+                                    android:id="@+id/heightEditBox"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
@@ -2062,8 +2063,8 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_weight="1"
+                            android:layout_marginStart="0dp"
+                            android:layout_weight="1.1"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -2085,6 +2086,7 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                                 app:cardElevation="2dp">
 
                                 <EditText
+                                    android:id="@+id/weightEditBox"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
@@ -2100,7 +2102,7 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
+                            android:layout_marginStart="0dp"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
@@ -2217,10 +2219,13 @@ tools:context=".UIs.BaselineQuestionnaireRecruitment4Activity">
                                 app:cardElevation="2dp">
 
                                 <EditText
+                                    android:id="@+id/bmiEditBox"
+                                    android:clickable="false"
+                                    android:focusable="false"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:hint="@string/f"
+                                    android:hint="0"
                                     android:padding="10dp"
                                     android:textSize="18sp" />
 

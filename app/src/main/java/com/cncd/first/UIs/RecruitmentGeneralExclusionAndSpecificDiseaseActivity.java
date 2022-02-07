@@ -2,11 +2,15 @@ package com.cncd.first.UIs;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -21,12 +25,19 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cncd.first.Models.PhoneModel.PhoneAdapter;
 import com.cncd.first.Network.ApiPostRequest;
 import com.cncd.first.Network.BaseUrl;
 import com.cncd.first.Network.SessionManager;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 import com.github.gcacace.signaturepad.views.SignaturePad;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.single.PermissionListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -47,7 +58,10 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
     SignaturePad mSignaturePad;
     boolean signCheck = false;
 
-    EditText participantAgeEdit, participantNameEdit, participantAddressEdit, participantNumberEdit, participantWhatsappEdit;
+    EditText participantAgeEdit, participantNameEdit, participantAddressEdit, participantNumberEdit, participantWhatsappEdit, participantNumberAdOn;
+    RecyclerView contactRecycler;
+    ArrayList<String> numbersAdList;
+
 
     RadioButton radioMale, radioFemale;
 
@@ -69,14 +83,30 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
             serumEdit, serumQuantity, plasmaEdit, plasmaQuantity, urineAliquotEdit, urineAliquotQuantity;
     CheckBox edtaCheckBox, geltubeCheckBox, urineCheckBox, serumCheckBox, plasmaCheckBox, urineAliquotCheckBox;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recruitment_general_exclusion_and_specific_disease);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-
+        numbersAdList = new ArrayList<>();
         loadUI();
+
+
+        if (GeneralUtils.checkNumberValidation(this, "03473647030")) {
+            Log.d("numberTage", "true");
+        } else {
+            Log.d("numberTage", "false");
+
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        // super.onSaveInstanceState(outState);
+        //Clear the Activity's bundle of the subsidiary fragments' bundles.
+        outState.clear();
     }
 
     private void loadUI() {
@@ -137,6 +167,9 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         serumCheckBox = findViewById(R.id.serumCheckBox);
         plasmaCheckBox = findViewById(R.id.plasmaCheckBox);
         urineAliquotCheckBox = findViewById(R.id.urineAliquotCheckBox);
+
+        contactRecycler = findViewById(R.id.contactRecycler);
+        participantNumberAdOn = findViewById(R.id.participantNumberAdOn);
 
 
     }
@@ -326,14 +359,24 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
             } else {
 
-                registerParticipantApiCall();
+                if (GeneralUtils.checkNumberValidation(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantNumber) &&
+                        GeneralUtils.checkNumberValidation(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantWhatsapp)) {
 
-                GeneralUtils.hideSoftKeyboard(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantAgeEdit);
-                layoutNameAge.setVisibility(View.GONE);
-                consentCard.setVisibility(View.VISIBLE);
-                Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
-                        R.anim.slide_in_bottom);
-                consentCard.startAnimation(slide_up);
+                    registerParticipantApiCall();
+
+                    GeneralUtils.hideSoftKeyboard(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantAgeEdit);
+                    layoutNameAge.setVisibility(View.GONE);
+                    consentCard.setVisibility(View.VISIBLE);
+                    Animation slide_up = AnimationUtils.loadAnimation(getApplicationContext(),
+                            R.anim.slide_in_bottom);
+                    consentCard.startAnimation(slide_up);
+                    //Toast.makeText(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Valid", Toast.LENGTH_SHORT).show();
+
+                } else {
+
+                    GeneralUtils.alertDialogBoxSimple(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Info", "Not valid phone number.");
+
+                }
             }
 
 
@@ -649,5 +692,55 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
     public void selectYesNoNot(View view) {
         GeneralUtils.selectYesNo(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, view);
+    }
+
+    public void callNumber(View view) {
+        if (participantNumberEdit.getText().toString().equals("")) {
+            Toast.makeText(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Please add phone number", Toast.LENGTH_SHORT).show();
+        } else {
+
+            Dexter.withContext(this)
+                    .withPermission(Manifest.permission.CALL_PHONE)
+                    .withListener(new PermissionListener() {
+                        @Override
+                        public void onPermissionGranted(PermissionGrantedResponse response) {
+
+
+                            // TODO Auto-generated method stub
+                            Intent i = new Intent(Intent.ACTION_CALL);
+                            i.setData(Uri.parse("tel:" + participantNumberEdit.getText().toString()));
+                            startActivity(i);
+
+                        }
+
+                        @Override
+                        public void onPermissionDenied(PermissionDeniedResponse response) {/* ... */}
+
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+                            token.continuePermissionRequest();
+                        }
+                    }).check();
+
+        }
+    }
+
+    public void adOnNumberAdd(View view) {
+        String numberAdOn = participantNumberAdOn.getText().toString();
+        if (GeneralUtils.checkNumberValidation(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, numberAdOn)) {
+
+            numbersAdList.add(numberAdOn);
+
+            contactRecycler = findViewById(R.id.contactRecycler);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+            contactRecycler.setLayoutManager(linearLayoutManager);
+
+            PhoneAdapter adapter = new PhoneAdapter(numbersAdList, RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this);
+            contactRecycler.setAdapter(adapter);
+            participantNumberAdOn.setText("");
+
+        } else
+            GeneralUtils.alertDialogBoxSimple(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Info", "Not valid phone number.");
+
     }
 }

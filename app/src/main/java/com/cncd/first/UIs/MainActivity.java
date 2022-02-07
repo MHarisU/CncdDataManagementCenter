@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.cncd.first.Dialogs.AdFormTypeDialog;
+import com.cncd.first.Dialogs.SelectCenterDialog;
+import com.cncd.first.Dialogs.SelectLanguageDialog;
 import com.cncd.first.Network.SessionManager;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
@@ -38,6 +41,23 @@ public class MainActivity extends AppCompatActivity {
 
         getUserInfo();
 
+        SelectCenterId();
+
+    }
+
+    private void SelectCenterId() {
+        Handler handler = new Handler();
+
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                SelectCenterDialog dialog = new SelectCenterDialog();
+                dialog.showDialog(MainActivity.this);
+
+            }
+        }, 500);
     }
 
     private void getUserInfo() {

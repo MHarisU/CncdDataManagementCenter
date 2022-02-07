@@ -261,7 +261,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
                     android:padding="10dp"
-                    android:text="@string/study_id_fz5435"
+                    android:text="@string/study_id_abd1"
                     android:textSize="18sp" />
 
             </androidx.cardview.widget.CardView>
