@@ -1,0 +1,26 @@
+[
+  {
+    name: "Personal Car"
+  },
+  {
+    name: "Motor Bike"
+  },
+  {
+    name: "Bus"
+  },
+  {
+    name: "Riksha/Taxi  "
+  },
+  {
+    name: "No Walk or Cycling"
+  },
+  {
+    name: "Walking or bicycling 1 to 29 minutes"
+  },
+  {
+    name: "Walking or bicycling > 30 minutes"
+  },
+  {
+    name: "Not Applicable"
+  }
+]

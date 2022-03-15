@@ -100,6 +100,7 @@
     <string name="recurrent_chest_infections">Recurrent Chest Infections</string>
     <string name="any_other_disease">Any other disease</string>
     <string name="continue_c">CONTINUE</string>
+    <string name="next">Next</string>
     <string name="call">CALL</string>
     <string name="submit_c">SUBMIT</string>
     <string name="medication_history_16">16. MEDICATION HISTORY</string>

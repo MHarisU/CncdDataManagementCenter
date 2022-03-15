@@ -81,13 +81,13 @@ public class ApiPostRequest {
                 }
             }
 
-            /*@Override
+            @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> headers = new HashMap<String, String>();
                 String auth = "Bearer " + new SessionManager(mContext).getToken();
                 headers.put("Authorization", auth);
                 return headers;
-            }*/
+            }
         };
 
         stringRequest.setRetryPolicy(new RetryPolicy() {

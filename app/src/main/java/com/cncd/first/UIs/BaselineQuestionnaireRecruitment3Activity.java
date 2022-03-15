@@ -121,6 +121,29 @@ public class BaselineQuestionnaireRecruitment3Activity extends AppCompatActivity
 
     }
 
+    public void selectExercise(View view) {
+        GeneralUtils.selectExercise(BaselineQuestionnaireRecruitment3Activity.this, view);
+
+    }
+
+
+    public void selectLeisureTime(View view) {
+        GeneralUtils.selectLeisureTime(BaselineQuestionnaireRecruitment3Activity.this, view);
+
+    }
+
+
+    public void selectDailyCommuting(View view) {
+        GeneralUtils.selectDailyCommuting(BaselineQuestionnaireRecruitment3Activity.this, view);
+
+    }
+
+
+    public void selectAtWorkOptions(View view) {
+        GeneralUtils.selectAtWork(BaselineQuestionnaireRecruitment3Activity.this, view);
+
+    }
+
     public void selectYesNoNot(View view) {
         GeneralUtils.selectYesNoNotAnswered(BaselineQuestionnaireRecruitment3Activity.this, view);
     }

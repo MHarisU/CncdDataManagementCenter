@@ -13,6 +13,7 @@ import androidx.cardview.widget.CardView;
 import com.cncd.first.R;
 import com.cncd.first.UIs.BaselineQuestionnaireRecruitmentActivity;
 import com.cncd.first.Utils.GeneralUtils;
+import com.cncd.first.Utils.ReturnValueFromDialog;
 
 public class LiverDiseaseDialog {
 
@@ -35,7 +36,8 @@ public class LiverDiseaseDialog {
         YesNoLayout = (LinearLayout) dialog.findViewById(R.id.YesNoLayout);
         diseaseLayout1 = (LinearLayout) dialog.findViewById(R.id.diseaseLayout1);
 
-        CardView diseaseYes,diseaseNo;
+        CardView diseaseYes,diseaseNo, submitButton;
+        submitButton = (CardView) dialog.findViewById(R.id.submitButton);
         diseaseYes = (CardView) dialog.findViewById(R.id.diseaseYes);
 
         diseaseNo = (CardView) dialog.findViewById(R.id.diseaseNo);
@@ -47,6 +49,15 @@ public class LiverDiseaseDialog {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
+            }
+        });
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                ReturnValueFromDialog activity = (ReturnValueFromDialog) context;
+                activity.onReturnLiverData("Liver Disease Data Entered");
             }
         });
 

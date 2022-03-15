@@ -6,10 +6,13 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
 import com.cncd.first.R;
+import com.cncd.first.Utils.GeneralUtils;
+import com.cncd.first.Utils.ReturnValueFromDialog;
 
 public class SeizuresDialog {
 
@@ -32,7 +35,8 @@ public class SeizuresDialog {
         YesNoLayout = (LinearLayout) dialog.findViewById(R.id.YesNoLayout);
         diseaseLayout1 = (LinearLayout) dialog.findViewById(R.id.diseaseLayout1);
 
-        CardView diseaseYes,diseaseNo;
+        CardView diseaseYes,diseaseNo, submitButton;
+        submitButton = (CardView) dialog.findViewById(R.id.submitButton);
         diseaseYes = (CardView) dialog.findViewById(R.id.diseaseYes);
 
         diseaseNo = (CardView) dialog.findViewById(R.id.diseaseNo);
@@ -44,6 +48,15 @@ public class SeizuresDialog {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
+            }
+        });
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                ReturnValueFromDialog activity = (ReturnValueFromDialog) context;
+                activity.onReturnSeizureData("Seizure Data Entered");
             }
         });
 
@@ -71,6 +84,25 @@ public class SeizuresDialog {
         });
 
 
+        TextView seizureFrequency = (TextView) dialog.findViewById(R.id.seizureFrequency);
+        seizureFrequency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GeneralUtils.selectSeizureFrequency(context, view);
+
+
+            }
+        });
+
+        TextView seizureDiagnosis = (TextView) dialog.findViewById(R.id.seizureDiagnosis);
+        seizureDiagnosis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GeneralUtils.selectSeizureDiagnosis(context, view);
+
+
+            }
+        });
 
 
 

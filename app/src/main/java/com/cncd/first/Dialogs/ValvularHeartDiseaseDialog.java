@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
+import com.cncd.first.Utils.ReturnValueFromDialog;
 
 public class ValvularHeartDiseaseDialog {
 
@@ -37,7 +38,8 @@ public class ValvularHeartDiseaseDialog {
         diabetesType2Layout = (LinearLayout) dialog.findViewById(R.id.diabetesType2Layout);
         diabetesGestationalLayout = (LinearLayout) dialog.findViewById(R.id.diabetesGestationalLayout);
 
-        CardView diabetesYes,diabetesNo, diabetesType2, diabetesGestational;
+        CardView diabetesYes,diabetesNo, diabetesType2, diabetesGestational, submitButton;
+        submitButton = (CardView) dialog.findViewById(R.id.submitButton);
         diabetesYes = (CardView) dialog.findViewById(R.id.diabetesYes);
 
         diabetesNo = (CardView) dialog.findViewById(R.id.diabetesNo);
@@ -51,6 +53,15 @@ public class ValvularHeartDiseaseDialog {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
+            }
+        });
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                ReturnValueFromDialog activity = (ReturnValueFromDialog) context;
+                activity.onReturnValvularData("Valvular Data Entered");
             }
         });
 

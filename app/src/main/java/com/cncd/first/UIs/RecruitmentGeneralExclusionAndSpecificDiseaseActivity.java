@@ -490,59 +490,149 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
     private void sampleApiCall(String temperature, String edtaT, String edtaQ, String gelT, String gelQ, String urineT, String urineQ, String serumT, String serumQ, String plasmaT, String plasmaQ, String urineAT, String urineAQ) {
 
 
+        /*
+        {
+
+        "study_id":"CZX6",
+        "sample":[
+       {
+        "sample_name": "EDTA",
+        "sample_id": "CZX6-ED-1",
+        "sample_quantity": "3"
+        },
+       {
+        "sample_name": "EDTA",
+        "sample_id": "CZX6-ED-2",
+        "sample_quantity": "3"
+        },
+       {
+       "sample_name": "SERUM",
+        "sample_id": "CZX6-S-1",
+        "sample_quantity": "3"
+        },
+       {
+        "sample_name": "PLASMA",
+        "sample_id": "CZX6-P-1",
+        "sample_quantity": "3"
+        }
+        ]
+
+        }
+        */
+
         JSONObject orderJsonObject = new JSONObject();
         try {
-            orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
+            // orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
             orderJsonObject.put("study_id", study_id);
-            orderJsonObject.put("temperature", temperature.isEmpty() ? "0" : temperature);
+            // orderJsonObject.put("temperature", temperature.isEmpty() ? "0" : temperature);
 
             JSONArray jsonArray = new JSONArray();
             if (edtaCheckBox.isChecked()) {
                 JSONObject object = new JSONObject();
-                object.put("tube", "edta");
-                object.put("number_of_tubes", edtaT);
-                object.put("quantity", edtaQ);
-                jsonArray.put(object);
+
+                for (int i = 1; i <= Integer.parseInt(edtaT); i++) {
+
+                    object.put("sample_name", "EDTA");
+                    object.put("sample_id", study_id + "-ED-" + i);
+                    object.put("sample_quantity", edtaQ);
+                    jsonArray.put(object);
+                }
             }
             if (geltubeCheckBox.isChecked()) {
+
+                JSONObject object = new JSONObject();
+
+                for (int i = 1; i <= Integer.parseInt(gelT); i++) {
+
+                    object.put("sample_name", "GEL");
+                    object.put("sample_id", study_id + "-G-" + i);
+                    object.put("sample_quantity", gelQ);
+                    jsonArray.put(object);
+                }
+                /*
                 JSONObject object = new JSONObject();
                 object.put("tube", "gel");
                 object.put("number_of_tubes", gelT);
                 object.put("quantity", gelQ);
-                jsonArray.put(object);
+                jsonArray.put(object);*/
 
             }
             if (urineCheckBox.isChecked()) {
                 JSONObject object = new JSONObject();
+
+                for (int i = 1; i <= Integer.parseInt(urineT); i++) {
+
+                    object.put("sample_name", "URINE");
+                    object.put("sample_id", study_id + "-U-" + i);
+                    object.put("sample_quantity", urineQ);
+                    jsonArray.put(object);
+                }
+
+            /*    JSONObject object = new JSONObject();
                 object.put("tube", "urine");
                 object.put("number_of_tubes", urineT);
                 object.put("quantity", urineQ);
-                jsonArray.put(object);
+                jsonArray.put(object);*/
 
             }
 
             if (serumCheckBox.isChecked()) {
+
+                JSONObject object = new JSONObject();
+
+                for (int i = 1; i <= Integer.parseInt(serumT); i++) {
+
+                    object.put("sample_name", "SERUM");
+                    object.put("sample_id", study_id + "-S-" + i);
+                    object.put("sample_quantity", serumQ);
+                    jsonArray.put(object);
+                }
+                /*
                 JSONObject object = new JSONObject();
                 object.put("tube", "serum");
                 object.put("number_of_tubes", serumT);
                 object.put("quantity", serumQ);
-                jsonArray.put(object);
+                jsonArray.put(object);*/
 
             }
             if (plasmaCheckBox.isChecked()) {
+
+
                 JSONObject object = new JSONObject();
+
+                for (int i = 1; i <= Integer.parseInt(plasmaT); i++) {
+
+                    object.put("sample_name", "PLASMA");
+                    object.put("sample_id", study_id + "-P-" + i);
+                    object.put("sample_quantity", plasmaQ);
+                    jsonArray.put(object);
+                }
+
+                /*JSONObject object = new JSONObject();
                 object.put("tube", "plasma");
                 object.put("number_of_tubes", plasmaT);
                 object.put("quantity", plasmaQ);
-                jsonArray.put(object);
+                jsonArray.put(object);*/
 
             }
             if (urineAliquotCheckBox.isChecked()) {
+
+                JSONObject object = new JSONObject();
+
+                for (int i = 1; i <= Integer.parseInt(urineAT); i++) {
+
+                    object.put("sample_name", "URINE_ALIQUOT");
+                    object.put("sample_id", study_id + "-UA-" + i);
+                    object.put("sample_quantity", urineAQ);
+                    jsonArray.put(object);
+                }
+
+/*
                 JSONObject object = new JSONObject();
                 object.put("tube", "urine_a");
                 object.put("number_of_tubes", urineAT);
                 object.put("quantity", urineAQ);
-                jsonArray.put(object);
+                jsonArray.put(object);*/
 
             }
 
@@ -559,7 +649,7 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
         new ApiPostRequest(
                 RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this,
-                new BaseUrl().getBaseUrl() + "/dms/apis/sample",
+                new BaseUrl().getBaseUrl() + "dmsapis/api/Participantsample",
                 requestBody,
                 new ApiPostRequest.AsyncApiResponse() {
                     @Override
@@ -576,10 +666,12 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
                         }
 
                         try {
-                            JSONObject jsonResponse = jsonObject.getJSONObject("Response");
-                            String jsonStatus = jsonResponse.getString("Status");
+                            // JSONObject jsonResponse = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
 
-                            if (jsonStatus.equals("true")) {
+                            if (successResponse.equals("true")) {
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
 
 
                             } else {
@@ -613,17 +705,31 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
     private void registerParticipantApiCall() {
 
 
+        /*
+
+{
+    "user_id":"Kl1321",
+    "sid_alpha":"CZX",
+    "name":"ali",
+    "age":"55",
+    "sex":"female",
+    "address":"dha karachi",
+    "contact_number":"03473647030 / 03458614514131 / 0345454545",
+    "whatsapp_number":"03473647031"
+}
+*/
+
         JSONObject orderJsonObject = new JSONObject();
         try {
-            orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
+            //   orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
             orderJsonObject.put("user_id", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getUserId());
-            orderJsonObject.put("center_id", "ABD");
-            orderJsonObject.put("p_name", participantName);
-            orderJsonObject.put("p_age", participantAge);
-            orderJsonObject.put("p_gender", participantGender.equals("Male") ? "Male" : "Female");
-            orderJsonObject.put("p_address", participantAddress);
-            orderJsonObject.put("p_phone", participantNumber);
-            orderJsonObject.put("p_whatsapp", participantWhatsapp);
+            orderJsonObject.put("sid_alpha", "ABD");
+            orderJsonObject.put("name", participantName);
+            orderJsonObject.put("age", participantAge);
+            orderJsonObject.put("sex", participantGender.equals("Male") ? "Male" : "Female");
+            orderJsonObject.put("address", participantAddress);
+            orderJsonObject.put("contact_number", participantNumber);
+            orderJsonObject.put("whatsapp_number", participantWhatsapp);
 
             ///////
 
@@ -635,7 +741,7 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
         new ApiPostRequest(
                 RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this,
-                new BaseUrl().getBaseUrl() + "/dms/apis/registration",
+                new BaseUrl().getBaseUrl() + "dmsapis/api/Participantregistration",
                 requestBody,
                 new ApiPostRequest.AsyncApiResponse() {
                     @Override
@@ -652,12 +758,13 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
                         }
 
                         try {
-                            JSONObject jsonResponse = jsonObject.getJSONObject("Response");
-                            String jsonStatus = jsonResponse.getString("Status");
+                            // JSONObject jsonResponse = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
 
-                            if (jsonStatus.equals("true")) {
-                                JSONArray jsonDataArray = jsonResponse.getJSONArray("Data");
-                                JSONObject jsonData = jsonDataArray.getJSONObject(0);
+                            if (successResponse.equals("true")) {
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
+                                //String jsonToken = jsonData.getString("token");
 
                                 study_id = jsonData.getString("study_id");
                                 Log.d("response", study_id);

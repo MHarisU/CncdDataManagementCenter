@@ -1,0 +1,15 @@
+[
+  {
+    name: "No Exercise"
+  },
+  {
+    name: "Aerobic"
+  },
+  {
+    name: "Anaerobic"
+  },
+  {
+    name: "Weight lifting or sprinting"
+  }
+
+]

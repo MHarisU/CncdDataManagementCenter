@@ -107,6 +107,110 @@ public class GeneralUtils {
         alert1.show();
     }
 
+
+    public static void selectExercise(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "exercise.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+
+    public static void selectLeisureTime(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "leisure_time.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+    public static void selectDailyCommuting(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "daily_commuting.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+    public static void selectAtWork(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "at_work.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
     public static void selectYesNoNotAnswered(Context context, View view) {
 
         TextView textView = (TextView) view;
@@ -716,6 +820,59 @@ public class GeneralUtils {
         menu.show(); //showing popup menu
 
     }
+
+
+    public static void selectSeizureDiagnosis(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "seizure_diagnosis.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
+
+    public static void selectSeizureFrequency(Context context, View view) {
+
+        TextView textView = (TextView) view;
+
+
+        String jsonArray = JsonListToJsonArray.loadJSONFromAsset(context, "seizure_frequency.json");
+        Log.d("CallBackActivity", jsonArray);
+        List<String> list = JsonArrayToList.createList(context, jsonArray);
+
+        PopupMenu menu = LoadListToMenu.loadMenu(context, list, view);
+
+        //registering popup with OnMenuItemClickListener
+        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+
+                textView.setText(item.getTitle().toString());
+
+                return true;
+            }
+        });
+
+        menu.show(); //showing popup menu
+
+    }
+
 
 
     public static void selectDiabetesType1Complications(Context context, View view) {

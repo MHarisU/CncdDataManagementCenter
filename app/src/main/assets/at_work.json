@@ -1,0 +1,15 @@
+[
+  {
+    name: "Light"
+  },
+  {
+    name: "Moderate"
+  },
+  {
+    name: "Active"
+  },
+  {
+    name: "Not Applicable"
+  }
+
+]

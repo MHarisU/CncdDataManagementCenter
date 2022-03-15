@@ -199,7 +199,7 @@
                     android:inputType="textEmailAddress"
                     android:maxLength="50"
                     android:singleLine="true"
-                    android:text="haris@cncd.org"
+                    android:text="muhammad.haris@cncd.org"
                     android:textSize="@dimen/sizeEditTextsInput"
                     android:textStyle="normal"
 

@@ -26,6 +26,7 @@ import com.cncd.first.Models.BaseParticipant.ParticipantDataList;
 import com.cncd.first.R;
 import com.cncd.first.Utils.DatePicker;
 import com.cncd.first.Utils.GeneralUtils;
+import com.cncd.first.Utils.ReturnValueFromDialog;
 import com.cncd.first.Utils.TimePicker;
 
 import java.text.SimpleDateFormat;
@@ -34,7 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity {
+public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity implements ReturnValueFromDialog {
 
     ArrayList<String> participantDetails = new ArrayList<>();
 
@@ -46,6 +47,8 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 
     ParticipantDataList participantDataList;
 
+
+    TextView diabetesTextView, thyroidTextView, valvularTextView, dyslipidemiaTextView, hypertensionTextView, liverTextView, miTextView, seizureTextView;
 
     //Note Views
     CardView notesLayout;
@@ -73,9 +76,9 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
         String formattedDate = df.format(c);
         if (GeneralUtils.getLanguage(BaselineQuestionnaireRecruitmentActivity.this).equals("ur")) {
-            interviewDateText.setText(formattedDate+"انٹرویو کی تاریخ: " );
+            interviewDateText.setText(formattedDate + "انٹرویو کی تاریخ: ");
 
-        }else {
+        } else {
             interviewDateText.setText("1. Date of Interview: " + formattedDate);
 
         }
@@ -107,24 +110,40 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         notesEdit = findViewById(R.id.notesEdit);
 
 
+        diabetesTextView = findViewById(R.id.diabetesTextView);
+        thyroidTextView = findViewById(R.id.thyroidTextView);
+        valvularTextView = findViewById(R.id.valvularTextView);
+        dyslipidemiaTextView = findViewById(R.id.dyslipidemiaTextView);
+        hypertensionTextView = findViewById(R.id.hypertensionTextView);
+        liverTextView = findViewById(R.id.liverTextView);
+        miTextView = findViewById(R.id.miTextView);
+        seizureTextView = findViewById(R.id.seizureTextView);
+
     }
 
     private void loadParticipantData() {
         Intent intent = getIntent();
-        participantDetails = intent.getStringArrayListExtra("participantData");
-        participantNameEdit.setText(participantDetails.get(0).toString());
-        participantAgeEdit.setText(participantDetails.get(1));
-        if (participantDetails.get(2).equals("Male")) {
-            radioMale.setChecked(true);
-            radioFemale.setChecked(false);
-        } else if (participantDetails.get(2).equals("Female")) {
-            radioMale.setChecked(false);
-            radioFemale.setChecked(true);
+        try {
+
+
+            participantDetails = intent.getStringArrayListExtra("participantData");
+            participantNameEdit.setText(participantDetails.get(0).toString());
+            participantAgeEdit.setText(participantDetails.get(1));
+            if (participantDetails.get(2).equals("Male")) {
+                radioMale.setChecked(true);
+                radioFemale.setChecked(false);
+            } else if (participantDetails.get(2).equals("Female")) {
+                radioMale.setChecked(false);
+                radioFemale.setChecked(true);
+            }
+            participantAddressEdit.setText(participantDetails.get(3));
+            participantTelephoneEdit.setText(participantDetails.get(4));
+            participantWhatsappEdit.setText(participantDetails.get(5));
+            //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        participantAddressEdit.setText(participantDetails.get(3));
-        participantTelephoneEdit.setText(participantDetails.get(4));
-        participantWhatsappEdit.setText(participantDetails.get(5));
-        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, ""+participantDetails.get(0).toString(), Toast.LENGTH_SHORT).show();
     }
 
     public void interviewDate(View view) {
@@ -160,10 +179,16 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     public void moveToSecondForm(View view) {
         //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
 
-        participantDataList = new ParticipantDataList("KL54862", participantDetails.get(0).toString(), participantFatherHusbandEdit.getText().toString(), participantDetails.get(3),
-                participantDetails.get(2), participantDetails.get(1), participantCnicEdit.getText().toString(), participantDetails.get(4), participantDetails.get(5),
-                dateLastMeal.getText().toString(), lastMealTime.getText().toString(), dateBloodSample.getText().toString(), bloodsampleTime.getText().toString());
+        try {
 
+
+            participantDataList = new ParticipantDataList("KL54862", participantDetails.get(0).toString(), participantFatherHusbandEdit.getText().toString(), participantDetails.get(3),
+                    participantDetails.get(2), participantDetails.get(1), participantCnicEdit.getText().toString(), participantDetails.get(4), participantDetails.get(5),
+                    dateLastMeal.getText().toString(), lastMealTime.getText().toString(), dateBloodSample.getText().toString(), bloodsampleTime.getText().toString());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Intent intent = new Intent(BaselineQuestionnaireRecruitmentActivity.this, BaselineQuestionnaireRecruitment2Activity.class);
         intent.putStringArrayListExtra("participantData", participantDetails);
         intent.putExtra("participantDataList", participantDataList);
@@ -194,18 +219,20 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     }
 
     public void DiabetesSelect(View view) {
+        // Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "API Error.", Toast.LENGTH_SHORT).show();
         DiabeteMellitusDialog dialog = new DiabeteMellitusDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
 
     public void ThyroidDiseaseSelect(View view) {
-
+        // Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "API Error.", Toast.LENGTH_SHORT).show();
         ThyroidDiseaseDialog dialog = new ThyroidDiseaseDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
 
     public void ValvularHeartDiseaseSelect(View view) {
 
+        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "API Error.", Toast.LENGTH_SHORT).show();
         ValvularHeartDiseaseDialog dialog = new ValvularHeartDiseaseDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
@@ -213,27 +240,44 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 
     public void dyslipidemiaSelect(View view) {
 
+        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "API Error.", Toast.LENGTH_SHORT).show();
+
         DyslipidemiaDialog dialog = new DyslipidemiaDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
 
     public void hypertensionSelect(View view) {
+
+        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "API Error.", Toast.LENGTH_SHORT).show();
+
+
         HypertensionDialog dialog = new HypertensionDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
 
     public void liverDiseaseSelect(View view) {
 
+        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "API Error.", Toast.LENGTH_SHORT).show();
+
+
         LiverDiseaseDialog dialog = new LiverDiseaseDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
 
     public void miDiseaseSelect(View view) {
+
+        // Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "API Error.", Toast.LENGTH_SHORT).show();
+
+
         MyocardialInfarctionDialog dialog = new MyocardialInfarctionDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
 
     public void seizuresSelect(View view) {
+
+        //Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "API Error.", Toast.LENGTH_SHORT).show();
+
+
         SeizuresDialog dialog = new SeizuresDialog();
         dialog.showDialog(BaselineQuestionnaireRecruitmentActivity.this);
     }
@@ -246,5 +290,53 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
             notesLayout.setVisibility(View.VISIBLE);
             notesOpenCheck = true;
         }
+    }
+
+//    TextView diabetesTextView, thyroidTextView, valvularTextView, dyslipidemiaTextView, hypertensionTextView, liverTextView, miTextView, seizureTextView;
+
+    @Override
+    public void onReturnDiabetesData(String data) {
+        diabetesTextView.setText(data);
+    }
+
+    @Override
+    public void onReturnThyroidData(String data) {
+        thyroidTextView.setText(data);
+    }
+
+    @Override
+    public void onReturnValvularData(String data) {
+        valvularTextView.setText(data);
+
+    }
+
+    @Override
+    public void onReturnDyslipidemiaData(String data) {
+        dyslipidemiaTextView.setText(data);
+
+    }
+
+    @Override
+    public void onReturnHypertensionData(String data) {
+        hypertensionTextView.setText(data);
+
+    }
+
+    @Override
+    public void onReturnLiverData(String data) {
+        liverTextView.setText(data);
+
+    }
+
+    @Override
+    public void onReturnMIData(String data) {
+        miTextView.setText(data);
+
+    }
+
+    @Override
+    public void onReturnSeizureData(String data) {
+        seizureTextView.setText(data);
+
     }
 }

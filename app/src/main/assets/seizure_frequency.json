@@ -1,0 +1,17 @@
+[
+  {
+    name: "Rarely"
+  },
+  {
+    name: "Occasionally"
+  },
+  {
+    name: "Frequently"
+  },
+  {
+    name: "Daily"
+  },
+  {
+    name: "Not Answered"
+  }
+]

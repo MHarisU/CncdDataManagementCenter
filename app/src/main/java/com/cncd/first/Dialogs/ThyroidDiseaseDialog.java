@@ -12,6 +12,7 @@ import androidx.cardview.widget.CardView;
 
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
+import com.cncd.first.Utils.ReturnValueFromDialog;
 
 public class ThyroidDiseaseDialog {
 
@@ -30,14 +31,16 @@ public class ThyroidDiseaseDialog {
         dialog.setContentView(R.layout.thyroid_disease_dialog_layout);
 
 
-        LinearLayout YesNoLayout, typeLayout, diabetesType1Layout, diabetesType2Layout,  diabetesGestationalLayout;
+        LinearLayout YesNoLayout, typeLayout, diabetesType1Layout, diabetesType2Layout,  diabetesGestationalLayout, submitLayout;
         YesNoLayout = (LinearLayout) dialog.findViewById(R.id.YesNoLayout);
         typeLayout = (LinearLayout) dialog.findViewById(R.id.typeLayout);
         diabetesType1Layout = (LinearLayout) dialog.findViewById(R.id.diabetesType1Layout);
         diabetesType2Layout = (LinearLayout) dialog.findViewById(R.id.diabetesType2Layout);
         diabetesGestationalLayout = (LinearLayout) dialog.findViewById(R.id.diabetesGestationalLayout);
+        submitLayout = (LinearLayout) dialog.findViewById(R.id.submitLayout);
 
-        CardView diabetesYes,diabetesNo, hypothyroidismType, diabetesType2, diabetesGestational;
+        CardView diabetesYes,diabetesNo, hypothyroidismType, diabetesType2, diabetesGestational, submitButton;
+        submitButton = (CardView) dialog.findViewById(R.id.submitButton);
         diabetesYes = (CardView) dialog.findViewById(R.id.diabetesYes);
 
         diabetesNo = (CardView) dialog.findViewById(R.id.diabetesNo);
@@ -53,6 +56,17 @@ public class ThyroidDiseaseDialog {
                 dialog.dismiss();
             }
         });
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                ReturnValueFromDialog activity = (ReturnValueFromDialog) context;
+                activity.onReturnThyroidData("Thyroid Data Entered");
+            }
+        });
+
+
 
 
 
@@ -83,6 +97,8 @@ public class ThyroidDiseaseDialog {
             public void onClick(View view) {
 
                 diabetesType1Layout.setVisibility(View.VISIBLE);
+                submitLayout.setVisibility(View.VISIBLE);
+
                 typeLayout.setVisibility(View.GONE);
 
             }
@@ -93,6 +109,8 @@ public class ThyroidDiseaseDialog {
             public void onClick(View view) {
 
                 diabetesType2Layout.setVisibility(View.VISIBLE);
+                submitLayout.setVisibility(View.VISIBLE);
+
                 typeLayout.setVisibility(View.GONE);
 
             }
@@ -103,6 +121,8 @@ public class ThyroidDiseaseDialog {
             public void onClick(View view) {
 
                 diabetesGestationalLayout.setVisibility(View.VISIBLE);
+                submitLayout.setVisibility(View.VISIBLE);
+
                 typeLayout.setVisibility(View.GONE);
 
             }

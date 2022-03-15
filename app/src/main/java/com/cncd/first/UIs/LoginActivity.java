@@ -132,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
         final String requestBody = jsonBody.toString();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, new BaseUrl().getBaseUrl() + "dms/userlogin",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, new BaseUrl().getBaseUrl() + "dmsapis/api/login",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -147,12 +147,12 @@ public class LoginActivity extends AppCompatActivity {
                         }
 
                         try {
-                            JSONObject jsonResponse = jsonObject.getJSONObject("Response");
-                            String jsonStatus = jsonResponse.getString("Status");
+                            //JSONObject jsonObject = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
 
-                            if (jsonStatus.equals("true")) {
-                                JSONArray jsonDataArray = jsonResponse.getJSONArray("Data");
-                                JSONObject jsonData = jsonDataArray.getJSONObject(0);
+                            if (successResponse.equals("true")) {
+                               // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
                                 String jsonToken = jsonData.getString("token");
 
                                 String id = jsonData.getString("id").trim();
@@ -201,7 +201,7 @@ public class LoginActivity extends AppCompatActivity {
                                 loginButton.setVisibility(View.VISIBLE);
                                 progressBarLogin.setVisibility(View.GONE);
 
-                            } else if (jsonStatus.equals("false")) {
+                            } else if (successResponse.equals("false")) {
                                 loginButton.setVisibility(View.VISIBLE);
                                 progressBarLogin.setVisibility(View.GONE);
                                 AlertDialog.Builder dialog = new AlertDialog.Builder(LoginActivity.this, R.style.DialogTheme)
