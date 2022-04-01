@@ -1310,7 +1310,7 @@
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/bttn_drk_stroke"
@@ -1319,11 +1319,11 @@
 
                                 <TextView
                                     android:id="@+id/globalExclusionText1"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="80dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:paddingStart="10dp"
@@ -1336,11 +1336,12 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
+                                    android:layout_alignEnd="@+id/globalExclusionText1"
                                     android:padding="5dp"
                                     android:src="@drawable/ic_down_arrow_black" />
 
 
-                            </LinearLayout>
+                            </RelativeLayout>
 
 
                         </androidx.cardview.widget.CardView>
@@ -1369,7 +1370,7 @@
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/bttn_drk_stroke"
@@ -1378,11 +1379,11 @@
 
                                 <TextView
                                     android:id="@+id/globalExclusionText2"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="80dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:paddingStart="10dp"
@@ -1395,11 +1396,12 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
+                                    android:layout_alignEnd="@+id/globalExclusionText2"
                                     android:padding="5dp"
                                     android:src="@drawable/ic_down_arrow_black" />
 
 
-                            </LinearLayout>
+                            </RelativeLayout>
 
 
                         </androidx.cardview.widget.CardView>
@@ -1428,7 +1430,7 @@
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/bttn_drk_stroke"
@@ -1437,11 +1439,11 @@
 
                                 <TextView
                                     android:id="@+id/globalExclusionText3"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="80dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:paddingStart="10dp"
@@ -1454,11 +1456,13 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
+                                    android:layout_alignEnd="@+id/globalExclusionText3"
                                     android:padding="5dp"
                                     android:src="@drawable/ic_down_arrow_black" />
 
 
-                            </LinearLayout>
+                            </RelativeLayout>
+
 
 
                         </androidx.cardview.widget.CardView>
@@ -1487,7 +1491,7 @@
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/bttn_drk_stroke"
@@ -1496,11 +1500,11 @@
 
                                 <TextView
                                     android:id="@+id/globalExclusionText4"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="80dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:paddingStart="10dp"
@@ -1513,11 +1517,12 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
+                                    android:layout_alignEnd="@+id/globalExclusionText4"
                                     android:padding="5dp"
                                     android:src="@drawable/ic_down_arrow_black" />
 
 
-                            </LinearLayout>
+                            </RelativeLayout>
 
 
                         </androidx.cardview.widget.CardView>
@@ -1546,7 +1551,7 @@
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/bttn_drk_stroke"
@@ -1555,11 +1560,11 @@
 
                                 <TextView
                                     android:id="@+id/globalExclusionText5"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="80dp"
                                     android:layout_height="40dp"
                                     android:layout_weight="1"
                                     android:fontFamily="@font/poppins_regular"
-                                    android:gravity="center"
+                                    android:gravity="center_vertical"
                                     android:inputType="text"
                                     android:onClick="selectYesNoNot"
                                     android:paddingStart="10dp"
@@ -1572,11 +1577,12 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
+                                    android:layout_alignEnd="@+id/globalExclusionText5"
                                     android:padding="5dp"
                                     android:src="@drawable/ic_down_arrow_black" />
 
 
-                            </LinearLayout>
+                            </RelativeLayout>
 
 
                         </androidx.cardview.widget.CardView>
@@ -1808,14 +1814,14 @@
                                 <ImageView
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
-                                    android:src="@drawable/mi_disease1"/>
+                                    android:src="@drawable/mi_disease1" />
 
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginTop="-25dp"
                                     android:layout_marginStart="10dp"
+                                    android:layout_marginTop="-25dp"
                                     android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="10dp"
 
@@ -1873,14 +1879,14 @@
                                 <ImageView
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
-                                    android:src="@drawable/heart_failure1"/>
+                                    android:src="@drawable/heart_failure1" />
 
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginTop="-5dp"
                                     android:layout_marginStart="10dp"
+                                    android:layout_marginTop="-5dp"
                                     android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="10dp"
 
@@ -1908,7 +1914,6 @@
 
 
                         </androidx.cardview.widget.CardView>
-
 
 
                         <!--
@@ -1939,14 +1944,14 @@
                                 <ImageView
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
-                                    android:src="@drawable/stroke1"/>
+                                    android:src="@drawable/stroke1" />
 
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginTop="0dp"
                                     android:layout_marginStart="10dp"
+                                    android:layout_marginTop="0dp"
                                     android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="10dp"
 
@@ -1976,8 +1981,6 @@
                         </androidx.cardview.widget.CardView>
 
 
-
-
                     </LinearLayout>
 
                     <!--
@@ -1986,12 +1989,10 @@
                                             -->
 
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-
 
 
                         <androidx.cardview.widget.CardView
@@ -2017,14 +2018,14 @@
                                 <ImageView
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
-                                    android:src="@drawable/nfald_disease1"/>
+                                    android:src="@drawable/nfald_disease1" />
 
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginTop="-10dp"
                                     android:layout_marginStart="10dp"
+                                    android:layout_marginTop="-10dp"
                                     android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="10dp"
 
@@ -2052,8 +2053,6 @@
 
 
                         </androidx.cardview.widget.CardView>
-
-
 
 
                         <!--
@@ -2085,14 +2084,14 @@
                                 <ImageView
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
-                                    android:src="@drawable/diabete_disease1"/>
+                                    android:src="@drawable/diabete_disease1" />
 
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginTop="-18dp"
                                     android:layout_marginStart="10dp"
+                                    android:layout_marginTop="-18dp"
                                     android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="10dp"
 
@@ -2120,7 +2119,6 @@
 
 
                         </androidx.cardview.widget.CardView>
-
 
 
                         <!--
@@ -2151,14 +2149,14 @@
                                 <ImageView
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
-                                    android:src="@drawable/cad1"/>
+                                    android:src="@drawable/cad1" />
 
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_marginTop="-10dp"
                                     android:layout_marginStart="10dp"
+                                    android:layout_marginTop="-10dp"
                                     android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="10dp"
 
@@ -2188,15 +2186,13 @@
                         </androidx.cardview.widget.CardView>
 
 
-
-
                     </LinearLayout>
 
                     <LinearLayout
-                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <androidx.cardview.widget.CardView
 

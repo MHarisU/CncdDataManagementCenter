@@ -3,9 +3,12 @@ package com.cncd.first.UIs;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -23,11 +26,17 @@ import com.cncd.first.Dialogs.SeizuresDialog;
 import com.cncd.first.Dialogs.ThyroidDiseaseDialog;
 import com.cncd.first.Dialogs.ValvularHeartDiseaseDialog;
 import com.cncd.first.Models.BaseParticipant.ParticipantDataList;
+import com.cncd.first.Models.DiseaseData.DiseaseList;
+import com.cncd.first.Network.ApiPostRequest;
+import com.cncd.first.Network.BaseUrl;
 import com.cncd.first.R;
 import com.cncd.first.Utils.DatePicker;
 import com.cncd.first.Utils.GeneralUtils;
 import com.cncd.first.Utils.ReturnValueFromDialog;
 import com.cncd.first.Utils.TimePicker;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -39,13 +48,14 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 
     ArrayList<String> participantDetails = new ArrayList<>();
 
-    TextView interviewDateText, dateLastMeal, dateBloodSample, lastMealTime, bloodsampleTime;
+    TextView interviewDateText, dateLastMeal, dateBloodSample, lastMealTime, bloodsampleTime, studyIDView;
     EditText interviewInitialsEdit, refTargetEdit, participantNameEdit, participantFatherHusbandEdit, participantAddressEdit, participantTelephoneEdit, participantWhatsappEdit;
     EditText participantAgeEdit, participantCnicEdit;
     RadioButton radioMale, radioFemale;
 
 
     ParticipantDataList participantDataList;
+    String study_id;
 
 
     TextView diabetesTextView, thyroidTextView, valvularTextView, dyslipidemiaTextView, hypertensionTextView, liverTextView, miTextView, seizureTextView;
@@ -85,6 +95,7 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
     }
 
     private void loadUI() {
+        studyIDView = findViewById(R.id.studyIDView);
         interviewDateText = findViewById(R.id.interviewDateText);
         interviewInitialsEdit = findViewById(R.id.interviewInitialsEdit);
         //refTargetEdit = findViewById(R.id.refTargetEdit);
@@ -125,8 +136,10 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         Intent intent = getIntent();
         try {
 
-
             participantDetails = intent.getStringArrayListExtra("participantData");
+            study_id = participantDetails.get(6);
+            studyIDView.setText(study_id);
+
             participantNameEdit.setText(participantDetails.get(0).toString());
             participantAgeEdit.setText(participantDetails.get(1));
             if (participantDetails.get(2).equals("Male")) {
@@ -182,7 +195,7 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
         try {
 
 
-            participantDataList = new ParticipantDataList("KL54862", participantDetails.get(0).toString(), participantFatherHusbandEdit.getText().toString(), participantDetails.get(3),
+            participantDataList = new ParticipantDataList(study_id, participantDetails.get(0).toString(), participantFatherHusbandEdit.getText().toString(), participantDetails.get(3),
                     participantDetails.get(2), participantDetails.get(1), participantCnicEdit.getText().toString(), participantDetails.get(4), participantDetails.get(5),
                     dateLastMeal.getText().toString(), lastMealTime.getText().toString(), dateBloodSample.getText().toString(), bloodsampleTime.getText().toString());
 
@@ -295,48 +308,287 @@ public class BaselineQuestionnaireRecruitmentActivity extends AppCompatActivity 
 //    TextView diabetesTextView, thyroidTextView, valvularTextView, dyslipidemiaTextView, hypertensionTextView, liverTextView, miTextView, seizureTextView;
 
     @Override
-    public void onReturnDiabetesData(String data) {
+    public void onReturnDiabetesData(String data, ArrayList<DiseaseList> diseaseLists) {
         diabetesTextView.setText(data);
+        Log.d("diseaseData", diseaseLists.toString());
+       // callDiseaseAPI("diabetes", diseaseLists);
     }
 
+
     @Override
-    public void onReturnThyroidData(String data) {
+    public void onReturnThyroidData(String data, ArrayList<DiseaseList> diseaseLists) {
         thyroidTextView.setText(data);
+        Log.d("diseaseData", diseaseLists.toString());
+        //callDiseaseAPI("thyroid", diseaseLists);
     }
 
     @Override
-    public void onReturnValvularData(String data) {
+    public void onReturnValvularData(String data, ArrayList<DiseaseList> diseaseLists) {
         valvularTextView.setText(data);
-
+        Log.d("diseaseData", diseaseLists.toString());
+        //callDiseaseAPI("valvular", diseaseLists);
     }
 
     @Override
-    public void onReturnDyslipidemiaData(String data) {
+    public void onReturnDyslipidemiaData(String data, ArrayList<DiseaseList> diseaseLists) {
         dyslipidemiaTextView.setText(data);
+        Log.d("diseaseData", diseaseLists.toString());
+        //callDiseaseAPI("dyslipidemia", diseaseLists);
 
     }
 
     @Override
-    public void onReturnHypertensionData(String data) {
+    public void onReturnHypertensionData(String data, ArrayList<DiseaseList> diseaseLists) {
         hypertensionTextView.setText(data);
+        Log.d("diseaseData", diseaseLists.toString());
+        //callDiseaseAPI("hypertension", diseaseLists);
 
     }
 
     @Override
-    public void onReturnLiverData(String data) {
+    public void onReturnLiverData(String data, ArrayList<DiseaseList> diseaseLists) {
         liverTextView.setText(data);
+        Log.d("diseaseData", diseaseLists.toString());
+        //callDiseaseAPI("liver", diseaseLists);
 
     }
 
     @Override
-    public void onReturnMIData(String data) {
+    public void onReturnMIData(String data, ArrayList<DiseaseList> diseaseLists) {
         miTextView.setText(data);
+        Log.d("diseaseData", diseaseLists.toString());
+        //callDiseaseAPI("mi", diseaseLists);
 
     }
 
     @Override
-    public void onReturnSeizureData(String data) {
+    public void onReturnSeizureData(String data, ArrayList<DiseaseList> diseaseLists) {
         seizureTextView.setText(data);
+        Log.d("diseaseData", diseaseLists.toString());
+        //callDiseaseAPI("seizures", diseaseLists);
 
     }
+
+    public void saveNotes(View view) {
+        //saveNotesAPI();
+    }
+
+    private void saveNotesAPI() {
+
+
+
+        /*
+       "{
+    ""study_id"":""ABC123"",
+    ""notes"":""Test notes.""
+        }"
+
+*/
+        JSONObject orderJsonObject = new JSONObject();
+        try {
+            //   orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
+            orderJsonObject.put("study_id", participantDetails.get(6));
+
+
+            orderJsonObject.put("notes", notesEdit.getText().toString());
+
+            ///////
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        final String requestBody = orderJsonObject.toString();
+
+        new ApiPostRequest(
+                BaselineQuestionnaireRecruitmentActivity.this,
+                new BaseUrl().getBaseUrl() + "api/Participantformnotes",
+                requestBody,
+                new ApiPostRequest.AsyncApiResponse() {
+                    @Override
+                    public void processFinish(String response) {
+
+
+                        Log.d("response", response);
+
+                        JSONObject jsonObject = null;
+                        try {
+                            jsonObject = new JSONObject(response);
+                        } catch (JSONException jsonException) {
+                            jsonException.printStackTrace();
+                        }
+
+                        try {
+                            // JSONObject jsonResponse = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
+
+                            if (successResponse.equals("true")) {
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+                                /*
+                                {
+    "success": true,
+    "data": {
+        "notes": "Test notes."
+    },
+    "message": "Notes Added Successfully"
+}
+                                */
+
+                                String message = jsonObject.getString("message");
+                                if (message.equals("Notes Added Successfully"))
+                                    Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "Notes Saved", Toast.LENGTH_SHORT).show();
+
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
+                                //String jsonToken = jsonData.getString("token");
+
+                                //study_id = jsonData.getString("study_id");
+                                //Log.d("response", study_id);
+
+
+                            } else {
+
+                                final AlertDialog.Builder aDialog = new AlertDialog.Builder(BaselineQuestionnaireRecruitmentActivity.this, R.style.DialogTheme)
+                                        .setTitle("")
+                                        .setMessage("Invalid request please login or try again later")
+                                        .setCancelable(false)
+                                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                            }
+                                        });
+                                aDialog.show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "Json Error.", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }
+        );
+
+
+    }
+
+    private void callDiseaseAPI_(String disease, ArrayList<DiseaseList> diseaseLists) {
+
+
+
+        /*
+{
+
+"study_id":"ABC123",
+"disease_name":"diabetes",
+"disease_data":
+{
+"type": "1",
+"complication": "diabetic retinopathy",
+"record_seen":"true",
+"insulin":"true",
+"age":"55"
+}
+
+}
+
+*/
+        JSONObject orderJsonObject = new JSONObject();
+        try {
+            //   orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
+            orderJsonObject.put("study_id", participantDetails.get(6));
+            orderJsonObject.put("disease_name", disease);
+
+            Log.d("requestBody", diseaseLists.size()+"");
+
+            JSONObject diseasesObject = new JSONObject();
+            for (int i = 0; i < diseaseLists.size(); i++) {
+                DiseaseList diseaseList = diseaseLists.get(i);
+                diseasesObject.put(diseaseList.getData_name(), diseaseList.getData_value());
+                Log.d("items", i+" "+diseaseList.getData_name());
+            }
+
+            orderJsonObject.put("disease_data", diseasesObject);
+
+            ///////
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        final String requestBody = orderJsonObject.toString();
+        Log.d("requestBody", requestBody);
+
+        new ApiPostRequest(
+                BaselineQuestionnaireRecruitmentActivity.this,
+                new BaseUrl().getBaseUrl() + "api/Participantdisease",
+                requestBody,
+                new ApiPostRequest.AsyncApiResponse() {
+                    @Override
+                    public void processFinish(String response) {
+
+
+                        Log.d("response", response);
+
+                        JSONObject jsonObject = null;
+                        try {
+                            jsonObject = new JSONObject(response);
+                        } catch (JSONException jsonException) {
+                            jsonException.printStackTrace();
+                        }
+
+                        try {
+                            // JSONObject jsonResponse = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
+
+                            if (successResponse.equals("true")) {
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+                                /*
+{
+    "success": true,
+    "data": {
+        "disease_result": "Disease Added Successfully."
+    },
+    "message": "Disease Added Successfully."
+}
+                                */
+
+                                String message = jsonObject.getString("message");
+                                if (message.equals("Disease Added Successfully."))
+                                    Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "Disease Saved", Toast.LENGTH_SHORT).show();
+
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
+                                //String jsonToken = jsonData.getString("token");
+
+                                //study_id = jsonData.getString("study_id");
+                                //Log.d("response", study_id);
+
+
+                            } else {
+
+                                final AlertDialog.Builder aDialog = new AlertDialog.Builder(BaselineQuestionnaireRecruitmentActivity.this, R.style.DialogTheme)
+                                        .setTitle("")
+                                        .setMessage("Invalid request please login or try again later")
+                                        .setCancelable(false)
+                                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                            }
+                                        });
+                                aDialog.show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(BaselineQuestionnaireRecruitmentActivity.this, "Json Error.", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }
+        );
+
+
+    }
+
 }

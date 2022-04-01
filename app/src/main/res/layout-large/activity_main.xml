@@ -67,7 +67,7 @@
                             android:id="@+id/userNameTextView"
                             android:gravity="center"
                             android:layout_width="match_parent"
-                            android:layout_height="25dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="0dp"
                             android:fontFamily="@font/poppins_regular"
                             android:text="@string/hamad_khan"
@@ -76,6 +76,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:layout_marginBottom="10dp"
                             android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -490,7 +491,7 @@
 
 
             <androidx.cardview.widget.CardView
-
+                android:onClick="logOutButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"

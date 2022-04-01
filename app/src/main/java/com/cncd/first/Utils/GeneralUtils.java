@@ -605,6 +605,9 @@ public class GeneralUtils {
             public boolean onMenuItemClick(MenuItem item) {
 
                 textView.setText(item.getTitle().toString());
+                TextViewTextChangeListener activity = (TextViewTextChangeListener) context;
+                activity.onTextChange(item.getTitle().toString());
+
 
                 return true;
             }

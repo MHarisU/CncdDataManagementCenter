@@ -442,21 +442,22 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <CheckBox
-                                android:layout_width="0dp"
+                                android:id="@+id/hypoRecordSeen"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="Record Seen" />
 
                             <CheckBox
-                                android:layout_width="0dp"
+                                android:id="@+id/hypoOral"
+
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="Oral medications" />
 
 
@@ -481,14 +482,15 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <EditText
+                                android:id="@+id/hypoAgeDiag"
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/bttn_drk_stroke"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
@@ -557,21 +559,21 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <CheckBox
-                                android:layout_width="0dp"
+                                android:id="@+id/hyperRecordSeen"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="Record Seen" />
 
                             <CheckBox
-                                android:layout_width="0dp"
+                                android:id="@+id/hyperOral"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="Oral medications" />
 
 
@@ -585,6 +587,7 @@
                             android:orientation="horizontal">
 
                             <CheckBox
+                                android:id="@+id/hyperThyrotox"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -612,14 +615,15 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <EditText
+                                android:id="@+id/hyperAgeDiag"
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/bttn_drk_stroke"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
@@ -690,12 +694,13 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
                             android:orientation="horizontal">
 
                             <CheckBox
+                                android:id="@+id/goitreThyroidec"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -723,14 +728,16 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <EditText
+                                android:id="@+id/goitreAgeDiag"
+
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/bttn_drk_stroke"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
@@ -751,12 +758,12 @@
             </LinearLayout>
 
             <LinearLayout
-                android:visibility="gone"
                 android:id="@+id/submitLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <androidx.cardview.widget.CardView
 

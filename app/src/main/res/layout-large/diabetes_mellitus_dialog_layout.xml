@@ -462,8 +462,6 @@
                     android:orientation="horizontal">
 
 
-
-
                     <LinearLayout
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
@@ -485,12 +483,14 @@
                             android:orientation="horizontal">
 
                             <CheckBox
+                                android:id="@+id/type1RecordSeen"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Record Seen" />
 
                             <CheckBox
+                                android:id="@+id/type1Insulin"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -518,14 +518,15 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <EditText
+                                android:id="@+id/type1AgeDiag"
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/bttn_drk_stroke"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
@@ -543,10 +544,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="end"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
 
@@ -587,7 +588,6 @@
                                     android:textColor="@color/white"
                                     android:textSize="22sp"
                                     android:textStyle="bold" />
-
 
 
                             </RelativeLayout>
@@ -654,8 +654,6 @@
                     android:orientation="horizontal">
 
 
-
-
                     <LinearLayout
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
@@ -677,12 +675,14 @@
                             android:orientation="horizontal">
 
                             <CheckBox
+                                android:id="@+id/type2RecordSeen"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Record Seen" />
 
                             <CheckBox
+                                android:id="@+id/type2Insulin"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -699,6 +699,7 @@
                             android:orientation="horizontal">
 
                             <CheckBox
+                                android:id="@+id/type2Oral"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -726,14 +727,15 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <EditText
+                                android:id="@+id/type2AgeDiag"
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/bttn_drk_stroke"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
@@ -751,10 +753,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="end"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
 
@@ -795,7 +797,6 @@
                                     android:textColor="@color/white"
                                     android:textSize="22sp"
                                     android:textStyle="bold" />
-
 
 
                             </RelativeLayout>
@@ -886,12 +887,15 @@
                             android:orientation="horizontal">
 
                             <CheckBox
+                                android:id="@+id/gesRecordSeen"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Record Seen" />
 
                             <CheckBox
+                                android:id="@+id/gesOral"
+
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -899,6 +903,8 @@
 
 
                             <CheckBox
+                                android:id="@+id/gesDietary"
+
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -926,14 +932,16 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <EditText
+                                android:id="@+id/gesAgeOfDiagnosis"
+
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/bttn_drk_stroke"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
@@ -951,10 +959,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="end"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
 
@@ -995,7 +1003,6 @@
                                     android:textColor="@color/white"
                                     android:textSize="22sp"
                                     android:textStyle="bold" />
-
 
 
                             </RelativeLayout>
@@ -1130,6 +1137,7 @@
                             android:orientation="horizontal">
 
                             <CheckBox
+                                android:id="@+id/complicationRecordSeen"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -1157,14 +1165,15 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="2dp">
 
                             <EditText
+                                android:id="@+id/complicationAgeDiag"
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:background="@drawable/bttn_drk_stroke"
                                 android:fontFamily="@font/poppins_regular"
                                 android:gravity="center"
@@ -1182,10 +1191,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:gravity="end"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
 
@@ -1228,7 +1237,6 @@
                                     android:textStyle="bold" />
 
 
-
                             </RelativeLayout>
 
 
@@ -1242,234 +1250,6 @@
 
 
             </LinearLayout>
-
-
-
-            <!--
-
-            <LinearLayout
-                android:id="@+id/buttonPgr"
-                android:gravity="center_vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="0dp"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_log_blue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="0sp"
-                    android:background="@color/Transparent"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center_vertical"
-                    android:text="@string/pgr"
-                    android:textColor="@color/Black80"
-                    android:textSize="18sp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="0dp"
-                        android:padding="17dp"
-                        android:src="@drawable/ic_arrow_forward_gray" />
-
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray50"/>
-
-
-            <LinearLayout
-                android:gravity="center_vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="0dp"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_log_blue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="0sp"
-                    android:background="@color/Transparent"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center_vertical"
-                    android:text="@string/promis"
-                    android:textColor="@color/Black80"
-                    android:textSize="18sp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="0dp"
-                        android:padding="17dp"
-                        android:src="@drawable/ic_arrow_forward_gray" />
-
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray50"/>
-
-            <LinearLayout
-                android:gravity="center_vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="0dp"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_log_blue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="0sp"
-                    android:background="@color/Transparent"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center_vertical"
-                    android:text="@string/cad"
-                    android:textColor="@color/Black80"
-                    android:textSize="18sp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="0dp"
-                        android:padding="17dp"
-                        android:src="@drawable/ic_arrow_forward_gray" />
-
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray50"/>
-
-            <LinearLayout
-                android:gravity="center_vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="0dp"
-                    android:padding="12dp"
-                    android:src="@drawable/ic_log_blue" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="0sp"
-                    android:background="@color/Transparent"
-                    android:fontFamily="@font/poppins_regular"
-                    android:gravity="center_vertical"
-                    android:text="@string/other"
-                    android:textColor="@color/Black80"
-                    android:textSize="18sp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="0dp"
-                        android:padding="17dp"
-                        android:src="@drawable/ic_arrow_forward_gray" />
-
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-
-            -->
 
 
         </LinearLayout>

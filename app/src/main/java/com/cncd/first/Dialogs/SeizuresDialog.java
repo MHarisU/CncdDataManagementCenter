@@ -4,15 +4,20 @@ import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
 import android.view.Window;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
+import com.cncd.first.Models.DiseaseData.DiseaseList;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 import com.cncd.first.Utils.ReturnValueFromDialog;
+
+import java.util.ArrayList;
 
 public class SeizuresDialog {
 
@@ -24,6 +29,7 @@ public class SeizuresDialog {
     }
 
     public void showDialog(final Context activity) {
+        ArrayList<DiseaseList> diseaseLists = new ArrayList<DiseaseList>();
         context = activity;
         dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -56,7 +62,44 @@ public class SeizuresDialog {
             public void onClick(View view) {
                 dialog.dismiss();
                 ReturnValueFromDialog activity = (ReturnValueFromDialog) context;
-                activity.onReturnSeizureData("Seizure Data Entered");
+
+
+
+                    /*
+                    Seizure data
+                    */
+
+                CheckBox seizureRecordSeen = (CheckBox) dialog.findViewById(R.id.seizureRecordSeen);
+                EditText seizureAge = (EditText) dialog.findViewById(R.id.seizureAge);
+                EditText seizureLast = (EditText) dialog.findViewById(R.id.seizureLast);
+                EditText seizureDuration = (EditText) dialog.findViewById(R.id.seizureDuration);
+                EditText seizureMedication = (EditText) dialog.findViewById(R.id.seizureMedication);
+                TextView seizureFrequency = (TextView) dialog.findViewById(R.id.seizureFrequency);
+                TextView seizureDiagnosis = (TextView) dialog.findViewById(R.id.seizureDiagnosis);
+
+
+
+                diseaseLists.add(new DiseaseList("record_seen", seizureRecordSeen.isChecked() ? "true" : "false"));
+                diseaseLists.add(new DiseaseList("first_seizure_age", !seizureAge.getText().toString().equals("")
+                        ? seizureAge.getText().toString() : "unknown"));
+
+                diseaseLists.add(new DiseaseList("last_seizure", !seizureLast.getText().toString().equals("")
+                        ? seizureLast.getText().toString() : "unknown"));
+
+                diseaseLists.add(new DiseaseList("seizure_duration", !seizureDuration.getText().toString().equals("")
+                        ? seizureDuration.getText().toString() : "unknown"));
+
+                diseaseLists.add(new DiseaseList("medication", !seizureMedication.getText().toString().equals("")
+                        ? seizureMedication.getText().toString() : "none"));
+
+                diseaseLists.add(new DiseaseList("frequency", seizureFrequency.getText().toString()));
+                diseaseLists.add(new DiseaseList("seizure_diagnosis", seizureDiagnosis.getText().toString()));
+
+
+
+                activity.onReturnSeizureData("Seizure Data Entered", diseaseLists);
+
+
             }
         });
 

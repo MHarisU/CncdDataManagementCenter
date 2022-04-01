@@ -188,6 +188,64 @@
 
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
+
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:gravity="center_vertical"
+                        android:onClick="saveNotes"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/bluelight"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="0sp"
+                                    android:background="@color/Transparent"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Save"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                                <ImageView
+
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="0dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_yes" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -256,6 +314,7 @@
                 app:cardElevation="2dp">
 
                 <TextView
+                    android:id="@+id/studyIDView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
@@ -279,7 +338,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
                     android:padding="10dp"
-                    android:text="@string/center_fz"
+                    android:text="@string/center_abdd"
                     android:textColor="@color/Black"
                     android:textSize="18sp" />
 
@@ -1553,6 +1612,7 @@
 
         </androidx.cardview.widget.CardView>
 
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1664,14 +1724,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -1703,15 +1763,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -1770,14 +1830,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -1809,15 +1869,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -1877,14 +1937,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -1916,15 +1976,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -1984,14 +2044,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
                                     android:layout_width="match_parent"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
@@ -2023,15 +2083,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2091,14 +2151,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2130,15 +2190,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2197,14 +2257,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2236,15 +2296,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2304,14 +2364,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2343,15 +2403,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2410,14 +2470,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2449,15 +2509,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2516,14 +2576,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2555,15 +2615,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2623,14 +2683,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2662,15 +2722,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2729,14 +2789,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2768,15 +2828,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2835,14 +2895,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2874,15 +2934,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2941,14 +3001,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -2980,15 +3040,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3048,14 +3108,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3087,15 +3147,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3155,14 +3215,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
                                     android:layout_width="match_parent"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
@@ -3194,15 +3254,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3261,14 +3321,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
                                     android:layout_width="match_parent"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
@@ -3300,15 +3360,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3367,14 +3427,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
                                     android:layout_width="match_parent"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
@@ -3406,15 +3466,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3473,14 +3533,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
                                     android:layout_width="match_parent"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center_vertical"
@@ -3512,15 +3572,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3579,14 +3639,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3618,15 +3678,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3685,14 +3745,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3724,15 +3784,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3791,14 +3851,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3830,15 +3890,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3898,14 +3958,14 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -3937,15 +3997,15 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
-                                android:layout_height="40dp"
+                                android:layout_height="wrap_content"
                                 android:layout_margin="2dp"
                                 android:visibility="gone"
                                 app:cardCornerRadius="10dp"
                                 app:cardElevation="2dp">
 
                                 <EditText
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:background="@drawable/bttn_drk_stroke"
                                     android:fontFamily="@font/poppins_regular"
                                     android:gravity="center"
@@ -4110,7 +4170,7 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginStart="10dp"
                                         android:layout_marginTop="10dp"
                                         android:layout_marginEnd="10dp"
@@ -4119,7 +4179,7 @@
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -4137,7 +4197,7 @@
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginEnd="10dp"
                                     android:orientation="horizontal">
@@ -4182,14 +4242,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -4262,14 +4322,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -4301,14 +4361,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -4381,14 +4441,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -4420,14 +4480,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -4507,14 +4567,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -4549,14 +4609,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -4637,14 +4697,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -4678,14 +4738,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -4766,14 +4826,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -4808,14 +4868,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -4896,14 +4956,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -4938,14 +4998,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -5026,14 +5086,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -5092,14 +5152,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -5180,14 +5240,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -5222,14 +5282,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -5310,14 +5370,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -5352,14 +5412,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -5440,14 +5500,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -5505,14 +5565,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -5593,14 +5653,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -5659,14 +5719,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -5747,14 +5807,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -5789,14 +5849,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -5877,14 +5937,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -5942,14 +6002,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -6030,14 +6090,14 @@
 
                                     <androidx.cardview.widget.CardView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
                                         app:cardCornerRadius="10dp"
                                         app:cardElevation="2dp">
 
                                         <TextView
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:background="@drawable/bttn_drk_stroke"
                                             android:fontFamily="@font/poppins_regular"
                                             android:gravity="center"
@@ -6072,14 +6132,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -6152,14 +6212,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -6191,14 +6251,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -6271,14 +6331,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -6310,14 +6370,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -6390,14 +6450,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"
@@ -6429,14 +6489,14 @@
 
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="40dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     app:cardCornerRadius="10dp"
                                     app:cardElevation="2dp">
 
                                     <EditText
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:background="@drawable/bttn_drk_stroke"
                                         android:fontFamily="@font/poppins_regular"
                                         android:gravity="center"

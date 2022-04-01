@@ -451,12 +451,13 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:orientation="horizontal">
 
                         <CheckBox
+                            android:id="@+id/valvularRecordSeen"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -486,14 +487,15 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <EditText
+                            android:id="@+id/valvularAgeDiag"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -524,14 +526,15 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <EditText
+                            android:id="@+id/valvularMedication"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -585,7 +588,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="0dp"
                         android:layout_marginEnd="10dp"
@@ -595,7 +598,7 @@
                         <TextView
                             android:id="@+id/type1ComplicationButton"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -630,7 +633,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="0dp"
                         android:layout_marginEnd="10dp"
@@ -640,7 +643,7 @@
                         <TextView
                             android:id="@+id/surgicalManagementButton"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -788,7 +791,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="0dp"
                         android:layout_marginEnd="10dp"
@@ -798,7 +801,7 @@
                         <TextView
                             android:id="@+id/type2ComplicationButton"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -831,7 +834,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:orientation="horizontal">
@@ -854,7 +857,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:orientation="horizontal">
@@ -888,14 +891,14 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <EditText
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -971,7 +974,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:orientation="horizontal">
@@ -1019,14 +1022,14 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <EditText
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"

@@ -5,12 +5,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.view.Window;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 
+import com.cncd.first.Models.DiseaseData.DiseaseList;
 import com.cncd.first.R;
 import com.cncd.first.UIs.BaselineQuestionnaireRecruitmentActivity;
 import com.cncd.first.UIs.CallBackFormActivity;
@@ -18,6 +22,8 @@ import com.cncd.first.UIs.FamilySheetActivity;
 import com.cncd.first.UIs.RecruitmentGeneralExclusionAndSpecificDiseaseActivity;
 import com.cncd.first.Utils.GeneralUtils;
 import com.cncd.first.Utils.ReturnValueFromDialog;
+
+import java.util.ArrayList;
 
 public class DiabeteMellitusDialog {
 
@@ -29,6 +35,8 @@ public class DiabeteMellitusDialog {
     }
 
     public void showDialog(final Context activity) {
+        ArrayList<DiseaseList> diseaseLists = new ArrayList<DiseaseList>();
+
         context = activity;
         dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -80,7 +88,25 @@ public class DiabeteMellitusDialog {
             public void onClick(View view) {
                 dialog.dismiss();
                 ReturnValueFromDialog activity = (ReturnValueFromDialog) context;
-                activity.onReturnDiabetesData("Gestational Data Entered");
+                //ArrayList<DiseaseList>  diseaseLists = new ArrayList<DiseaseList>();
+
+
+                    /*
+                    Gestational diabetes data
+                    */
+
+                CheckBox gesRecordSeen = (CheckBox) dialog.findViewById(R.id.gesRecordSeen);
+                CheckBox gesOral = (CheckBox) dialog.findViewById(R.id.gesOral);
+                CheckBox gesDietary = (CheckBox) dialog.findViewById(R.id.gesDietary);
+                EditText gesAgeOfDiagnosis = (EditText) dialog.findViewById(R.id.gesAgeOfDiagnosis);
+
+                diseaseLists.add(new DiseaseList("type", "gestational"));
+                diseaseLists.add(new DiseaseList("record_seen", gesRecordSeen.isChecked() ? "true" : "false"));
+                diseaseLists.add(new DiseaseList("oral_hypogylcemic", gesOral.isChecked() ? "true" : "false"));
+                diseaseLists.add(new DiseaseList("dietary_changes", gesDietary.isChecked() ? "true" : "false"));
+                diseaseLists.add(new DiseaseList("age_of_diagnosis", !gesAgeOfDiagnosis.getText().toString().equals("")
+                        ? gesAgeOfDiagnosis.getText().toString() : "unknown"));
+                activity.onReturnDiabetesData("Gestational Data Entered", diseaseLists);
             }
         });
 
@@ -90,10 +116,67 @@ public class DiabeteMellitusDialog {
                 dialog.dismiss();
                 ReturnValueFromDialog activity = (ReturnValueFromDialog) context;
                 if (backCheck[0] == 1) {
-                    activity.onReturnDiabetesData("Diabetes Type 1 Data Entered");
-                }
-                else if (backCheck[0] == 2) {
-                    activity.onReturnDiabetesData("Diabetes Type 2 Data Entered");
+
+                    /*
+                    Type 1 diabetes data
+                    */
+                    CheckBox type1RecordSeen = (CheckBox) dialog.findViewById(R.id.type1RecordSeen);
+                    CheckBox type1Insulin = (CheckBox) dialog.findViewById(R.id.type1Insulin);
+                    EditText type1AgeDiag = (EditText) dialog.findViewById(R.id.type1AgeDiag);
+
+                    TextView type1ComplicationButton = (TextView) dialog.findViewById(R.id.type1ComplicationButton);
+                    CheckBox type1ComplicationRecordSeen = (CheckBox) dialog.findViewById(R.id.complicationRecordSeen);
+                    EditText complicationAgeDiag = (EditText) dialog.findViewById(R.id.complicationAgeDiag);
+
+                    Toast.makeText(context, ""+complicationAgeDiag.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                    diseaseLists.add(new DiseaseList("type", "type1"));
+                    diseaseLists.add(new DiseaseList("record_seen", type1RecordSeen.isChecked() ? "true" : "false"));
+                    diseaseLists.add(new DiseaseList("insulin", type1Insulin.isChecked() ? "true" : "false"));
+                    diseaseLists.add(new DiseaseList("age_of_diagnosis", !type1AgeDiag.getText().toString().equals("")
+                            ? type1AgeDiag.getText().toString() : "unknown"));
+
+                    diseaseLists.add(new DiseaseList("complication", type1ComplicationButton.getText().toString()));
+                    diseaseLists.add(new DiseaseList("complication_record_seen", type1ComplicationRecordSeen.isChecked() ? "true" : "false"));
+                    diseaseLists.add(new DiseaseList("age_of_diagnosis", !complicationAgeDiag.getText().toString().equals("")
+                            ? complicationAgeDiag.getText().toString() : "unknown"));
+
+                    activity.onReturnDiabetesData("Diabetes Type 1 Data Entered", diseaseLists);
+
+                } else if (backCheck[0] == 2) {
+
+
+                    /*
+                    Type 2 diabetes data
+                    */
+
+
+                    CheckBox type2RecordSeen = (CheckBox) dialog.findViewById(R.id.type2RecordSeen);
+                    CheckBox type2Insulin = (CheckBox) dialog.findViewById(R.id.type2Insulin);
+                    CheckBox type2Oral = (CheckBox) dialog.findViewById(R.id.type2Oral);
+                    EditText type2AgeDiag = (EditText) dialog.findViewById(R.id.type2AgeDiag);
+
+                    TextView type1ComplicationButton = (TextView) dialog.findViewById(R.id.type1ComplicationButton);
+                    CheckBox type1ComplicationRecordSeen = (CheckBox) dialog.findViewById(R.id.complicationRecordSeen);
+                    EditText complicationAgeDiag = (EditText) dialog.findViewById(R.id.complicationAgeDiag);
+
+
+                    diseaseLists.add(new DiseaseList("type", "type2"));
+                    diseaseLists.add(new DiseaseList("record_seen", type2RecordSeen.isChecked() ? "true" : "false"));
+                    diseaseLists.add(new DiseaseList("insulin", type2Insulin.isChecked() ? "true" : "false"));
+                    diseaseLists.add(new DiseaseList("oral_hypogylcemic", type2Oral.isChecked() ? "true" : "false"));
+                    diseaseLists.add(new DiseaseList("age_of_diagnosis", !type2AgeDiag.getText().toString().equals("")
+                            ? type2AgeDiag.getText().toString() : "unknown"));
+
+                    diseaseLists.add(new DiseaseList("complication", type1ComplicationButton.getText().toString()));
+                    diseaseLists.add(new DiseaseList("complication_record_seen", type1ComplicationRecordSeen.isChecked() ? "true" : "false"));
+                    diseaseLists.add(new DiseaseList("age_of_diagnosis", !complicationAgeDiag.getText().toString().equals("")
+                            ? complicationAgeDiag.getText().toString() : "unknown"));
+
+
+
+
+                    activity.onReturnDiabetesData("Diabetes Type 2 Data Entered", diseaseLists);
                 }
             }
         });

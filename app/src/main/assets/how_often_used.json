@@ -1,5 +1,8 @@
 [
   {
+    name: "never"
+  },
+  {
     name: "Once a year"
   },
   {
@@ -19,5 +22,8 @@
   },
   {
     name: "Everyday"
+  },
+  {
+    name: "Not Answered"
   }
 ]

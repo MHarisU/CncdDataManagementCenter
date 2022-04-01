@@ -32,6 +32,11 @@ public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity
 
     EditText bmiEditBox, heightEditBox, weightEditBox;
 
+    //Women UI
+    TextView womenStateOfSubject, womenHadPeriodInLast12Months, womenWhyPeriodStopped, womenEverUsedHormoneReplacement, womenEverHadAbortion, womenEverHadEclampsia,
+            womenEverHadGestationalDiabetesPregnancy, womenEverDeliveredPreamatureBaby;
+    EditText womenWhenPeriodStopped, womenNumberOfAbortions ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,6 +94,20 @@ public class BaselineQuestionnaireRecruitment4Activity extends AppCompatActivity
                 }
             }
         });
+
+
+        womenStateOfSubject = findViewById(R.id.womenStateOfSubject);
+        womenHadPeriodInLast12Months = findViewById(R.id.womenHadPeriodInLast12Months);
+        womenWhyPeriodStopped = findViewById(R.id.womenWhyPeriodStopped);
+        womenEverUsedHormoneReplacement = findViewById(R.id.womenEverUsedHormoneReplacement);
+        womenEverHadAbortion = findViewById(R.id.womenEverHadAbortion);
+        womenEverHadEclampsia = findViewById(R.id.womenEverHadEclampsia);
+        womenEverHadGestationalDiabetesPregnancy = findViewById(R.id.womenEverHadGestationalDiabetesPregnancy);
+        womenEverDeliveredPreamatureBaby = findViewById(R.id.womenEverDeliveredPreamatureBaby);
+        womenWhenPeriodStopped = findViewById(R.id.womenWhenPeriodStopped);
+        womenNumberOfAbortions = findViewById(R.id.womenNumberOfAbortions);
+
+
     }
 
     //  ArrayList<String> participantDetails = new ArrayList<>();

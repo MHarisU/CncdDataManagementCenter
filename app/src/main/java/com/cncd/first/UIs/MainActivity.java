@@ -78,6 +78,13 @@ public class MainActivity extends AppCompatActivity {
         formTypeDialog.showDialog(MainActivity.this);
     }
 
+    public void logOutButton(View view) {
+        startActivity(new Intent(this, LoginActivity.class));
+    }
+
+
+
+
     public void openMyForms(View view) {
         startActivity(new Intent(this, MyFormsActivity.class));
     }

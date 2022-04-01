@@ -190,8 +190,107 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
                     R.anim.slide_in_bottom);
             layoutSelectCaseType.startAnimation(slide_up);
         } else {
+            //callGlobalExclusionAPI();
             GeneralUtils.alertDialogBoxSimple(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Info", "This case can not be registered");
+            finish();
         }
+
+    }
+
+    private void callGlobalExclusionAPI() {
+
+
+
+        /*
+        "{
+
+        ""study_id"":""ABC123"",
+        ""exclusion_data"":
+       {
+        ""Q1"": ""NO"",
+        ""Q2"": ""NO"",
+        ""Q3"": ""Yes"",
+        ""Q4"":""NO""
+        }
+
+}"
+*/
+        JSONObject orderJsonObject = new JSONObject();
+        try {
+            //   orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
+            orderJsonObject.put("study_id", study_id);
+
+            JSONObject questionObjects = new JSONObject();
+            questionObjects.put("Q1", globalExclusionText1.getText().toString().equals("No") ? "No" : "Yes");
+            questionObjects.put("Q2", globalExclusionText2.getText().toString().equals("No") ? "No" : "Yes");
+            questionObjects.put("Q3", globalExclusionText3.getText().toString().equals("No") ? "No" : "Yes");
+            questionObjects.put("Q4", globalExclusionText4.getText().toString().equals("No") ? "No" : "Yes");
+
+            orderJsonObject.put("exclusion_data", questionObjects);
+
+            ///////
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        final String requestBody = orderJsonObject.toString();
+
+        new ApiPostRequest(
+                RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this,
+                new BaseUrl().getBaseUrl() + "api/Participantexclusion",
+                requestBody,
+                new ApiPostRequest.AsyncApiResponse() {
+                    @Override
+                    public void processFinish(String response) {
+
+
+                        Log.d("response", response);
+
+                        JSONObject jsonObject = null;
+                        try {
+                            jsonObject = new JSONObject(response);
+                        } catch (JSONException jsonException) {
+                            jsonException.printStackTrace();
+                        }
+
+                        try {
+                            // JSONObject jsonResponse = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
+
+                            if (successResponse.equals("true")) {
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
+                                //String jsonToken = jsonData.getString("token");
+
+                                //study_id = jsonData.getString("study_id");
+                                //Log.d("response", study_id);
+
+
+                            } else {
+
+                                final AlertDialog.Builder aDialog = new AlertDialog.Builder(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, R.style.DialogTheme)
+                                        .setTitle("")
+                                        .setMessage("Invalid request please login or try again later")
+                                        .setCancelable(false)
+                                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                            }
+                                        });
+                                aDialog.show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Json Error.", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }
+        );
+
 
     }
 
@@ -209,6 +308,7 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         participantDetails.add(participantAddress);
         participantDetails.add(participantNumber);
         participantDetails.add(participantWhatsapp);
+        participantDetails.add(study_id);
 
         Intent intent = null;
 
@@ -362,7 +462,8 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
                 if (GeneralUtils.checkNumberValidation(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantNumber) &&
                         GeneralUtils.checkNumberValidation(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantWhatsapp)) {
 
-                    registerParticipantApiCall();
+                    //registerParticipantApiCall();
+                    registerParticipantApiCallDummy();
 
                     GeneralUtils.hideSoftKeyboard(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, participantAgeEdit);
                     layoutNameAge.setVisibility(View.GONE);
@@ -472,7 +573,8 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
         if (checkAll) {
 
-            sampleApiCall(temperature, edtaT, edtaQ, gelT, gelQ, urineT, urineQ, serumT, serumQ, plasmaT, plasmaQ, urineAT, urineAQ);
+            //sampleApiCall(temperature, edtaT, edtaQ, gelT, gelQ, urineT, urineQ, serumT, serumQ, plasmaT, plasmaQ, urineAT, urineAQ);
+            sampleApiCallDummy(temperature, edtaT, edtaQ, gelT, gelQ, urineT, urineQ, serumT, serumQ, plasmaT, plasmaQ, urineAT, urineAQ);
 
 
             layoutSampling.setVisibility(View.GONE);
@@ -486,6 +588,13 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
 
     }
+
+    private void sampleApiCallDummy(String temperature, String edtaT, String edtaQ, String gelT, String gelQ,
+                                    String urineT, String urineQ, String serumT, String serumQ, String plasmaT, String plasmaQ, String urineAT, String urineAQ) {
+
+       // Toast.makeText(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "this is dummy sample API", Toast.LENGTH_SHORT).show();
+    }
+
 
     private void sampleApiCall(String temperature, String edtaT, String edtaQ, String gelT, String gelQ, String urineT, String urineQ, String serumT, String serumQ, String plasmaT, String plasmaQ, String urineAT, String urineAQ) {
 
@@ -649,7 +758,7 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
         new ApiPostRequest(
                 RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this,
-                new BaseUrl().getBaseUrl() + "dmsapis/api/Participantsample",
+                new BaseUrl().getBaseUrl() + "api/Participantsample",
                 requestBody,
                 new ApiPostRequest.AsyncApiResponse() {
                     @Override
@@ -701,6 +810,12 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
 
     }
 
+    private void registerParticipantApiCallDummy() {
+        //Toast.makeText(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "this is dummy api call", Toast.LENGTH_SHORT).show();
+        study_id = "ABD1";
+
+
+    }
 
     private void registerParticipantApiCall() {
 
@@ -723,7 +838,7 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
         try {
             //   orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
             orderJsonObject.put("user_id", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getUserId());
-            orderJsonObject.put("sid_alpha", "ABD");
+            orderJsonObject.put("sid_alpha", "ABC");
             orderJsonObject.put("name", participantName);
             orderJsonObject.put("age", participantAge);
             orderJsonObject.put("sex", participantGender.equals("Male") ? "Male" : "Female");
@@ -737,11 +852,14 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
             e.printStackTrace();
         }
 
+
         final String requestBody = orderJsonObject.toString();
+        Log.d("jsonRequest", requestBody);
+
 
         new ApiPostRequest(
                 RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this,
-                new BaseUrl().getBaseUrl() + "dmsapis/api/Participantregistration",
+                new BaseUrl().getBaseUrl() + "api/Participantregistration",
                 requestBody,
                 new ApiPostRequest.AsyncApiResponse() {
                     @Override
@@ -850,4 +968,6 @@ public class RecruitmentGeneralExclusionAndSpecificDiseaseActivity extends AppCo
             GeneralUtils.alertDialogBoxSimple(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this, "Info", "Not valid phone number.");
 
     }
+
+
 }

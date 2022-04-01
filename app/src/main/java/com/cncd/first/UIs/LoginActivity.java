@@ -90,7 +90,9 @@ public class LoginActivity extends AppCompatActivity {
             public void run() {
                 if (email != null && !email.equals("") && password != null && !password.equals("")) {
 
-                    Login(email, password);
+                    //Login(email, password);
+                    if (email.equals("danish@cncd.org") && password.equals("12345678"))
+                        LoginDummy(email, password);
                     //Login("harish@cncd.org", "123");
 
 
@@ -118,6 +120,31 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    private void LoginDummy(String email, String password) {
+        //Toast.makeText(LoginActivity.this, "This is dummy login", Toast.LENGTH_SHORT).show();
+
+        String id = "1";
+        String name = "Danish Saleheen";
+        //String email = "dummy@gmail.com";
+        String contact = "03473647030";
+        String image = "";
+        String role = "1";
+
+
+        sessionManager = new SessionManager(LoginActivity.this);
+        sessionManager.createSession(id, name, email, password, role, contact, "jsonToken");
+
+
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        finish();
+
+        //  Toast.makeText(LoginActivity.this, name+"\n"+id, Toast.LENGTH_SHORT).show();
+
+        loginButton.setVisibility(View.VISIBLE);
+        progressBarLogin.setVisibility(View.GONE);
+    }
+
 
     private void Login(final String email, final String password) {
 
@@ -132,7 +159,7 @@ public class LoginActivity extends AppCompatActivity {
         final String requestBody = jsonBody.toString();
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, new BaseUrl().getBaseUrl() + "dmsapis/api/login",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, new BaseUrl().getBaseUrl() + "api/login",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -151,7 +178,7 @@ public class LoginActivity extends AppCompatActivity {
                             String successResponse = jsonObject.getString("success");
 
                             if (successResponse.equals("true")) {
-                               // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
                                 JSONObject jsonData = jsonObject.getJSONObject("data");
                                 String jsonToken = jsonData.getString("token");
 

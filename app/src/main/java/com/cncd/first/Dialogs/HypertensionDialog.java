@@ -4,13 +4,18 @@ import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
 import android.view.Window;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.cardview.widget.CardView;
 
+import com.cncd.first.Models.DiseaseData.DiseaseList;
 import com.cncd.first.R;
 import com.cncd.first.Utils.ReturnValueFromDialog;
+
+import java.util.ArrayList;
 
 public class HypertensionDialog {
 
@@ -22,6 +27,8 @@ public class HypertensionDialog {
     }
 
     public void showDialog(final Context activity) {
+        ArrayList<DiseaseList> diseaseLists = new ArrayList<DiseaseList>();
+
         context = activity;
         dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -54,7 +61,33 @@ public class HypertensionDialog {
             public void onClick(View view) {
                 dialog.dismiss();
                 ReturnValueFromDialog activity = (ReturnValueFromDialog) context;
-                activity.onReturnHypertensionData("Hypertension Data Entered");
+
+
+                    /*
+                    hypertension data
+                    */
+
+                CheckBox hypertensionRecordSeen = (CheckBox) dialog.findViewById(R.id.hypertensionRecordSeen);
+                EditText hypertensionAgeDiag = (EditText) dialog.findViewById(R.id.hypertensionAgeDiag);
+                EditText hypertensionMedication = (EditText) dialog.findViewById(R.id.hypertensionMedication);
+                EditText hypertensionDietary = (EditText) dialog.findViewById(R.id.hypertensionDietary);
+
+
+
+                diseaseLists.add(new DiseaseList("record_seen", hypertensionRecordSeen.isChecked() ? "true" : "false"));
+                diseaseLists.add(new DiseaseList("age_of_diagnosis", !hypertensionAgeDiag.getText().toString().equals("")
+                        ? hypertensionAgeDiag.getText().toString() : "unknown"));
+                diseaseLists.add(new DiseaseList("medication", !hypertensionMedication.getText().toString().equals("")
+                        ? hypertensionMedication.getText().toString() : "none"));
+                diseaseLists.add(new DiseaseList("dietary", !hypertensionDietary.getText().toString().equals("")
+                        ? hypertensionDietary.getText().toString() : "none"));
+
+
+
+                activity.onReturnHypertensionData("Hypertension Data Entered", diseaseLists);
+
+
+
             }
         });
 

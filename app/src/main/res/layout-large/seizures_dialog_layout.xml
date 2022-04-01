@@ -239,14 +239,15 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <EditText
+                            android:id="@+id/seizureAge"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -292,14 +293,16 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <EditText
+                            android:id="@+id/seizureLast"
+
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -329,14 +332,15 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <EditText
+                            android:id="@+id/seizureDuration"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -377,15 +381,16 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <TextView
+
                             android:id="@+id/seizureFrequency"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -414,14 +419,15 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
 
                         <EditText
+                            android:id="@+id/seizureMedication"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity=""
@@ -466,7 +472,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="2dp">
@@ -474,7 +480,7 @@
                         <TextView
                             android:id="@+id/seizureDiagnosis"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/bttn_drk_stroke"
                             android:fontFamily="@font/poppins_regular"
                             android:gravity="center"
@@ -489,6 +495,8 @@
 
 
                 <CheckBox
+                    android:id="@+id/seizureRecordSeen"
+
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

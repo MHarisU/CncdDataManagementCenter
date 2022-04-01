@@ -5,6 +5,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,15 +21,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cncd.first.Models.BaseParticipant.ParticipantDataList;
+import com.cncd.first.Models.DiseaseData.DiseaseList;
 import com.cncd.first.Models.FamilyModel.FamilyAdapter;
 import com.cncd.first.Models.FamilyModel.FamilyList;
 import com.cncd.first.Models.MedicationModel.MedicationAdapter;
 import com.cncd.first.Models.MedicationModel.MedicationList;
+import com.cncd.first.Network.ApiPostRequest;
+import com.cncd.first.Network.BaseUrl;
 import com.cncd.first.R;
 import com.cncd.first.Utils.GeneralUtils;
 import com.cncd.first.Utils.JsonArrayToList;
 import com.cncd.first.Utils.JsonListToJsonArray;
 import com.cncd.first.Utils.LoadListToMenu;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,10 +61,14 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
     ParticipantDataList participantDataList;
 
 
-
     CardView notesLayout;
     EditText notesEdit;
     Boolean notesOpenCheck = false;
+
+
+    EditText ethnicityEditView, castEditView, numberOfChildrenEditView, yearsOfEducationEditView, occupationOfSubjectEditView;
+    TextView maritalStatusView, fatherMotherCousinView, fatherMotherRelationView, spouseCousinView, spouseRelationView, jobsOfSubjectView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +77,6 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
             GeneralUtils.changeIntoUrdu(BaselineQuestionnaireRecruitment2Activity.this);
         setContentView(R.layout.activity_baseline_questionnaire_recruitment2);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-
 
 
         loadUIs();
@@ -77,13 +89,13 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
 
     }
 
-   // ArrayList<String> participantDetails = new ArrayList<>();
+    // ArrayList<String> participantDetails = new ArrayList<>();
 
     private void loadParticipantData() {
         Intent intent = getIntent();
 
         participantDataList = (ParticipantDataList) getIntent().getSerializableExtra("participantDataList");
-       // participantDetails = intent.getStringArrayListExtra("participantData");
+        // participantDetails = intent.getStringArrayListExtra("participantData");
         //Toast.makeText(BaselineQuestionnaireRecruitment2Activity.this, ""+participantDataList.getName(), Toast.LENGTH_SHORT).show();
     }
 
@@ -110,6 +122,20 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
 
         notesLayout = findViewById(R.id.notesLayout);
         notesEdit = findViewById(R.id.notesEdit);
+
+        ethnicityEditView = findViewById(R.id.ethnicityEditView);
+        castEditView = findViewById(R.id.castEditView);
+        numberOfChildrenEditView = findViewById(R.id.numberOfChildrenEditView);
+        yearsOfEducationEditView = findViewById(R.id.yearsOfEducationEditView);
+        occupationOfSubjectEditView = findViewById(R.id.occupationOfSubjectEditView);
+        maritalStatusView = findViewById(R.id.maritalStatusView);
+        fatherMotherCousinView = findViewById(R.id.fatherMotherCousinView);
+        fatherMotherRelationView = findViewById(R.id.fatherMotherRelationView);
+        spouseCousinView = findViewById(R.id.spouseCousinView);
+        spouseRelationView = findViewById(R.id.spouseRelationView);
+        jobsOfSubjectView = findViewById(R.id.jobsOfSubjectView);
+
+
     }
 
     private void loadMedications() {
@@ -166,11 +192,11 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
             if (medicationLists.size() > 0) {
                 int size = medicationLists.size();
                 size++;
-                Log.d("CallBackForm",size + "."+" "+drugName+" "+drugGeneric+" "+drugDuration);
+                Log.d("CallBackForm", size + "." + " " + drugName + " " + drugGeneric + " " + drugDuration);
                 medicationLists.add(new MedicationList(size + ".", drugName, drugGeneric, drugDuration));
             } else {
                 medicationLists.add(new MedicationList("1.", drugName, drugGeneric, drugDuration));
-                Log.d("CallBackForm","1."+" "+drugName+" "+drugGeneric+" "+drugDuration);
+                Log.d("CallBackForm", "1." + " " + drugName + " " + drugGeneric + " " + drugDuration);
 
             }
 
@@ -187,6 +213,7 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
 
             //GeneralUtils.hideSoftKeyboard(BaselineQuestionnaireRecruitment2Activity.this, drugDurationEdit);
             GeneralUtils.alertDialogBoxSimple(BaselineQuestionnaireRecruitment2Activity.this, "Info", "Medical History Added");
+            //addMedicationAPI(drugName, drugGeneric, drugDuration);
 
 
         } else {
@@ -194,6 +221,342 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
 
         }
     }
+
+    private void addMedicationAPI(String drugName, String drugGeneric, String drugDuration) {
+        /*
+
+{
+"study_id": "ABC123",
+"drug_name": "Amoxil",
+"drug_generic": "AMoxilate",
+"duration_month": "22-10-2020"
+}
+*/
+        JSONObject orderJsonObject = new JSONObject();
+        try {
+            //   orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
+            orderJsonObject.put("study_id", participantDataList.getStudy_id());
+            orderJsonObject.put("drug_name", drugName);
+            orderJsonObject.put("drug_generic", drugGeneric);
+            orderJsonObject.put("duration_month", drugDuration);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        final String requestBody = orderJsonObject.toString();
+        Log.d("requestBody", requestBody);
+
+        new ApiPostRequest(
+                BaselineQuestionnaireRecruitment2Activity.this,
+                new BaseUrl().getBaseUrl() + "api/Participantmedication",
+                requestBody,
+                new ApiPostRequest.AsyncApiResponse() {
+                    @Override
+                    public void processFinish(String response) {
+
+
+                        Log.d("response", response);
+
+                        JSONObject jsonObject = null;
+                        try {
+                            jsonObject = new JSONObject(response);
+                        } catch (JSONException jsonException) {
+                            jsonException.printStackTrace();
+                        }
+
+                        try {
+                            // JSONObject jsonResponse = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
+
+                            if (successResponse.equals("true")) {
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+
+
+                                String message = jsonObject.getString("message");
+                                if (message.equals("Medication Added Successfully."))
+                                    Toast.makeText(BaselineQuestionnaireRecruitment2Activity.this, "Medication added Online", Toast.LENGTH_SHORT).show();
+
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
+                                //String jsonToken = jsonData.getString("token");
+
+                                //study_id = jsonData.getString("study_id");
+                                //Log.d("response", study_id);
+
+
+                            } else {
+
+                                final AlertDialog.Builder aDialog = new AlertDialog.Builder(BaselineQuestionnaireRecruitment2Activity.this, R.style.DialogTheme)
+                                        .setTitle("")
+                                        .setMessage("Invalid request please login or try again later")
+                                        .setCancelable(false)
+                                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                            }
+                                        });
+                                aDialog.show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(BaselineQuestionnaireRecruitment2Activity.this, "Json Error.", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }
+        );
+
+
+    }
+
+    private void addFamilyHistoryAPI() {
+        /*
+
+"{
+""study_id"": ""ABC123"",
+""relations"":[
+    {
+""relationship_to_participant"": ""Brother"",
+""disease"": ""Strock"",
+""specify_condition"": ""Heart Attack"",
+""age"":""56""},
+{
+""relationship_to_participant"": ""Brother"",
+""disease"": ""Strock"",
+""specify_condition"": ""Heart Attack"",
+""age"":""56""}
+]
+
+}
+"
+*/
+
+
+        JSONObject orderJsonObject = new JSONObject();
+        try {
+            //   orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
+            orderJsonObject.put("study_id", participantDataList.getStudy_id());
+
+            JSONArray jsonArray = new JSONArray();
+            JSONObject relationObject = new JSONObject();
+            for (FamilyList familyList : familyLists) {
+                relationObject.put("relationship_to_participant", familyList.getRelation_name());
+                relationObject.put("disease", familyList.getMedical_condition_name());
+                relationObject.put("specify_condition", familyList.getSpecify_condition_name());
+                relationObject.put("age", familyList.getAge_diagnosed());
+                jsonArray.put(relationObject);
+
+            }
+
+            orderJsonObject.put("relations", jsonArray);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        final String requestBody = orderJsonObject.toString();
+        Log.d("requestBody", requestBody);
+
+        new ApiPostRequest(
+                BaselineQuestionnaireRecruitment2Activity.this,
+                new BaseUrl().getBaseUrl() + "api/Participantfamilyhistory",
+                requestBody,
+                new ApiPostRequest.AsyncApiResponse() {
+                    @Override
+                    public void processFinish(String response) {
+
+
+                        Log.d("response", response);
+
+                        JSONObject jsonObject = null;
+                        try {
+                            jsonObject = new JSONObject(response);
+                        } catch (JSONException jsonException) {
+                            jsonException.printStackTrace();
+                        }
+
+                        try {
+                            // JSONObject jsonResponse = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
+
+                            if (successResponse.equals("true")) {
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+
+
+                                String message = jsonObject.getString("message");
+                                if (message.equals("Family History Added Successfully."))
+                                    Toast.makeText(BaselineQuestionnaireRecruitment2Activity.this, "Family history added Online", Toast.LENGTH_SHORT).show();
+
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
+                                //String jsonToken = jsonData.getString("token");
+
+                                //study_id = jsonData.getString("study_id");
+                                //Log.d("response", study_id);
+
+
+                            } else {
+
+                                final AlertDialog.Builder aDialog = new AlertDialog.Builder(BaselineQuestionnaireRecruitment2Activity.this, R.style.DialogTheme)
+                                        .setTitle("")
+                                        .setMessage("Invalid request please login or try again later")
+                                        .setCancelable(false)
+                                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                            }
+                                        });
+                                aDialog.show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(BaselineQuestionnaireRecruitment2Activity.this, "Json Error.", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }
+        );
+
+
+    }
+
+
+    private void addDemographicDataAPI() {
+        /*
+   "study_id":"ABC123",
+   "ethnicity":"Islam",
+   "cast":"Rangar",
+   "marital_status":"1",
+   "number_of_children":"5",
+   "subjects_father_mother_cousin":"1",
+   "father_mother_relation":"1",
+   "subject_spouse_cousin":"0",
+   "subject_spouse_relation":"0",
+   "total_jobs_of _subject":"1",
+   "years_of_education":"14",
+   "occupation_of_subject":"1"
+*/
+        //occupationOfSubjectEditView = findViewById(R.id.occupationOfSubjectEditView);
+        //maritalStatusView = findViewById(R.id.maritalStatusView);
+        fatherMotherCousinView = findViewById(R.id.fatherMotherCousinView);
+        fatherMotherRelationView = findViewById(R.id.fatherMotherRelationView);
+        spouseCousinView = findViewById(R.id.spouseCousinView);
+        spouseRelationView = findViewById(R.id.spouseRelationView);
+        jobsOfSubjectView = findViewById(R.id.jobsOfSubjectView);
+
+        String maritalSting = maritalStatusView.getText().toString();
+        int maritalInt = 6;
+        switch (maritalSting) {
+            case "Single":
+                maritalInt = 1;
+                break;
+            case "Married":
+                maritalInt = 2;
+                break;
+            case "Divorced":
+                maritalInt = 3;
+                break;
+            case "Separated":
+                maritalInt = 4;
+                break;
+            case "Widow":
+                maritalInt = 5;
+                break;
+            case "Not Answered":
+                maritalInt = 6;
+                break;
+        }
+
+        JSONObject orderJsonObject = new JSONObject();
+        try {
+            //   orderJsonObject.put("token", new SessionManager(RecruitmentGeneralExclusionAndSpecificDiseaseActivity.this).getToken());
+            orderJsonObject.put("study_id", participantDataList.getStudy_id());
+            orderJsonObject.put("ethnicity", ethnicityEditView.getText().toString().equals("") ? "" : ethnicityEditView.getText().toString());
+            orderJsonObject.put("cast", castEditView.getText().toString().equals("") ? "" : castEditView.getText().toString());
+            orderJsonObject.put("marital_status", maritalInt);
+            orderJsonObject.put("number_of_children", numberOfChildrenEditView.getText().toString().equals("") ? "0" : numberOfChildrenEditView.getText().toString());
+            orderJsonObject.put("subjects_father_mother_cousin", "1");
+            orderJsonObject.put("father_mother_relation", "1");
+            orderJsonObject.put("subject_spouse_cousin", "1");
+            orderJsonObject.put("subject_spouse_relation", "1");
+            orderJsonObject.put("total_jobs_of _subject", "1");
+            orderJsonObject.put("years_of_education", yearsOfEducationEditView.getText().toString().equals("") ? "0" : yearsOfEducationEditView.getText().toString());
+            orderJsonObject.put("occupation_of_subject", "1");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        final String requestBody = orderJsonObject.toString();
+        Log.d("requestBody", requestBody);
+
+        new ApiPostRequest(
+                BaselineQuestionnaireRecruitment2Activity.this,
+                new BaseUrl().getBaseUrl() + "api/Participantdemographicdata",
+                requestBody,
+                new ApiPostRequest.AsyncApiResponse() {
+                    @Override
+                    public void processFinish(String response) {
+
+
+                        Log.d("response", response);
+
+                        JSONObject jsonObject = null;
+                        try {
+                            jsonObject = new JSONObject(response);
+                        } catch (JSONException jsonException) {
+                            jsonException.printStackTrace();
+                        }
+
+                        try {
+                            // JSONObject jsonResponse = jsonObject.getJSONObject("Response");
+                            String successResponse = jsonObject.getString("success");
+
+                            if (successResponse.equals("true")) {
+                                // JSONArray jsonDataArray = jsonObject.getJSONArray("data");
+
+
+                                String message = jsonObject.getString("message");
+                                if (message.equals("Demographic Data Added Successfully."))
+                                    Toast.makeText(BaselineQuestionnaireRecruitment2Activity.this, "Demographic added Online", Toast.LENGTH_SHORT).show();
+
+                                JSONObject jsonData = jsonObject.getJSONObject("data");
+                                //String jsonToken = jsonData.getString("token");
+
+                                //study_id = jsonData.getString("study_id");
+                                //Log.d("response", study_id);
+
+
+                            } else {
+
+                                final AlertDialog.Builder aDialog = new AlertDialog.Builder(BaselineQuestionnaireRecruitment2Activity.this, R.style.DialogTheme)
+                                        .setTitle("")
+                                        .setMessage("Invalid request please login or try again later")
+                                        .setCancelable(false)
+                                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                            }
+                                        });
+                                aDialog.show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(BaselineQuestionnaireRecruitment2Activity.this, "Json Error.", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }
+        );
+
+
+    }
+
 
     public void openAddFamilyHistory(View view) {
         layoutAddNewFamily.setVisibility(View.VISIBLE);
@@ -348,11 +711,15 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
     public void moveToThirdForm(View view) {
         //startActivity(new Intent(CallBackForm2Activity.this, CallBackForm3Activity.class));
         //startActivity(new Intent(CallBackFormActivity.this, CallBackForm2Activity.class));
+        if (familyLists.size() > 0) {
+            //addFamilyHistoryAPI();
+        }
+
+        //addDemographicDataAPI();
 
         Intent intent = new Intent(BaselineQuestionnaireRecruitment2Activity.this, BaselineQuestionnaireRecruitment3Activity.class);
         intent.putExtra("participantDataList", participantDataList);
         startActivityForResult(intent, 1);
-
 
 
     }
@@ -360,7 +727,7 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1 && resultCode == 1) {
+        if (requestCode == 1 && resultCode == 1) {
             this.setResult(1);
             this.finish();
         }
@@ -368,10 +735,10 @@ public class BaselineQuestionnaireRecruitment2Activity extends AppCompatActivity
 
 
     public void openNotes(View view) {
-        if (notesOpenCheck){
+        if (notesOpenCheck) {
             notesLayout.setVisibility(View.GONE);
             notesOpenCheck = false;
-        }else {
+        } else {
             notesLayout.setVisibility(View.VISIBLE);
             notesOpenCheck = true;
         }
